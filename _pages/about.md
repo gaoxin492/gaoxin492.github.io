@@ -7,15 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-% I'm a second year undergraduate student from [School of EECS](https://eecs.pku.edu.cn/), [Fudan University](https://www.pku.edu.cn/). My research interest includes machine learning, representation learning, computer vision, generative model, probalisitic modeling, and variational inference.
+I am a second-year Master's student at the Institute of Science and Technology for Brain-Inspired Intelligence ([ISTBI]((https://istbi.fudan.edu.cn/jx/zs/zsjz.htm))), [Fudan University](https://www.fudan.edu.cn/), majoring in Applied Mathematics. My research interests encompass machine learning, representation learning, computer vision, generative models, probabilistic modeling, and variational inference.
 
-% I am very fortunate to be advised by [Prof. Jian Pu](https://www.XXX.com/) of PULab from [School of Computer Science](https://cs.pku.edu.cn/), Peking University. I am also working with [Prof. Chenyang Si](https://XXX.pku.edu.cn/) from [School of Computer Science](https://cs.pku.edu.cn/), Peking University.
+I am privileged to be advised by [Prof. Jian Pu]([https://www.xxx.com/](https://scholar.google.com/citations?user=9pUCoOkAAAAJ)) at PULab, Fudan University. Additionally, I collaborate with [Prof. Chenyang Si](https://chenyangsi.top/) from Nanyang Technological University (NTU).
 
-% You can find my CV here: [XX's Curriculum Vitae](../assets/Curriculum_Vitae.pdf).
+You can view my CV here: [Xin Gao's Curriculum Vitae](../assets/Curriculum_Vitae.pdf)..
 
-% [Email](gaoxin23@m.fudan.edu.cn) / [Github](https://github.com/gaoxin492) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=1UKUQUEAAAAJ) / [Wechat Accounts](鑫中有数)
+Feel free to connect with me:
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+ [Email](gaoxin23@m.fudan.edu.cn) / [Github](https://github.com/gaoxin492) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=1UKUQUEAAAAJ) / [Wechat Accounts](鑫中有数)
 
 A data-driven personal website
 ======
