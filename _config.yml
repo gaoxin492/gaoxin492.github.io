@@ -10,9 +10,9 @@
 locale                   : "en-US"
 title                    : "Xin Gao / Personal Page"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Xin Gao"
 description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://gaoxin492.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
@@ -27,7 +27,7 @@ author:
   bio              : "Short biography for the left-hand sidebar"
   location         : "Shanghai"
   employer         : "Fudan Univeristy"
-  uri              : "https://gaoxin492.github.io"
+  uri              : https://gaoxin492.github.io
   email            : "gaoxin23@m.fudan.edu.cn" 
 
   # Academic websites
