@@ -9,7 +9,7 @@ redirect_from:
 
 I am a second-year Master's student at the Institute of Science and Technology for Brain-Inspired Intelligence ([ISTBI]((https://istbi.fudan.edu.cn/jx/zs/zsjz.htm))), [Fudan University](https://www.fudan.edu.cn/), majoring in Applied Mathematics. My research interests encompass machine learning, representation learning, computer vision, generative models, probabilistic modeling, and variational inference.
 
-I am privileged to be advised by [Prof. Jian Pu]([https://www.xxx.com/](https://scholar.google.com/citations?user=9pUCoOkAAAAJ)) at PULab, Fudan University. Additionally, I collaborate with [Prof. Chenyang Si](https://chenyangsi.top/) from Nanyang Technological University (NTU).
+I am privileged to be advised by [Prof. Jian Pu](https://scholar.google.com/citations?user=9pUCoOkAAAAJ) at PULab, Fudan University. Additionally, I collaborate with [Prof. Chenyang Si](https://chenyangsi.top/) from Nanyang Technological University (NTU).
 
 You can view my CV here: [Xin Gao's Curriculum Vitae](../assets/Curriculum_Vitae.pdf)..
 
