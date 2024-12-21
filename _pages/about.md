@@ -15,7 +15,7 @@ You can view my CV here: [Xin Gao's Curriculum Vitae](../assets/Curriculum_Vitae
 
 Feel free to connect with me:
 
- [Email](gaoxin23@m.fudan.edu.cn) / [Github](https://github.com/gaoxin492) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=1UKUQUEAAAAJ) / [Wechat Accounts]([鑫中有数](https://mp.weixin.qq.com/s/24-1Xn3gCQP_jjsdRz-Mmg))
+ [Email](gaoxin23@m.fudan.edu.cn) / [Github](https://github.com/gaoxin492) / [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=1UKUQUEAAAAJ) / [Wechat Accounts](https://mp.weixin.qq.com/s/24-1Xn3gCQP_jjsdRz-Mmg)
 
 A data-driven personal website
 ======
