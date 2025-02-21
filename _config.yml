@@ -6,13 +6,13 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Guanghao Li (李光浩)"
-description              : "Ph.D. candidate of Fudan University"
-repository               : "Lightingooo/Lightingooo.github.io"
+title                    : "Xin Gao (高鑫)"
+description              : "Master of Fudan University"
+repository               : "gaoxin492/gaoxin492.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+google_analytics_id      :  # get google_analytics_id  from https://analytics.google.com/analytics/
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
@@ -21,14 +21,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Guanghao Li"
+  name             : "Xin Gao"
   avatar           : "images/android-chrome-512x512.png"
   bio              : # "Fudan University"
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=6nkKQDIAAAAJ"
-  email            : "ghli22@m.fudan.edu.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=1UKUQUEAAAAJ"
+  email            : "gaoxin23@m.fudan.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -37,7 +37,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : Lightingooo
+  github           : gaoxin492
   google_plus      :
   keybase          :
   instagram        :
