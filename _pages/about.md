@@ -101,7 +101,7 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 
 # 📚 Learning Materials
 
-😁 If you want the following material without watermarks, please contact me using the email address on the left side and specify your intended use.  
+😁 If you want the following material without watermarks, please contact me using the email address and specify your intended use.  
 
 ## Material 1: [Frontiers in Diffusion Model Technologies (1)](1-diffusion-page)
 <div style="display: flex; margin-bottom: 20px;">
