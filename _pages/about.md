@@ -17,19 +17,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently a second-year Master's student in Applied Mathematics at the Institute of Science and Technology for Brain-inspired Intelligence (ISTBI) at Fudan University. I completed my Bachelor's degree in Mathematics at Donghua University in Shanghai.
+I am currently a second-year Master's student in Applied Mathematics at Fudan University. My research focuses on artificial intelligence and machine learning, with particular emphasis on probability distribution modeling, generative models, multimodal and multi-view representation learning, as well as the attack and defense of foundation models. **I am planning to apply for a PhD program for Fall 2026, with a primary research interest in the security of foundation models—specifically their vulnerabilities and countermeasures.**
 
-My research focuses on artificial intelligence and machine learning, with particular emphasis on probability distribution modeling, generative models, multimodal and multi-view representation learning, as well as the attack and defense of foundation models. **I am planning to apply for a PhD program for Fall 2026, with a primary research interest in the security of foundation models—specifically their vulnerabilities and countermeasures.**
-
-I aim to engage in work that is not only theoretically deep but also simple and effective in practical applications. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations.
-
-
-<!-- I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
+I aim to engage in work that is either theoretically deep or simple and effective in practical applications. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations.
 
 
 # 🔥 News
-- *2024.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**.
-- *2024.01*: 🎉 [evi-CEM](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_29) is accepted by **MICCAI 2024**. Congrats to Yibo.
+- *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
+- *2024.05*: 🎉 [evi-CEM](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_29) is accepted by **MICCAI 2024**. Congrats to Yibo.
 <!-- Honored to collaborate with them on these promising projects. -->
 
 # 📝 Publications 
@@ -50,7 +45,7 @@ I aim to engage in work that is not only theoretically deep but also simple and 
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR</div><img src='images/2025_01_MVP/MVP_Pipeline.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2025</div><img src='images/2025_01_MVP/MVP_Pipeline.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [MVP: Deep Incomplete Multi-view Learning via Cyclic Permutation of VAEs](https://openreview.net/pdf?id=s4MwstmB8o)
@@ -82,10 +77,6 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 </div>
 
 
-
-
-<!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
-
 # 🎖 Honors and Awards
 - 2023.09 Fudan University Zhicheng Freshman Second Prize Scholarship (Top 5%)
 - 2023.06 Outstanding Graduate of Shanghai
@@ -103,9 +94,33 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 - *2023.09 - 2026.06 (now)*, Master of Applied Mathematics, Fudan University, Shanghai, China.
 - *2019.09 - 2023.06*, Bachelor of Mathematics, Donghua Univeristy, Shanghai, China.
 
-<!-- # 💬 Invited Talks -->
-<!-- - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
-
 # 💻 Internships
 - *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
+
+
+# 💬 Learning Materials
+## Material 1: [Frontiers in Diffusion Model Technologies (1)](1-diffusion-page)
+<div style="display: flex; margin-bottom: 20px;">
+  <img src="images/materials/diffusion.png" alt="Material 1 Image" style="width: 320px; height: 180px; object-fit: cover; margin-right: 20px;">
+  <div>
+    <p>This document provides an overview of key concepts related to diffusion models, particularly focusing on the theoretical foundations, development timeline, and recent advancements in the field. The content includes detailed discussions on VAE, DDPM, DDIM, SDE, and ODE, as well as conditional guidance. It also covers the evolution of stable diffusion, including topics like Latent Diffusion, VQ-VAE, and DiT. Lastly, the document highlights the latest methodology, IC-Light, set to be presented at ICLR 2025.</p>
+  </div>
+</div>
+
+## Material 2: [Tutorial of Information Geometry and t3-VAE](2-t3VAE-page)
+<div style="display: flex; margin-bottom: 20px;">
+  <img src="images/materials/t3VAE.png" alt="Material 1 Image" style="width: 320px; height: 180px; object-fit: cover; margin-right: 20px;">
+  <div>
+    <p>This document introduces the t3-Variational Autoencoder (<a href="https://openreview.net/pdf?id=RzNlECeoOB" target="_blank">ICLR 2024</a>), which uses Student’s t-distributions to model heavy-tailed data distributions and improve latent variable representations. It also explores the framework of Information Geometry, focusing on how generative models can be understood through statistical manifolds, divergences, and Riemannian metrics, providing a deeper understanding of probability distributions and their applications in machine learning, signal processing, and neuroscience.</p>
+  </div>
+</div>
+
+## Material 3: [EM Algorithm and X-metric](3-xmetric-page)
+<div style="display: flex; margin-bottom: 20px;">
+  <img src="images/materials/xmetric.png" alt="Material 1 Image" style="width: 320px; height: 180px; object-fit: cover; margin-right: 20px;">
+  <div>
+    <p>This document introduces the X-metric framework (<a href="https://ieeexplore.ieee.org/document/9965747" target="_blank">PAMI 2023</a>), an N-dimensional information-theoretic approach designed for groupwise registration and deep combined computing, with applications in advanced machine learning tasks. It also covers the theoretical foundations, including entropy, mutual information, and the MLE algorithm, alongside the framework's modifications for deep computing and network training.</p>
+  </div>
+</div>
+
+
