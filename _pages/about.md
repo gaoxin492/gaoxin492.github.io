@@ -99,7 +99,10 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 - *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
 
 
-# 💬 Learning Materials
+# 📚 Learning Materials
+
+😁 If you want the following material without watermarks, please contact me using the email address on the left side and specify your intended use.  
+
 ## Material 1: [Frontiers in Diffusion Model Technologies (1)](1-diffusion-page)
 <div style="display: flex; margin-bottom: 20px;">
   <img src="images/materials/diffusion.png" alt="Material 1 Image" style="width: 320px; height: 180px; object-fit: cover; margin-right: 20px;">
