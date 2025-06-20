@@ -17,14 +17,8 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<<<<<<< HEAD
 
 I am currently a second-year Master’s student in Applied Mathematics at Fudan University. My research focuses on artificial intelligence and machine learning, with particular emphasis on probability distribution modeling, generative models (especially diffusion models), as well as the multimodal representation learning. **I will apply for a PhD in Fall 2026 and seek advisors and collaborators with a mathematics background who share an interest in AI. I believe mathematics is the key to solving fundamental AI challenges.**
-=======
-I am currently a second-year Master's student in Applied Mathematics at Fudan University. My research focuses on artificial intelligence and machine learning, with particular emphasis on probability distribution modeling, generative models, multimodal representation learning, as well as the attack and defense of foundation models. **I will apply for a PhD in Fall 2026 and seek advisors and collaborators with a mathematics background who share an interest in AI. I believe mathematics is the key to solving fundamental AI challenges.**
-
-Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations.
->>>>>>> a317d8d953237ba5d1dd368b95fa236068d403f3
 
 Feel free to reach out if you’d like to learn more about my work, chat, or explore potential collaborations.
 
