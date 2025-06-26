@@ -108,6 +108,7 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 
 # 💻 Internships
 - *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
+- *2025.05 - Now*, [Shanghai Ailab](https://www.shlab.org.cn/), Shanghai, China.
 
 
 # 📚 Learning Materials
