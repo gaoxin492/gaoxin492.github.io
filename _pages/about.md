@@ -52,7 +52,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
  **Jiasheng Guo**, **Xin Gao**, Yuxiang Yan, Guanghao Li, Jian Pu
 
-- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using task-driven losses and content-aware adaptability for automatic RAW-to-RGB conversion.
+- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion tailored to detection tasks. 
 </div>
 </div>
 
