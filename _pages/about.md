@@ -24,8 +24,13 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
 
 # 🔥 News
+- *2025.09*：🎉 [GOOD](https://neurips.cc/virtual/2025/poster/116282) is accepted by **Neurips 2025**. See you in San Diego!
+- *2025.09*：🎉 [OrderMind](https://neurips.cc/virtual/2025/poster/116565) is accepted by **Neurips 2025**. Congrats to Yuxiang!
+- *2025.09*：🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
 - *2025.06*：🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
+- *2025.05*：🎉 Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
 - *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
+- *2024.12*：🎉 Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
 - *2024.05*: 🎉 [evi-CEM](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_29) is accepted by **MICCAI 2024**. Congrats to Yibo.
 <!-- Honored to collaborate with them on these promising projects. -->
 
@@ -96,7 +101,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Learning Spatial-Aware Manipulation Ordering](https://neurips.cc/virtual/2025/poster/116282)
+[Learning Spatial-Aware Manipulation Ordering](https://neurips.cc/virtual/2025/poster/116565)
 
 Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
 
@@ -113,6 +118,10 @@ Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qu
 [Loong: Synthesize Long Chain-of-Thoughts at Scale through Verifiers](https://arxiv.org/abs/2509.03059)
 
 Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe Bi, Zifeng Ding, Yiqun Duan, Chengyu Fan, Wendong Fan, **Xin Gao** et al.
+
+[![GitHub Stars](https://img.shields.io/github/stars/camel-ai/loong?style=social)](https://github.com/camel-ai/loong)
+[![GitHub Forks](https://img.shields.io/github/forks/camel-ai/loong?style=social)](https://github.com/camel-ai/loong)
+[[Project page]](https://github.com/camel-ai/loong)
 
 - **Loong** is an open-source framework for scalable, verifiable reasoning data. It pairs **LoongBench** (8,729 human-vetted, code-checkable examples across 12 domains) with **LoongEnv**, a modular generator forming an agent–environment loop for RL with verifiable rewards and broad-domain CoT training.
 </div>
