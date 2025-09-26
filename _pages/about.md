@@ -24,13 +24,14 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
 
 # 🔥 News
-- *2025.09*：🎉 [GOOD](https://neurips.cc/virtual/2025/poster/116282) is accepted by **Neurips 2025**. See you in San Diego!
-- *2025.09*：🎉 [OrderMind](https://neurips.cc/virtual/2025/poster/116565) is accepted by **Neurips 2025**. Congrats to Yuxiang!
-- *2025.09*：🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
-- *2025.06*：🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
-- *2025.05*：🎉 Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
+- *2025.09*: 🎉 [GOOD](https://neurips.cc/virtual/2025/poster/116282) is accepted by **Neurips 2025**. See you in San Diego!
+- *2025.09*: 🎉 [OrderMind](https://neurips.cc/virtual/2025/poster/116565) is accepted by **Neurips 2025**. Congrats to Yuxiang!
+- *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
+- *2025.06*: 🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
+- *2025.05*: Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
+- *2025.04*: Welcomed two adorable cats into my life: Fellow and Putao 🐱🍇 
 - *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
-- *2024.12*：🎉 Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
+- *2024.12*: Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
 - *2024.05*: 🎉 [evi-CEM](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_29) is accepted by **MICCAI 2024**. Congrats to Yibo.
 <!-- Honored to collaborate with them on these promising projects. -->
 
