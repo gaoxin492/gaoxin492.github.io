@@ -45,17 +45,8 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 </div>
 </div> -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
 
-[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
-
- **Jiasheng Guo**, **Xin Gao**, Yuxiang Yan, Guanghao Li, Jian Pu
-
-- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion. 
-</div>
-</div>
-
+<!-- ========================================================================================================================== -->
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2025</div><img src='images/2025_01_MVP/MVP_Pipeline.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -72,6 +63,63 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 </div>
 </div>
 
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://neurips.cc/virtual/2025/poster/116282)
+
+**Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
+
+- **GOOD** is a training-free diffusion guidance framework that shapes a robust OOD/ID decision boundary. It steers sampling with two gradients—image-level toward low-density regions and feature-level toward sparse zones—to generate diverse, controllable OOD examples.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
+
+**Jiasheng Guo**, **Xin Gao**, Yuxiang Yan, Guanghao Li, Jian Pu
+
+- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion. 
+</div>
+</div>
+
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Learning Spatial-Aware Manipulation Ordering](https://neurips.cc/virtual/2025/poster/116282)
+
+Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
+
+- This paper introduces **OrderMind**, a spatial-aware manipulation ordering framework that learns object priorities from local geometry via a kNN spatial graph and a lightweight temporal module, supervised by VLM-distilled spatial priors. It also presents the **Manipulation Ordering Benchmark** (163k+ samples) for cluttered scenes.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025 workshop</div><img src='images/2025_09_Loong/Loong.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Loong: Synthesize Long Chain-of-Thoughts at Scale through Verifiers](https://arxiv.org/abs/2509.03059)
+
+Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe Bi, Zifeng Ding, Yiqun Duan, Chengyu Fan, Wendong Fan, **Xin Gao** et al.
+
+- **Loong** is an open-source framework for scalable, verifiable reasoning data. It pairs **LoongBench** (8,729 human-vetted, code-checkable examples across 12 domains) with **LoongEnv**, a modular generator forming an agent–environment loop for RL with verifiable rewards and broad-domain CoT training.
+</div>
+</div>
+
+
+<!-- ========================================================================================================================== -->
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">MICCAI 2024</div><img src='images/2024_10_evi_cem/EVI_CEM.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -97,18 +145,16 @@ Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
 - 2021.09 National Second Prize in the China Undergraduate Mathematical Contest in Modeling
 - 2020.12 Shanghai Scholarship
 
-<!-- # 👨‍💼 Academic Service
-- Journal Reviewer: RA-L
-- Conference Reviewer: ICME2025
-- Teaching assistant: Embodied Intelligence -->
+# 👨‍💼 Academic Service
+- Conference Reviewer: Neurips 2025, ICCV 2025, ICLR 2026
 
 # 📖 Educations
 - *2023.09 - 2026.06 (now)*, Master of Applied Mathematics, Fudan University, Shanghai, China.
 - *2019.09 - 2023.06*, Bachelor of Mathematics, Donghua Univeristy, Shanghai, China.
 
 # 💻 Internships
+- *2025.05 - Now*, [Shanghai Alab](https://www.shlab.org.cn/), Shanghai, China.
 - *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
-- *2025.05 - Now*, [Shanghai Ailab](https://www.shlab.org.cn/), Shanghai, China.
 
 
 # 📚 Learning Materials
