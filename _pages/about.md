@@ -89,7 +89,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
 [Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
 
-**Jiasheng Guo**, **Xin Gao**, Yuxiang Yan, Guanghao Li, Jian Pu
+**Jiasheng Guo#**, **Xin Gao#**, Yuxiang Yan, Guanghao Li, Jian Pu
 
 - **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion. 
 </div>
