@@ -20,7 +20,7 @@ redirect_from:
 
 I am currently a second-year Master’s student in Applied Mathematics at Fudan University. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. **I plan to apply for PhD programs in Fall 2026 and am seeking potential advisors and collaborators with shared research interests.**
 
-Feel free to reach out if you’d like to learn more about my work, chat, or explore potential collaborations.
+Feel free to reach out if you’d like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
 
 # 🔥 News
