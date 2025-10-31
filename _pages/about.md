@@ -24,8 +24,8 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
 
 # 🔥 News
-- *2025.09*: 🎉 [GOOD](https://neurips.cc/virtual/2025/poster/116282) is accepted by **Neurips 2025**. See you in San Diego!
-- *2025.09*: 🎉 [OrderMind](https://neurips.cc/virtual/2025/poster/116565) is accepted by **Neurips 2025**. Congrats to Yuxiang!
+- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. See you in San Diego!
+- *2025.09*: 🎉 [OrderMind](https://arxiv.org/pdf/2510.25138) is accepted by **Neurips 2025**. Congrats to Yuxiang!
 - *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
 - *2025.06*: 🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
 - *2025.05*: Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
@@ -74,7 +74,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://neurips.cc/virtual/2025/poster/116282)
+[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://arxiv.org/pdf/2510.17131)
 
 **Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
 
@@ -102,7 +102,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Learning Spatial-Aware Manipulation Ordering](https://neurips.cc/virtual/2025/poster/116565)
+[Learning Spatial-Aware Manipulation Ordering](https://arxiv.org/pdf/2510.25138)
 
 Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
 
