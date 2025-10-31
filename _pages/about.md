@@ -20,16 +20,6 @@ redirect_from:
 
 I am currently a second-year Master's student in Applied Mathematics at Fudan University. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. **I plan to apply for PhD programs in Fall 2026 and am seeking potential advisors and collaborators with shared research interests.** Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
-**And I've been thinking a lot recently - why PhD?**
-
-In fact, I was originally admitted to Fudan University as a direct PhD student after my undergraduate studies. However, at that time, the available research directions in my department were mostly focused on interdisciplinary areas between neuroscience and AI, which didn't fully align with my core interests - I've always been more fascinated by the algorithmic and mathematical foundations of intelligence.
-
-Coming from a pure mathematics background, I realized that I hadn't yet received systematic training in scientific research, especially in fields related to AI and machine learning. I felt that before committing to a long and challenging PhD journey, I needed to go through a complete and rigorous master's program - to learn how to ask meaningful questions, design experiments, and build research intuition.
-
-Fortunately, during this process, I discovered the genuine joy of research. I found excitement in turning abstract ideas into working systems, in bridging theoretical insights with practical models, and in those quiet moments of struggling with an equation until it suddenly made sense. Research became more than a requirement - it became a way of thinking.
-
-That's why I now seek a PhD not as an academic credential, but as a natural continuation of this intellectual curiosity. I want to push the boundary between representation structure and generative intelligence, to explore how reasoning and understanding can emerge from learning systems, and to work with mentors and peers who share this deep fascination. To me, a PhD represents the freedom and responsibility to create something that didn't exist before - and I'm ready for that challenge.
-
 
 # 🔥 News
 - *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. Got visa! See you in San Diego!
@@ -139,6 +129,18 @@ Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe B
 
 <!-- ========================================================================================================================== -->
 
+
+# Why PhD?
+
+**And I've been thinking a lot recently - why PhD?**
+
+In fact, I was originally admitted to Fudan University as a direct PhD student after my undergraduate studies. However, at that time, the available research directions in my department were mostly focused on interdisciplinary areas between neuroscience and AI, which didn't fully align with my core interests - I've always been more fascinated by the algorithmic and mathematical foundations of intelligence.
+
+Coming from a pure mathematics background, I realized that I hadn't yet received systematic training in scientific research, especially in fields related to AI and machine learning. I felt that before committing to a long and challenging PhD journey, I needed to go through a complete and rigorous master's program - to learn how to ask meaningful questions, design experiments, and build research intuition.
+
+Fortunately, during this process, I discovered the genuine joy of research. I found excitement in turning abstract ideas into working systems, in bridging theoretical insights with practical models, and in those quiet moments of struggling with an equation until it suddenly made sense. Research became more than a requirement - it became a way of thinking.
+
+That's why I now seek a PhD not as an academic credential, but as a natural continuation of this intellectual curiosity. I want to push the boundary between representation structure and generative intelligence, to explore how reasoning and understanding can emerge from learning systems, and to work with mentors and peers who share this deep fascination. To me, a PhD represents the freedom and responsibility to create something that didn't exist before - and I'm ready for that challenge.
 
 
 # 🎖 Honors and Awards
