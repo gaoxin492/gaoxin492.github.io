@@ -24,7 +24,7 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 
 
 # 🔥 News
-- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. See you in San Diego!
+- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. Got visa! See you in San Diego!
 - *2025.09*: 🎉 [OrderMind](https://arxiv.org/pdf/2510.25138) is accepted by **Neurips 2025**. Congrats to Yuxiang!
 - *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
 - *2025.06*: 🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
@@ -32,10 +32,9 @@ Feel free to reach out if you’d like to learn more about my work, chat, or exp
 - *2025.04*: Welcomed two adorable cats into my life: Fellow and Putao 🐱🍇 
 - *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
 - *2024.12*: Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
-- *2024.05*: 🎉 [evi-CEM](https://link.springer.com/chapter/10.1007/978-3-031-72117-5_29) is accepted by **MICCAI 2024**. Congrats to Yibo.
 <!-- Honored to collaborate with them on these promising projects. -->
 
-# 📝 Publications 
+# 📝 Selected Publications 
 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv preprint</div><img src='images/2024_09_PAPL_SLAM/PAPL_SLAM.png' alt="sym" width="100%"></div></div>
@@ -131,20 +130,6 @@ Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe B
 
 <!-- ========================================================================================================================== -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MICCAI 2024</div><img src='images/2024_10_evi_cem/EVI_CEM.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Evidential concept embedding models: Towards reliable concept explanations for skin disease diagnosis](https://ui.adsabs.harvard.edu/abs/2024arXiv240413346L/abstract)
-
-Yibo Gao, Zheyao Gao, **Xin Gao**, Yuanye Liu, Bomin Wang, Xiahai Zhuang
-
-[![GitHub Stars](https://img.shields.io/github/stars/obiyoag/evi-CEM?style=social)](https://github.com/obiyoag/evi-CEM)
-[![GitHub Forks](https://img.shields.io/github/forks/obiyoag/evi-CEM?style=social)](https://github.com/obiyoag/evi-CEM)
-[[Project page]](https://github.com/obiyoag/evi-CEM)
-
-- **evi-CEM** introduces an evidential learning approach to enhance the reliability of concept predictions in Concept Bottleneck Models, addressing concept misalignments in medical image analysis and improving performance in both supervised and label-efficient settings.
-</div>
-</div>
 
 
 # 🎖 Honors and Awards
