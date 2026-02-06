@@ -443,8 +443,8 @@ $nose-pink: #ffaebc;
             position: absolute; bottom: 0; width: 28px; height: 20px; 
             background: #fff; border-radius: 15px 15px 8px 8px; 
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            &.left { left: 15px; } 
-            &.right { right: 15px; } 
+            &.left { left: 20px; } 
+            &.right { right: 20px; } 
         } 
     }
 
@@ -474,9 +474,9 @@ $nose-pink: #ffaebc;
 
     .cat-paws.lying-paws {
         position: absolute; 
-        bottom: -22px; 
+        bottom: -30px; 
         left: 50%; transform: translateX(-50%);
-        width: 55px; height: 25px; 
+        width: 70px; height: 25px; 
         z-index: 25; 
         .paw {
             position: absolute; bottom: 0; width: 26px; height: 22px;
