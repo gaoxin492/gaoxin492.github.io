@@ -29,11 +29,18 @@ redirect_from:
   }
 </style>
 
+<div class="material-layout" markdown="1">
+
 # Tutorial of Information Geometry and t3-VAE
 
 This document introduces the t3-Variational Autoencoder (<a href="https://openreview.net/pdf?id=RzNlECeoOB" target="_blank">ICLR 2023</a>), which uses Student’s t-distributions to model heavy-tailed data distributions and improve latent variable representations. It also explores the framework of Information Geometry, focusing on how generative models can be understood through statistical manifolds, divergences, and Riemannian metrics, providing a deeper understanding of probability distributions and their applications in machine learning, signal processing, and neuroscience.
 
-<div id="myPDF" style="height: 80%; width: 80%; margin: auto;"></div>
+</div>
+
+<div class="material-viewer">
+  <div class="material-viewer-label">Interactive PDF (scroll, zoom, and swipe through the slides)</div>
+  <div id="myPDF" style="height: 80%; width: 80%; margin: auto;"></div>
+</div>
 
 <script type="text/javascript" src="/assets/js/pdf.compatibility.js"></script>
 <script type="text/javascript" src="/assets/js/pdf.js"></script>

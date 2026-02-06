@@ -282,3 +282,30 @@ h1:before, .anchor:before {
     color: darken($accent-blue, 8%);
     border-bottom-color: rgba(247, 182, 216, 0.75);
 }
+
+// Layout for learning material pages (PDF notes)
+.material-layout {
+    max-width: 960px;
+    margin: 1.5rem auto 0.75rem;
+    padding: 1.25rem 1.6rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(90, 141, 238, 0.06);
+}
+
+.material-layout h1 {
+    margin-top: 0;
+}
+
+.material-viewer {
+    max-width: 1100px;
+    margin: 0.25rem auto 2rem;
+    text-align: center;
+}
+
+.material-viewer-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
