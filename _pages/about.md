@@ -128,7 +128,7 @@ Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qu
 
 </div>
 </div>
-<!-- ========================================================================================================================== --> -->
+<!-- ========================================================================================================================== --> 
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025 workshop</div><img src='images/2025_09_Loong/Loong.png' alt="sym" width="100%"></div></div>
@@ -235,4 +235,68 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 </div>
 
 
+<div class="cat-park">
+  <div class="cat-avatar" data-cat="1">
+    <div class="cat-body"></div>
+    <div class="cat-head">
+      <div class="cat-ear left"></div>
+      <div class="cat-ear right"></div>
+      <div class="cat-face">
+        <div class="cat-eye left"><div class="cat-pupil"></div></div>
+        <div class="cat-eye right"><div class="cat-pupil"></div></div>
+        <div class="cat-mouth"></div>
+      </div>
+    </div>
+    <div class="cat-tail"></div>
+    <div class="cat-shadow"></div>
+  </div>
 
+  <div class="cat-avatar" data-cat="2">
+    <div class="cat-body"></div>
+    <div class="cat-head">
+      <div class="cat-ear left"></div>
+      <div class="cat-ear right"></div>
+      <div class="cat-face">
+        <div class="cat-eye left"><div class="cat-pupil"></div></div>
+        <div class="cat-eye right"><div class="cat-pupil"></div></div>
+        <div class="cat-mouth"></div>
+      </div>
+    </div>
+    <div class="cat-tail"></div>
+    <div class="cat-shadow"></div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var cats = document.querySelectorAll('.cat-avatar');
+    if (!cats.length) return;
+
+    var pupils = document.querySelectorAll('.cat-pupil');
+
+    window.addEventListener('mousemove', function(e) {
+      var vw = window.innerWidth || 1;
+      var vh = window.innerHeight || 1;
+      var relX = (e.clientX / vw - 0.5) * 2; // -1 to 1
+      var relY = (e.clientY / vh - 0.5) * 2; // -1 to 1
+
+      var maxOffset = 4; // px inside the eye
+      pupils.forEach(function(pupil, idx) {
+        // small variation per cat
+        var factor = idx % 2 === 0 ? 1 : 0.7;
+        var tx = relX * maxOffset * factor;
+        var ty = relY * maxOffset * factor * 0.8;
+        pupil.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px)';
+      });
+    });
+
+    cats.forEach(function(cat, index) {
+      cat.addEventListener('click', function() {
+        cat.style.transform = 'translateY(-10px) scale(1.06)';
+        setTimeout(function() {
+          cat.style.transform = '';
+        }, 260);
+      });
+    });
+  })();
+</script>
