@@ -342,8 +342,8 @@ $scroll_offset : 2em;
 }
 
 /* ==========================================================================
-   REALISTIC SILVER SHADED CATS - FINAL V7
-   (Lighter Colors, Visible "Waterweed" Tail, Added Right Paws)
+   REALISTIC SILVER SHADED CATS - FINAL V9
+   (Side Waterweed Tail & Paws Attached to Head)
    Replace the bottom section of main.scss with this
    ========================================================================== */
 
@@ -353,11 +353,11 @@ $scroll_offset : 2em;
     @media (max-width: 768px) { left: 50%; transform: translateX(-50%) scale(0.75); bottom: 0.5rem; }
 }
 
-/* --- 变量更新 (颜色更浅、更仙) --- */
+/* --- 变量 (浅色仙气版) --- */
 $fur-white: #ffffff;
-$fur-light-grey: #ecf0f5; /* 极浅灰 (尾巴尖) */
-$fur-silver: #dfe6ee;     /* 浅银色 (身体过渡) */
-$fur-grey: #b8c0cc;       /* 较浅的基础灰 (尾巴根) */
+$fur-light-grey: #ecf0f5;
+$fur-silver: #dfe6ee;
+$fur-grey: #b8c0cc;
 $eye-green: #90d4ac;
 $eye-liner: #4a4a4a;
 $nose-pink: #ffaebc;
@@ -380,7 +380,6 @@ $nose-pink: #ffaebc;
     background: radial-gradient(circle at 40% 40%, #fff, $fur-silver);
     border-radius: 46%; z-index: 20; box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
-/* 尖耳朵 */
 .ear-container { position: absolute; top: -8px; width: 100%; height: 30px; z-index: 19; }
 .cat-ear {
     position: absolute; top: 0; width: 0; height: 0;
@@ -398,7 +397,6 @@ $nose-pink: #ffaebc;
     background: #fff; border-radius: 50%; filter: blur(4px); z-index: 22;
     &.left { left: -8px; } &.right { right: -8px; }
 }
-/* 五官 */
 .cat-face { position: absolute; inset: 0; }
 .cat-eye {
     position: absolute; top: 32px; width: 24px; height: 24px;
@@ -428,41 +426,39 @@ $nose-pink: #ffaebc;
 .whisker-pad.right .whisker { left: 0; transform-origin: 0% 50%; &.w1 { transform: rotate(-15deg); } &.w2 { transform: rotate(0deg); } &.w3 { transform: rotate(15deg); } }
 
 /* ========================
-   猫咪 1：坐姿 (Sitting)
+   猫咪 1：坐姿 (Sitting - Left Cat)
    ======================== */
 .cat-avatar[data-pose="sitting"] {
     width: 140px; height: 170px;
     .cat-body { width: 95px; height: 110px; border-radius: 48% 48% 50% 50% / 60% 60% 40% 40%;
         .chest-ruff { position: absolute; top: 25px; left: 50%; transform: translateX(-50%); width: 70px; height: 50px; background: #fff; border-radius: 50%; filter: blur(5px); box-shadow: 0 5px 15px rgba(255,255,255,0.8); z-index: 5; } }
     .cat-head { top: 0; width: 100px; height: 90px; }
-    .cat-paws { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; z-index: 15;
+    .cat-paws.sitting-paws { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; z-index: 15;
         .paw { position: absolute; bottom: 0; width: 28px; height: 20px; background: #fff; border-radius: 15px 15px 8px 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             &.left { left: 20px; } &.right { right: 20px; } } }
 
-    /* --- 坐姿尾巴修改：身后上方可见，水草摇摆 --- */
+    /* --- 坐姿尾巴修改：紧贴左侧 + 水草摇摆 --- */
     .cat-tail {
         position: absolute; 
-        bottom: 45px; /* 提高位置，让它从身体上方露出来 */
-        left: 50%; transform: translateX(-50%);
-        z-index: -1; /* 在身体后面 */
-        transform-origin: 50% 95%; /* 根部固定在底部 */
-        width: 65px; height: 130px; /* 更长更高 */
+        bottom: 20px; 
+        left: -35px; /* 紧贴身体左侧 */
+        z-index: 5;
+        transform-origin: bottom right; 
+        width: 60px; height: 130px;
         
         .tail-fluff {
             width: 100%; height: 100%;
-            /* 颜色更浅的渐变 */
             background: linear-gradient(170deg, $fur-light-grey 20%, $fur-silver 50%, $fur-grey 100%);
-            /* 弯曲的S形形状 */
-            border-radius: 50% 50% 40% 40% / 60% 60% 30% 30%;
+            /* S形水草状 */
+            border-radius: 50% 50% 40% 60% / 60% 60% 30% 40%;
             filter: blur(4px); opacity: 1;
-            /* 新的水草摇摆动画 */
-            animation: tail-sway-waterweed 6s ease-in-out infinite alternate;
+            animation: tail-sway-side-waterweed 5s ease-in-out infinite alternate;
         }
     }
 }
 
 /* ========================
-   猫咪 2：趴姿 (Lying) - NOW WITH PAWS
+   猫咪 2：趴姿 (Lying - Right Cat)
    ======================== */
 .cat-avatar[data-pose="lying"] {
     width: 160px; height: 110px;
@@ -470,14 +466,19 @@ $nose-pink: #ffaebc;
         &::after { content: ''; position: absolute; top: -5px; right: 20%; width: 60%; height: 30px; background: rgba(255,255,255,0.6); border-radius: 50%; filter: blur(5px); } }
     .cat-head { bottom: 30px; right: -10px; left: auto; width: 95px; height: 85px; transform: rotate(5deg); }
 
-    /* --- 新增：趴姿的爪子 (揣手手) --- */
+    /* --- 趴姿爪子 (现在是头部的子元素，定位调整) --- */
     .cat-paws.lying-paws {
-        position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
-        width: 60px; height: 20px; z-index: 25; /* 在头前面 */
+        position: absolute; 
+        bottom: -15px; /* 在下巴底下 */
+        left: 50%; transform: translateX(-50%);
+        width: 55px; height: 25px; 
+        z-index: 25; 
         .paw {
-            position: absolute; bottom: 0; width: 26px; height: 18px;
-            background: $fur-white; border-radius: 12px 12px 8px 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: absolute; bottom: 0; width: 26px; height: 22px;
+            background: $fur-white; 
+            border-radius: 14px 14px 10px 10px; 
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15); 
+            /* 微微内八字，看起来更像揣手 */
             &.left { left: 0; transform: rotate(15deg); }
             &.right { right: 0; transform: rotate(-15deg); }
         }
@@ -492,16 +493,15 @@ $nose-pink: #ffaebc;
 /* ========================
    动画状态
    ======================== */
-/* 新：水草般柔软摇摆 */
-@keyframes tail-sway-waterweed { 
-    0% { transform: rotate(-15deg) translateX(-5px) scaleY(1); } 
-    50% { transform: rotate(0deg) translateX(0px) scaleY(1.02); } /* 中间稍微伸长 */
-    100% { transform: rotate(15deg) translateX(5px) scaleY(1); } 
+/* 侧面水草般柔软摇摆 */
+@keyframes tail-sway-side-waterweed { 
+    0% { transform: rotate(0deg) scaleY(1); border-radius: 50% 50% 40% 60% / 60% 60% 30% 40%; } 
+    100% { transform: rotate(-12deg) scaleY(1.02); border-radius: 60% 40% 50% 50% / 40% 30% 60% 60%; } 
 }
 /* 趴姿尾巴摇摆 */
 @keyframes tail-wag-soft { 0% { transform: rotate(0deg) translateY(0); } 100% { transform: rotate(10deg) translateY(-5px); } }
 
-/* 交互动画 (保持不变) */
+/* 交互动画 */
 .cat-avatar.grooming { .cat-head { animation: head-groom 1s ease-in-out infinite; } .mouth .tongue { transform: translateX(-50%) scale(1); } .mouth .fangs { opacity: 1; } }
 @keyframes head-groom { 0%,100%{transform:translateX(-50%);} 50%{transform:translateX(-50%) translateY(5px) rotate(-3deg);} }
 .cat-avatar.stretching { animation: body-stretch 2.5s ease-in-out; .cat-eye { height: 2px; border-color: transparent; background:#ccc; } .mouth .fangs { opacity: 1; transition-delay: 0.5s; } }

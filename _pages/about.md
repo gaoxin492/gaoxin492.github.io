@@ -271,9 +271,10 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
     <div class="cat-paws"><div class="paw left"></div><div class="paw right"></div></div>
   </div>
 
-  <div class="cat-avatar" data-pose="lying" onclick="interact(this)">
+<div class="cat-avatar" data-pose="lying" onclick="interact(this)">
     <div class="cat-tail"><div class="tail-fluff"></div></div>
     <div class="cat-body"></div>
+    
     <div class="cat-head">
       <div class="ear-container">
         <div class="cat-ear left"><div class="ear-inner"></div></div>
@@ -297,13 +298,14 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
           </div>
         </div>
       </div>
-    </div>
-    <div class="cat-paws lying-paws">
-        <div class="paw left"></div>
-        <div class="paw right"></div>
-    </div>
+      
+      <div class="cat-paws lying-paws">
+          <div class="paw left"></div>
+          <div class="paw right"></div>
+      </div>
+      
   </div>
-</div>
+  </div>
 
 <script>
 function interact(el) {
