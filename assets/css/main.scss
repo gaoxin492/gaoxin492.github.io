@@ -1,17 +1,361 @@
-// ===============================================
-// REALISTIC SILVER SHADED CATS (Bio-mimetic CSS)
-// ===============================================
+---
+---
 
-.cat-park {
+/*
+ *    Minimal Mistakes Jekyll Theme
+ *
+ *  - Michael Rose
+ *  - mademistakes.com
+ *  - https://twitter.com/mmistakes
+ *
+*/
+
+@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "variables";
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
+
+// Custom pastel blue-pink palette (macaron style)
+$pastel-blue: #a9c8ff;
+$pastel-pink: #f7b6d8;
+$accent-blue: #5a8dee;
+$soft-border: rgba(90, 141, 238, 0.18);
+$soft-shadow: 0 10px 30px rgba(90, 141, 238, 0.15);
+
+.paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 2em 0 2em 0;
+    
+
+    .paper-box-image{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+        img {
+            max-width: 400px;
+            box-shadow: 3px 3px 6px #888;
+            object-fit: cover;
+        }
+    }
+    
+    .paper-box-text{
+        max-width: 100%;
+        order: 1;
+    }
+    
+    @include breakpoint($medium) {
+        .paper-box-image{
+            justify-content: left;
+            min-width: 200px;
+            max-width: 40%;
+            order: 1;
+        }
+        
+        .paper-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 60%;
+            order: 2;
+        }
+
+    }
+
+
+}
+
+$scroll_offset : 2em;
+.anchor:before { 
+    content: ''; 
+    display: block; 
+    position: relative; 
+    width: 0; 
+    height: $scroll_offset; 
+    margin-top: -$scroll_offset;
+}
+
+// Publication badge styling with pastel gradient
+.badge {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: absolute;
+    margin-top: .5em;
+    margin-left: -.5em;
+    color: #ffffff;
+    background: linear-gradient(135deg, $pastel-blue, $pastel-pink);
+    font-size: .8em;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+// Scrollable "slide window" for long News lists - now with timeline styling
+.news-window {
+    max-height: 14rem;
+    overflow-y: auto;
+    padding: 0.9rem 1rem 0.9rem 1.4rem;
+    margin: 0.75rem 0 1.5rem 0;
+    position: relative;
+
+    border: 1px solid $soft-border;
+    border-radius: 0.9rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.08),
+        rgba(247, 182, 216, 0.05)
+    );
+
+    // keep layout stable when scrollbars appear (supported in modern browsers)
+    scrollbar-gutter: stable;
+}
+
+.news-window ul,
+.news-window ol {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.news-window > :last-child {
+    margin-bottom: 0;
+}
+
+.news-window::before {
+    content: '';
+    position: absolute;
+    left: 0.55rem;
+    top: 0.85rem;
+    bottom: 0.85rem;
+    width: 2px;
+    background: linear-gradient(to bottom, $pastel-blue, $pastel-pink);
+    opacity: 0.65;
+}
+
+.news-window li {
+    position: relative;
+    padding-left: 1.4rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    font-size: 0.95em;
+}
+
+.news-window li::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 2px solid $pastel-blue;
+    box-shadow: 0 0 0 3px rgba(169, 200, 255, 0.25);
+}
+
+.news-window li:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.6rem;
+}
+
+.news-window em {
+    font-weight: 600;
+    color: $accent-blue;
+}
+
+// Hero card at the top of About page
+.hero-card {
+    padding: 1.6rem 1.8rem;
+    margin: 0.5rem 0 1.8rem 0;
+    border-radius: 1.1rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.22),
+        rgba(247, 182, 216, 0.18)
+    );
+    border: 1px solid $soft-border;
+    box-shadow: $soft-shadow;
+}
+
+.hero-card strong:first-child {
+    font-size: 1.45rem;
+}
+
+.hero-card em {
+    color: $accent-blue;
+}
+
+.hero-meta {
+    margin: 0.9rem 0 0.6rem 0;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.28rem 0.75rem;
+    margin: 0 0.4rem 0.4rem 0;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid rgba(90, 141, 238, 0.28);
+    color: #555;
+}
+
+// Section heading styling with pastel accent
+.page__content h1,
+.page__content h2 {
+    position: relative;
+    padding-left: 0.9rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+// Left accent bar only for level-2 headings
+.page__content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0.95em;
+    border-radius: 999px;
+    background: $accent-blue;
+}
+
+.page__content h1::after,
+.page__content h2::after {
+    content: '';
+    display: block;
+    margin-top: 0.3rem;
+    width: 4rem;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, $pastel-blue, $pastel-pink);
+    opacity: 0.9;
+}
+
+// Highlight style for level-1 headings instead of a left bar
+.page__content h1 {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.18),
+        rgba(247, 182, 216, 0.18)
+    );
+}
+
+// Remove underline bar for level-1 headings (keep for h2 only)
+.page__content h1::after {
+    display: none;
+}
+
+// Publication card hover enhancement
+.paper-box {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem 1.6rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+}
+
+.paper-box:hover {
+    transform: translateY(-3px);
+    border-color: $soft-border;
+    box-shadow: $soft-shadow;
+}
+
+.paper-box-image img {
+    border-radius: 0.8rem;
+}
+
+// Pastel link styling within content (do not affect nav)
+.page__content a {
+    color: $accent-blue;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(90, 141, 238, 0.3);
+}
+
+.page__content a:hover {
+    color: darken($accent-blue, 8%);
+    border-bottom-color: rgba(247, 182, 216, 0.75);
+}
+
+// Layout for learning material pages (PDF notes)
+.material-layout {
+    max-width: 960px;
+    margin: 1.5rem auto 0.75rem;
+    padding: 1.25rem 1.6rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 30px rgba(90, 141, 238, 0.06);
+}
+
+.material-layout h1 {
+    margin-top: 0;
+}
+
+.material-viewer {
+    max-width: 1100px;
+    margin: 0.25rem auto 2rem;
+    text-align: center;
+}
+
+.material-viewer-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   REALISTIC SILVER SHADED CATS (FINAL FIXED VERSION)
+   Add this to the VERY END of main.scss
+   ========================================================================== */
+
+   .cat-park {
     position: fixed;
     left: 2rem;
     bottom: 1rem;
     z-index: 999;
     display: flex;
     align-items: flex-end;
-    gap: -15px; // 稍微重叠一点点，显得亲密
-    pointer-events: none; // 让鼠标能穿透空白区域
-
+    gap: -20px; /* 让两只猫稍微叠在一起，更有互动感 */
+    pointer-events: none; /* 让鼠标可以穿透空白区域点击背后的网页 */
+    
     @media (max-width: 768px) {
         left: 50%;
         transform: translateX(-50%) scale(0.75);
@@ -19,51 +363,50 @@
     }
 }
 
-// --- 银渐层调色板 ---
-$fur-base: #fdfdfd;       // 亮白底色
-$fur-shade: #e3e6eb;      // 银色阴影
-$fur-dark: #b8c2cc;       // 深灰毛尖
-$nose-pink: #ffadbc;
-$eye-green: #9cdab3;      // 银渐层特有的绿眼
-$pupil-black: #1a1a1a;
-$line-grey: #6a6a6a;      // 嘴巴线条
+/* --- 银渐层专用色盘 --- */
+$fur-base: #ffffff;
+$fur-silver: #e8ecf2;
+$fur-shadow: #c0c8d5;
+$eye-green: #90d4ac;
+$eye-liner: #4a4a4a;
+$nose-pink: #ffaebc;
 
 .cat-avatar {
     position: relative;
-    pointer-events: auto;
+    pointer-events: auto; /* 猫可以被点击 */
     cursor: grab;
-    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     
+    &:hover { transform: translateY(-5px); }
     &:active { cursor: grabbing; transform: scale(0.95); }
-    // 基础呼吸动画
-    animation: breathe-idle 4s ease-in-out infinite;
 }
 
-// ========================
-// 猫咪 1：坐姿 (Sitting)
-// ========================
+/* ========================
+   猫咪 1：坐姿 (Sitting)
+   ======================== */
 .cat-avatar[data-pose="sitting"] {
     width: 140px; height: 170px;
-    z-index: 5;
+    z-index: 10;
 
     .cat-body {
         position: absolute; bottom: 0; left: 50%;
         transform: translateX(-50%);
-        width: 90px; height: 110px;
-        background: radial-gradient(circle at 30% 20%, $fur-base, $fur-shade);
-        // 关键：非对称圆角，模拟梨形身材
-        border-radius: 45% 45% 50% 50% / 60% 60% 40% 40%;
-        box-shadow: inset -10px -5px 20px rgba(0,0,0,0.05);
+        width: 95px; height: 110px;
+        /* 梨形身材，不再是圆形 */
+        background: radial-gradient(circle at 30% 20%, $fur-base, $fur-silver);
+        border-radius: 48% 48% 50% 50% / 60% 60% 40% 40%;
+        box-shadow: inset -10px -5px 20px rgba(0,0,0,0.08);
         
-        .chest-fur {
-            position: absolute; top: 20px; left: 50%;
+        /* 胸毛 (围脖) */
+        .chest-ruff {
+            position: absolute; top: 25px; left: 50%;
             transform: translateX(-50%);
-            width: 70px; height: 60px;
-            background: $fur-base;
+            width: 70px; height: 50px;
+            background: #fff;
             border-radius: 50%;
-            filter: blur(6px); // 蓬松感
-            box-shadow: 0 0 10px $fur-base;
-            z-index: 10;
+            filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.8);
+            z-index: 5;
         }
     }
 
@@ -71,90 +414,91 @@ $line-grey: #6a6a6a;      // 嘴巴线条
         position: absolute; top: 0; left: 50%;
         transform: translateX(-50%);
         width: 100px; height: 90px;
+        background: radial-gradient(circle at 40% 40%, #fff, $fur-silver);
+        border-radius: 48%; 
         z-index: 20;
-        background: radial-gradient(circle at 50% 40%, $fur-base 60%, $fur-shade 100%);
-        border-radius: 48%; // 稍微扁一点的圆
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     .cat-paws {
         position: absolute; bottom: 0; left: 50%;
         transform: translateX(-50%);
-        width: 100px; height: 25px;
+        width: 100px;
         z-index: 15;
         .paw {
             position: absolute; bottom: 0;
-            width: 28px; height: 22px;
-            background: $fur-base;
-            border-radius: 15px 15px 10px 10px;
-            box-shadow: 0 3px 5px rgba(0,0,0,0.15);
-            &.left { left: 18px; }
-            &.right { right: 18px; }
+            width: 28px; height: 20px;
+            background: #fff;
+            border-radius: 15px 15px 8px 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            &.left { left: 20px; }
+            &.right { right: 20px; }
         }
     }
 
+    /* 大鸡毛掸子尾巴 */
     .cat-tail {
         position: absolute; bottom: 10px; right: -25px;
         z-index: 1;
         transform-origin: bottom left;
-        // 鸡毛掸子效果：通过 blur 和 spread shadow 实现
         .tail-fluff {
-            width: 50px; height: 110px;
-            background: transparent;
+            width: 55px; height: 120px;
+            background: $fur-shadow;
             border-radius: 50px;
-            box-shadow: 15px 0 0 $fur-dark;
-            filter: blur(8px); // 极度蓬松
-            opacity: 0.8;
-            animation: tail-sway-sit 5s ease-in-out infinite;
+            filter: blur(8px); /* 关键：高斯模糊模拟长毛 */
+            opacity: 0.9;
+            box-shadow: inset 10px 10px 20px #fff;
+            animation: tail-sway 5s ease-in-out infinite;
         }
     }
 }
 
-// ========================
-// 猫咪 2：趴姿 (Lying)
-// ========================
+/* ========================
+   猫咪 2：趴姿 (Lying/Loaf)
+   ======================== */
 .cat-avatar[data-pose="lying"] {
     width: 160px; height: 110px;
-    z-index: 4;
+    z-index: 5;
 
     .cat-body {
         position: absolute; bottom: 0; left: 10px;
         width: 130px; height: 75px;
-        background: radial-gradient(ellipse at 50% 20%, $fur-base, $fur-shade);
-        // 关键：豆子形状
+        /* 豆子形状 */
+        background: radial-gradient(ellipse at 50% 20%, $fur-base, $fur-silver);
         border-radius: 40% 50% 45% 45% / 50% 70% 40% 40%;
-        box-shadow: inset -5px -10px 15px rgba(0,0,0,0.08);
-
-        .back-fur {
-            position: absolute; top: -5px; left: 40%;
-            width: 60px; height: 20px;
-            background: rgba(255,255,255,0.6);
-            filter: blur(5px);
+        box-shadow: inset -5px -10px 20px rgba(0,0,0,0.1);
+        
+        /* 背部蓬松的毛 */
+        &::after {
+            content: ''; position: absolute; top: -5px; left: 20%;
+            width: 80%; height: 30px;
+            background: rgba(255,255,255,0.5);
             border-radius: 50%;
+            filter: blur(5px);
         }
     }
 
     .cat-head {
-        position: absolute; bottom: 30px; left: -15px;
+        position: absolute; bottom: 30px; left: -10px;
         width: 95px; height: 85px;
         background: #fff;
         border-radius: 46%;
+        transform: rotate(-5deg);
         z-index: 20;
-        transform: rotate(-5deg); // 稍微歪头
-        box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 2px 5px 15px rgba(0,0,0,0.1);
     }
 
     .cat-paws {
+        /* 趴着只露一点爪尖 */
         .paw-tip {
             position: absolute; bottom: 0;
-            width: 24px; height: 14px;
-            background: $fur-shade;
-            border-radius: 12px;
-            opacity: 0.8;
-            z-index: 5;
+            width: 20px; height: 12px;
+            background: $fur-silver;
+            border-radius: 10px;
             filter: blur(1px);
-            &.left { left: 40px; }
-            &.right { left: 70px; }
+            z-index: 6;
+            &.left { left: 45px; }
+            &.right { left: 75px; }
         }
     }
 
@@ -162,51 +506,41 @@ $line-grey: #6a6a6a;      // 嘴巴线条
         position: absolute; bottom: 0; right: -30px;
         transform-origin: left center;
         .tail-fluff {
-            width: 100px; height: 40px;
-            background: $fur-dark;
-            border-radius: 50px;
-            filter: blur(7px); // 蓬松
-            animation: tail-wag-lie 6s ease-in-out infinite;
+            width: 110px; height: 45px;
+            background: $fur-shadow;
+            border-radius: 40px;
+            filter: blur(7px);
+            animation: tail-wag-lazy 6s ease-in-out infinite;
         }
     }
 }
 
-// ========================
-// 共同解剖结构 (Anatomy)
-// ========================
+/* ========================
+   共同特征 (解剖学修正)
+   ======================== */
 
-// 1. 耳朵：柔和倒三角，分开
-.ear-container {
-    position: absolute; top: -12px; width: 100%; height: 40px;
-}
+/* 1. 耳朵：倒三角，稍微外撇 */
+.ear-container { position: absolute; top: -10px; width: 100%; height: 40px; }
 .cat-ear {
     position: absolute; top: 0;
-    width: 32px; height: 38px;
-    background: $fur-shade;
-    // 关键：模拟真实耳朵轮廓
-    border-radius: 20% 80% 0 0; 
+    width: 30px; height: 36px;
+    background: $fur-silver;
+    border-radius: 20% 80% 0 0; /* 模拟真实耳廓弧度 */
     overflow: hidden;
     
-    &.left { left: 4px; transform: rotate(-30deg); }
-    &.right { right: 4px; transform: scaleX(-1) rotate(-30deg); }
+    &.left { left: 5px; transform: rotate(-30deg); }
+    &.right { right: 5px; transform: scaleX(-1) rotate(-30deg); }
 
     .ear-inner {
-        position: absolute; bottom: 0; left: 10%;
+        position: absolute; bottom: 0; left: 20%;
         width: 60%; height: 80%;
-        background: #f0d5dd; // 浅粉色耳内
+        background: #ffe0e9;
         border-radius: 50% 50% 0 0;
         opacity: 0.8;
-        filter: blur(1px);
-    }
-    .ear-tuft { // 耳毛
-        position: absolute; bottom: 0; left: 0;
-        width: 100%; height: 15px;
-        background: #fff;
-        filter: blur(2px);
     }
 }
 
-// 2. 脸颊毛发 (Long hair look)
+/* 2. 脸颊毛 (长毛猫特征) */
 .cheek-fluff {
     position: absolute; bottom: 5px;
     width: 25px; height: 25px;
@@ -218,45 +552,42 @@ $line-grey: #6a6a6a;      // 嘴巴线条
     &.right { right: -8px; }
 }
 
-// 3. 眼睛：分开，有神
+/* 3. 眼睛：有神，分开 */
 .cat-face { position: absolute; inset: 0; }
 .cat-eye {
     position: absolute; top: 32px;
     width: 24px; height: 24px;
-    background: $eye-green;
+    background: linear-gradient(135deg, lighten($eye-green, 10%), darken($eye-green, 10%));
     border-radius: 50%;
-    border: 1px solid #4a4a4a; // 眼线
+    border: 1.5px solid $eye-liner; /* 眼线 */
     overflow: hidden;
     z-index: 25;
-    background: linear-gradient(135deg, lighten($eye-green, 15%), darken($eye-green, 10%));
-
-    &.left { left: 14px; }  // 眼睛分开
-    &.right { right: 14px; }
+    
+    &.left { left: 16px; }
+    &.right { right: 16px; }
 
     .pupil {
         position: absolute; top: 50%; left: 50%;
         transform: translate(-50%, -50%);
-        width: 7px; height: 18px;
-        background: $pupil-black;
+        width: 7px; height: 16px;
+        background: #111;
         border-radius: 50%;
-        transition: transform 0.1s;
     }
     .shine {
-        position: absolute; top: 6px; right: 6px;
+        position: absolute; top: 5px; right: 5px;
         width: 6px; height: 6px;
         background: #fff;
         border-radius: 50%;
     }
 }
 
-// 4. 口鼻部 & 胡须 (修正胡须位置)
+/* 4. 口鼻部与胡须 (关键修正) */
 .cat-muzzle {
-    position: absolute; top: 46px; left: 50%;
+    position: absolute; top: 48px; left: 50%;
     transform: translateX(-50%);
     width: 40px; height: 30px;
-    z-index: 25;
+    z-index: 26;
 }
-
 .nose {
     position: absolute; top: 0; left: 50%;
     transform: translateX(-50%);
@@ -264,134 +595,82 @@ $line-grey: #6a6a6a;      // 嘴巴线条
     background: $nose-pink;
     border-radius: 4px 4px 6px 6px;
 }
-
 .mouth {
-    position: absolute; top: 7px; width: 100%; height: 10px;
+    position: absolute; top: 7px; left: 50%;
+    transform: translateX(-50%);
+    width: 20px; height: 10px;
+    
     .lip {
         position: absolute; top: 0;
         width: 10px; height: 8px;
-        border: 1.5px solid $line-grey;
+        border: 1.5px solid #888;
         border-top: none;
         &.left { right: 50%; border-right: none; border-radius: 0 0 0 8px; }
         &.right { left: 50%; border-left: none; border-radius: 0 0 8px 0; }
     }
-    // 粉色小舌头
+    
     .tongue {
         position: absolute; top: 2px; left: 50%;
         transform: translateX(-50%) scale(0);
-        width: 10px; height: 12px;
+        width: 12px; height: 14px;
         background: #ff8fa3;
         border-radius: 0 0 10px 10px;
         transition: transform 0.2s;
     }
 }
 
+/* 胡须肉垫 (胡须生长点) */
 .whisker-pad {
     position: absolute; top: 5px;
     width: 16px; height: 14px;
-    background: rgba(255,255,255,0.6); // 微微可见的肉垫
+    background: rgba(255,255,255,0.5);
     border-radius: 50%;
-    
-    &.left { left: 0; }
-    &.right { right: 0; }
+    &.left { left: -2px; }
+    &.right { right: -2px; }
 
     .whisker {
         position: absolute; top: 50%;
         height: 1px; width: 45px;
-        background: #a0a0a0;
-        transform-origin: 0% 50%; // 从肉垫根部长出
-        
+        background: #bbb;
+        transform-origin: 0% 50%;
         &.w1 { transform: rotate(-10deg); top: -3px; }
-        &.w2 { transform: rotate(0deg); width: 48px; }
+        &.w2 { transform: rotate(0deg); }
         &.w3 { transform: rotate(10deg); top: 3px; }
     }
-    
-    &.right .whisker {
-        right: 0; transform-origin: 100% 50%; // 右侧反向
-    }
+    &.right .whisker { right: 0; transform-origin: 100% 50%; }
 }
 
-// ========================
-// 动画与行为 (Behavior)
-// ========================
+/* ========================
+   动画状态 (Animations)
+   ======================== */
 
-// 1. 呼吸 (Breathing)
-@keyframes breathe-idle {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-}
+/* 尾巴摇摆 */
+@keyframes tail-sway { 0%,100%{transform:rotate(0deg);} 50%{transform:rotate(10deg);} }
+@keyframes tail-wag-lazy { 0%,100%{transform:rotate(0deg);} 50%{transform:rotate(5deg) translateY(-5px);} }
 
-// 2. 尾巴摇摆 (Tail)
-@keyframes tail-sway-sit {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(8deg); }
-}
-@keyframes tail-wag-lie {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(5deg) translateY(-3px); }
-}
-
-// 3. 眨眼 (Blink)
-.cat-avatar.blinking {
-    .cat-eye {
-        height: 2px;
-        top: 42px; // 闭眼位置
-        background: #ccc;
-        border-color: transparent;
-        .pupil, .shine { opacity: 0; }
-    }
-}
-
-// 4. 洗脸/舔毛 (Grooming)
+/* 舔毛 */
 .cat-avatar.grooming {
-    .cat-head {
-        animation: head-bob 1s ease-in-out infinite;
-    }
-    .mouth .tongue {
-        transform: translateX(-50%) scale(1); // 舌头伸出来
-        animation: lick-motion 0.5s infinite;
-    }
+    .cat-head { animation: head-groom 1s ease-in-out infinite; }
+    .mouth .tongue { transform: translateX(-50%) scale(1); } /* 吐舌头 */
 }
-@keyframes head-bob {
-    0%, 100% { transform: translateX(-50%) translateY(0) rotate(0); }
-    50% { transform: translateX(-50%) translateY(10px) rotate(-3deg); }
-}
-@keyframes lick-motion {
-    0%, 100% { height: 8px; }
-    50% { height: 14px; }
-}
+@keyframes head-groom { 0%,100%{transform:translateX(-50%);} 50%{transform:translateX(-50%) translateY(5px) rotate(-3deg);} }
 
-// 5. 伸懒腰 (Stretching)
+/* 伸懒腰 */
 .cat-avatar.stretching {
-    animation: body-stretch 3s ease-in-out;
-    .cat-eye { height: 2px; } // 伸懒腰时闭眼享受
+    animation: body-stretch 2.5s ease-in-out;
+    .cat-eye { height: 2px; border-color: transparent; background:#ccc; } /* 闭眼 */
 }
-@keyframes body-stretch {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scaleX(1.15) scaleY(0.9) skewX(-5deg); }
+@keyframes body-stretch { 
+    0%,100%{transform:scale(1);} 
+    50%{transform:scaleX(1.15) scaleY(0.9) skewX(-5deg);} 
 }
 
-// 6. 睡觉 (Sleeping)
+/* 睡觉 */
 .cat-avatar.sleeping {
-    .cat-eye {
-        height: 2px; top: 42px; background: #ccc; border-color: transparent;
-        .pupil, .shine { opacity: 0; }
-    }
-    .cat-body {
-        animation: deep-breathe 3s ease-in-out infinite; // 呼吸变深
-    }
+    .cat-eye { height: 2px; top: 40px; background:#ccc; border-color:transparent; .pupil,.shine{display:none;} }
+    .cat-body { animation: breathe 3s ease-in-out infinite; }
 }
-@keyframes deep-breathe {
-    0%, 100% { transform: translateX(-50%) scale(1); }
-    50% { transform: translateX(-50%) scale(1.04); }
-}
+@keyframes breathe { 0%,100%{transform:translateX(-50%) scale(1);} 50%{transform:translateX(-50%) scale(1.03);} }
 
-// 7. 交互震动 (Purring)
-.cat-avatar.purring {
-    animation: vibe 0.1s infinite;
-}
-@keyframes vibe {
-    0% { transform: translate(0,0); }
-    50% { transform: translate(1px, 1px); }
-    100% { transform: translate(-1px, -1px); }
-}
+/* 眨眼 */
+.cat-avatar.blinking .cat-eye { transform: scaleY(0.1); }
