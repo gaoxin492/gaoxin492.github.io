@@ -235,56 +235,53 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 </div>
 
 
-
-
 <div class="cat-park">
   
   <div class="cat-avatar silver-cat" data-pose="sitting" onclick="petCat(this)">
     <div class="cat-tail">
-      <div class="tail-fur"></div>
+      <div class="tail-core"></div>
+      <div class="tail-fluff-layer"></div>
     </div>
     <div class="cat-body">
-      <div class="fur-texture"></div>
-      <div class="chest-fluff"></div>
+      <div class="chest-fur"></div>
+      <div class="body-fur-layer"></div>
     </div>
     <div class="cat-paws">
-      <div class="paw left"><div class="paw-pad"></div></div>
-      <div class="paw right"><div class="paw-pad"></div></div>
+      <div class="paw left"></div>
+      <div class="paw right"></div>
     </div>
     <div class="cat-head">
-      <div class="head-fur-1"></div>
-      <div class="head-fur-2"></div>
-      <div class="cat-ear left"><div class="ear-inner"></div><div class="ear-fur"></div></div>
-      <div class="cat-ear right"><div class="ear-inner"></div><div class="ear-fur"></div></div>
-      <div class="face-marking left"></div>
-      <div class="face-marking right"></div>
-      <div class="cheek-fluff left"></div>
-      <div class="cheek-fluff right"></div>
-      <div class="cat-face">
+      <div class="ear-container">
+        <div class="cat-ear left"><div class="ear-fluff"></div></div>
+        <div class="cat-ear right"><div class="ear-fluff"></div></div>
+      </div>
+      <div class="face-base">
         <div class="cat-eye left">
-          <div class="eye-white"></div>
-          <div class="cat-pupil"></div>
-          <div class="eye-shine"></div>
+          <div class="pupil"></div>
+          <div class="shine"></div>
         </div>
         <div class="cat-eye right">
-          <div class="eye-white"></div>
-          <div class="cat-pupil"></div>
-          <div class="eye-shine"></div>
+          <div class="pupil"></div>
+          <div class="shine"></div>
         </div>
-        <div class="cat-nose"></div>
-        <div class="cat-mouth">
-          <div class="mouth-line left"></div>
-          <div class="mouth-line right"></div>
-        </div>
-        <div class="whisker-group left">
-          <div class="whisker w1"></div>
-          <div class="whisker w2"></div>
-          <div class="whisker w3"></div>
-        </div>
-        <div class="whisker-group right">
-          <div class="whisker w1"></div>
-          <div class="whisker w2"></div>
-          <div class="whisker w3"></div>
+        <div class="cat-muzzle">
+          <div class="cat-nose"></div>
+          <div class="cat-mouth">
+            <div class="lip left"></div>
+            <div class="lip right"></div>
+          </div>
+          <div class="whiskers-hub left">
+            <div class="whisker w1"></div>
+            <div class="whisker w2"></div>
+            <div class="whisker w3"></div>
+            <div class="whisker w4"></div>
+          </div>
+          <div class="whiskers-hub right">
+            <div class="whisker w1"></div>
+            <div class="whisker w2"></div>
+            <div class="whisker w3"></div>
+            <div class="whisker w4"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -292,141 +289,93 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 
   <div class="cat-avatar silver-cat" data-pose="lying" onclick="petCat(this)">
     <div class="cat-tail">
-      <div class="tail-fur"></div>
+      <div class="tail-core"></div>
     </div>
     <div class="cat-body">
-      <div class="body-stripe"></div>
-      <div class="fur-layer-1"></div>
-      <div class="fur-layer-2"></div>
-      <div class="belly-spot"></div>
-    </div>
-    <div class="cat-paws">
-      <div class="paw left"></div>
-      <div class="paw right"></div>
+      <div class="back-fur"></div>
     </div>
     <div class="cat-head">
-      <div class="head-fur-1"></div>
-      <div class="cat-ear left"><div class="ear-inner"></div></div>
-      <div class="cat-ear right"><div class="ear-inner"></div></div>
-      <div class="face-marking left"></div>
-      <div class="face-marking right"></div>
-      <div class="cheek-fluff left"></div>
-      <div class="cheek-fluff right"></div>
-      <div class="cat-face">
+      <div class="ear-container">
+        <div class="cat-ear left"><div class="ear-fluff"></div></div>
+        <div class="cat-ear right"><div class="ear-fluff"></div></div>
+      </div>
+      <div class="face-base">
         <div class="cat-eye left">
-          <div class="eye-white"></div>
-          <div class="cat-pupil"></div>
-          <div class="eye-shine"></div>
+          <div class="pupil"></div>
+          <div class="shine"></div>
         </div>
         <div class="cat-eye right">
-          <div class="eye-white"></div>
-          <div class="cat-pupil"></div>
-          <div class="eye-shine"></div>
+          <div class="pupil"></div>
+          <div class="shine"></div>
         </div>
-        <div class="cat-nose"></div>
-        <div class="cat-mouth">
-          <div class="mouth-line left"></div>
-          <div class="mouth-line right"></div>
-        </div>
-        <div class="whisker-group left">
-          <div class="whisker w1"></div>
-          <div class="whisker w2"></div>
-        </div>
-        <div class="whisker-group right">
-          <div class="whisker w1"></div>
-          <div class="whisker w2"></div>
+        <div class="cat-muzzle">
+          <div class="cat-nose"></div>
+          <div class="cat-mouth">
+            <div class="lip left"></div>
+            <div class="lip right"></div>
+          </div>
+          <div class="whiskers-hub left">
+            <div class="whisker w1"></div>
+            <div class="whisker w2"></div>
+            <div class="whisker w3"></div>
+          </div>
+          <div class="whiskers-hub right">
+            <div class="whisker w1"></div>
+            <div class="whisker w2"></div>
+            <div class="whisker w3"></div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="cat-paws">
+      <div class="paw-fold left"></div>
+      <div class="paw-fold right"></div>
+    </div>
   </div>
-
 </div>
 
 <script>
-// Cat Interaction Logic
-function petCat(element) {
-  if (element.classList.contains('petted')) return;
-  element.classList.add('petted');
-  
-  // Make the other cat look at the petted cat
-  const otherCat = document.querySelector(`.cat-avatar:not([data-pose="${element.dataset.pose}"])`);
-  if(otherCat) otherCat.classList.add('curious');
-
-  setTimeout(() => {
-    element.classList.remove('petted');
-    if(otherCat) otherCat.classList.remove('curious');
-  }, 1500);
+function petCat(el) {
+  if(el.classList.contains('purring')) return;
+  el.classList.add('purring');
+  setTimeout(() => el.classList.remove('purring'), 2500);
 }
 
 (function() {
   const cats = document.querySelectorAll('.cat-avatar');
-  const park = document.querySelector('.cat-park');
-
-  // 1. Mouse Tracking (Eyes)
+  
+  // Eye Tracking
   document.addEventListener('mousemove', (e) => {
     cats.forEach(cat => {
-      if (cat.classList.contains('sleeping')) return; // Don't track if asleep
-
-      const eyes = cat.querySelectorAll('.cat-pupil');
+      const pupils = cat.querySelectorAll('.pupil');
       const rect = cat.getBoundingClientRect();
-      const catCenterX = rect.left + rect.width / 2;
-      const catCenterY = rect.top + rect.height / 2;
+      const cx = rect.left + rect.width/2;
+      const cy = rect.top + rect.height/2;
+      
+      // Limit eye movement radius
+      const dx = (e.clientX - cx) / window.innerWidth;
+      const dy = (e.clientY - cy) / window.innerHeight;
+      
+      // Clamp values so eyes don't roll back into head
+      const x = Math.max(-10, Math.min(10, dx * 30)); 
+      const y = Math.max(-5, Math.min(8, dy * 20));
 
-      // Calculate angle and distance
-      const angle = Math.atan2(e.clientY - catCenterY, e.clientX - catCenterX);
-      const dist = Math.min(Math.hypot(e.clientX - catCenterX, e.clientY - catCenterY), 200);
-      const moveDist = dist / 40; // Sensitivity
-
-      const x = Math.cos(angle) * moveDist;
-      const y = Math.sin(angle) * moveDist * 0.8; // Flatten Y for perspective
-
-      eyes.forEach(pupil => {
-        pupil.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+      pupils.forEach(p => {
+        p.style.transform = `translate(${x}px, ${y}px)`;
       });
     });
   });
 
-  // 2. Random Behaviors System
-  cats.forEach(cat => {
-    const states = ['sleeping', 'happy', 'stretch', 'shake-tail', 'idle'];
-    
-    // Set initial random delay so they don't sync
-    let nextActionTime = Math.random() * 5000 + 2000;
-
-    const performAction = () => {
-      // Clear previous states (except pose data)
-      states.forEach(s => cat.classList.remove(s));
-      
-      // 20% chance to sleep, 30% chance to do action, 50% idle
-      const roll = Math.random();
-      let activeTime = 2000;
-
-      if (roll < 0.15) {
-        cat.classList.add('sleeping');
-        activeTime = 8000; // Sleep longer
-      } else if (roll < 0.25) {
-        cat.classList.add('stretch');
-        activeTime = 2500;
-      } else if (roll < 0.40) {
-        cat.classList.add('happy');
-        activeTime = 2000;
-      } else if (roll < 0.50) {
-        cat.classList.add('shake-tail');
-        activeTime = 2000;
-      }
-      
-      // Blink logic handled in CSS/Animation, but we can force a double blink here
-      if (roll > 0.8) {
-        const eyes = cat.querySelectorAll('.cat-eye');
-        eyes.forEach(eye => eye.classList.add('blinking'));
-        setTimeout(() => eyes.forEach(eye => eye.classList.remove('blinking')), 200);
-      }
-
-      // Schedule next action
-      setTimeout(performAction, activeTime + Math.random() * 4000);
-    };
-
-    setTimeout(performAction, nextActionTime);
+  // Random Idle Animations (Morphing body shape)
+  cats.forEach((cat, idx) => {
+    setInterval(() => {
+        if(Math.random() > 0.6) {
+            const poses = ['stretch', 'wiggle', 'sleepy'];
+            const pose = poses[Math.floor(Math.random() * poses.length)];
+            cat.classList.add(pose);
+            setTimeout(() => cat.classList.remove(pose), 3000);
+        }
+    }, 5000 + (idx * 2000));
   });
 })();
 </script>
