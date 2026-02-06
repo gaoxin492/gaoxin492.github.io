@@ -17,8 +17,24 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+<div class="hero-card" markdown="1">
 
-I am currently a third-year Master's student in Applied Mathematics at Fudan University and an **incoming PhD student in Computer Science at a US top-10 university**. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models, and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+**Xin Gao**  
+*Third-year Master's student in Applied Mathematics at Fudan University*  
+*Incoming PhD student in Computer Science at a US top‑10 university*  
+
+My research focuses on **generative machine learning**, with particular emphasis on **probabilistic distribution modeling**, **generative models**, and **multimodal representation learning**. I am especially interested in **recursive and looped architectures**, such as diffusion language models, tiny recursive models, and looped transformers for complex reasoning tasks.
+
+<div class="hero-meta">
+  <span class="hero-badge">Generative Models</span>
+  <span class="hero-badge">Multimodal Learning</span>
+  <span class="hero-badge">Diffusion & Looped Architectures</span>
+</div>
+
+If you'd like to learn more about my work, chat, or explore potential collaborations, feel free to reach out.  
+This is my [Google Scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+
+</div>
 
 
 # 🔥 News
@@ -172,7 +188,7 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 - 2020.12 Shanghai Scholarship
 
 # 👨‍💼 Academic Service
-- Conference Reviewer: Neurips 2025, ICCV 2025, ICLR 2026
+- Conference Reviewer: Neurips 2025, ICCV 2025, ICLR 2026, ICML 2026
 
 # 📖 Educations
 - *2023.09 - 2026.06 (now)*, Master of Applied Mathematics, Fudan University, Shanghai, China.

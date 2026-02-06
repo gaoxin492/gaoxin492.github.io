@@ -40,6 +40,13 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+// Custom pastel blue-pink palette (macaron style)
+$pastel-blue: #a9c8ff;
+$pastel-pink: #f7b6d8;
+$accent-blue: #5a8dee;
+$soft-border: rgba(90, 141, 238, 0.18);
+$soft-shadow: 0 10px 30px rgba(90, 141, 238, 0.15);
+
 .paper-box {
     display: flex;
     justify-content: left;
@@ -97,27 +104,35 @@ h1:before, .anchor:before {
     margin-top: -$scroll_offset;
 }
 
+// Publication badge styling with pastel gradient
 .badge {
     padding-left: 1rem;
     padding-right: 1rem;
     position: absolute;
     margin-top: .5em;
     margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
+    color: #ffffff;
+    background: linear-gradient(135deg, $pastel-blue, $pastel-pink);
     font-size: .8em;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-// Scrollable "slide window" for long News lists
+// Scrollable "slide window" for long News lists - now with timeline styling
 .news-window {
     max-height: 14rem;
     overflow-y: auto;
-    padding: 0.75rem 0.75rem 0.75rem 1rem;
-    margin: 0.75rem 0 1.25rem 0;
+    padding: 0.9rem 1rem 0.9rem 1.4rem;
+    margin: 0.75rem 0 1.5rem 0;
+    position: relative;
 
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 0.6rem;
-    background: rgba(0, 0, 0, 0.015);
+    border: 1px solid $soft-border;
+    border-radius: 0.9rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.08),
+        rgba(247, 182, 216, 0.05)
+    );
 
     // keep layout stable when scrollbars appear (supported in modern browsers)
     scrollbar-gutter: stable;
@@ -125,9 +140,145 @@ h1:before, .anchor:before {
 
 .news-window ul,
 .news-window ol {
+    list-style: none;
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .news-window > :last-child {
     margin-bottom: 0;
+}
+
+.news-window::before {
+    content: '';
+    position: absolute;
+    left: 0.55rem;
+    top: 0.85rem;
+    bottom: 0.85rem;
+    width: 2px;
+    background: linear-gradient(to bottom, $pastel-blue, $pastel-pink);
+    opacity: 0.65;
+}
+
+.news-window li {
+    position: relative;
+    padding-left: 1.4rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    font-size: 0.95em;
+}
+
+.news-window li::before {
+    content: '';
+    position: absolute;
+    left: 0.3rem;
+    top: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 2px solid $pastel-blue;
+    box-shadow: 0 0 0 3px rgba(169, 200, 255, 0.25);
+}
+
+.news-window li:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.6rem;
+}
+
+.news-window em {
+    font-weight: 600;
+    color: $accent-blue;
+}
+
+// Hero card at the top of About page
+.hero-card {
+    padding: 1.6rem 1.8rem;
+    margin: 0.5rem 0 1.8rem 0;
+    border-radius: 1.1rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.22),
+        rgba(247, 182, 216, 0.18)
+    );
+    border: 1px solid $soft-border;
+    box-shadow: $soft-shadow;
+}
+
+.hero-card strong:first-child {
+    font-size: 1.45rem;
+}
+
+.hero-card em {
+    color: $accent-blue;
+}
+
+.hero-meta {
+    margin: 0.9rem 0 0.6rem 0;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.28rem 0.75rem;
+    margin: 0 0.4rem 0.4rem 0;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 1px solid rgba(90, 141, 238, 0.28);
+    color: #555;
+}
+
+// Section heading styling with pastel accent
+.page__content h1,
+.page__content h2 {
+    position: relative;
+    padding-left: 0.85rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid $accent-blue;
+}
+
+.page__content h1::after,
+.page__content h2::after {
+    content: '';
+    display: block;
+    margin-top: 0.3rem;
+    width: 4rem;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, $pastel-blue, $pastel-pink);
+    opacity: 0.9;
+}
+
+// Publication card hover enhancement
+.paper-box {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem 1.6rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out;
+}
+
+.paper-box:hover {
+    transform: translateY(-3px);
+    border-color: $soft-border;
+    box-shadow: $soft-shadow;
+}
+
+.paper-box-image img {
+    border-radius: 0.8rem;
+}
+
+// Pastel link styling within content (do not affect nav)
+.page__content a {
+    color: $accent-blue;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(90, 141, 238, 0.3);
+}
+
+.page__content a:hover {
+    color: darken($accent-blue, 8%);
+    border-bottom-color: rgba(247, 182, 216, 0.75);
 }
