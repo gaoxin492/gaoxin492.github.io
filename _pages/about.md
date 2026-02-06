@@ -267,23 +267,20 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
           <div class="shine"></div>
         </div>
         
-        <div class="cat-muzzle">
-          <div class="nose"></div>
-          <div class="mouth">
-             <div class="lip left"></div>
-             <div class="lip right"></div>
-             <div class="tongue"></div> </div>
-          <div class="whisker-pad left">
-             <div class="whisker w1"></div>
-             <div class="whisker w2"></div>
-             <div class="whisker w3"></div>
-          </div>
-          <div class="whisker-pad right">
-             <div class="whisker w1"></div>
-             <div class="whisker w2"></div>
-             <div class="whisker w3"></div>
-          </div>
+      <div class="cat-muzzle">
+        <div class="nose"></div>
+        <div class="mouth">
+          <div class="lip left"></div>
+          <div class="lip right"></div>
+          <div class="fangs"></div> <div class="tongue"></div>
         </div>
+        <div class="whisker-pad left">
+          <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
+        </div>
+        <div class="whisker-pad right">
+          <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
+        </div>
+      </div>
       </div>
     </div>
     <div class="cat-paws">
