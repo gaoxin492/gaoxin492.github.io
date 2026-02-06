@@ -236,67 +236,201 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 
 
 <div class="cat-park">
-  <div class="cat-avatar" data-cat="1">
-    <div class="cat-body"></div>
-    <div class="cat-head">
-      <div class="cat-ear left"></div>
-      <div class="cat-ear right"></div>
-      <div class="cat-face">
-        <div class="cat-eye left"><div class="cat-pupil"></div></div>
-        <div class="cat-eye right"><div class="cat-pupil"></div></div>
-        <div class="cat-mouth"></div>
-      </div>
+  <!-- Cat 1: Sitting pose -->
+  <div class="cat-avatar realistic-cat" data-cat="1">
+    <div class="cat-body">
+      <div class="cat-fur-detail"></div>
+      <div class="cat-chest"></div>
     </div>
-    <div class="cat-tail"></div>
+    <div class="cat-head">
+      <div class="cat-ear left">
+        <div class="ear-inner"></div>
+        <div class="ear-tuft"></div>
+      </div>
+      <div class="cat-ear right">
+        <div class="ear-inner"></div>
+        <div class="ear-tuft"></div>
+      </div>
+      <div class="cat-face">
+        <div class="cat-eye left">
+          <div class="eye-highlight"></div>
+          <div class="cat-pupil"></div>
+          <div class="eye-shine"></div>
+        </div>
+        <div class="cat-eye right">
+          <div class="eye-highlight"></div>
+          <div class="cat-pupil"></div>
+          <div class="eye-shine"></div>
+        </div>
+        <div class="cat-nose"></div>
+        <div class="cat-mouth"></div>
+        <div class="cat-whiskers left"></div>
+        <div class="cat-whiskers right"></div>
+      </div>
+      <div class="cat-muzzle"></div>
+    </div>
+    <div class="cat-front-paws">
+      <div class="paw left"></div>
+      <div class="paw right"></div>
+    </div>
+    <div class="cat-tail">
+      <div class="tail-segment"></div>
+      <div class="tail-segment"></div>
+      <div class="tail-segment"></div>
+    </div>
     <div class="cat-shadow"></div>
   </div>
 
-  <div class="cat-avatar" data-cat="2">
-    <div class="cat-body"></div>
-    <div class="cat-head">
-      <div class="cat-ear left"></div>
-      <div class="cat-ear right"></div>
-      <div class="cat-face">
-        <div class="cat-eye left"><div class="cat-pupil"></div></div>
-        <div class="cat-eye right"><div class="cat-pupil"></div></div>
-        <div class="cat-mouth"></div>
-      </div>
+  <!-- Cat 2: Lying down pose -->
+  <div class="cat-avatar realistic-cat" data-cat="2">
+    <div class="cat-body">
+      <div class="cat-fur-detail"></div>
+      <div class="cat-chest"></div>
     </div>
-    <div class="cat-tail"></div>
+    <div class="cat-head">
+      <div class="cat-ear left">
+        <div class="ear-inner"></div>
+        <div class="ear-tuft"></div>
+      </div>
+      <div class="cat-ear right">
+        <div class="ear-inner"></div>
+        <div class="ear-tuft"></div>
+      </div>
+      <div class="cat-face">
+        <div class="cat-eye left">
+          <div class="eye-highlight"></div>
+          <div class="cat-pupil"></div>
+          <div class="eye-shine"></div>
+        </div>
+        <div class="cat-eye right">
+          <div class="eye-highlight"></div>
+          <div class="cat-pupil"></div>
+          <div class="eye-shine"></div>
+        </div>
+        <div class="cat-nose"></div>
+        <div class="cat-mouth"></div>
+        <div class="cat-whiskers left"></div>
+        <div class="cat-whiskers right"></div>
+      </div>
+      <div class="cat-muzzle"></div>
+    </div>
+    <div class="cat-front-paws">
+      <div class="paw left"></div>
+      <div class="paw right"></div>
+    </div>
+    <div class="cat-tail">
+      <div class="tail-segment"></div>
+      <div class="tail-segment"></div>
+      <div class="tail-segment"></div>
+    </div>
     <div class="cat-shadow"></div>
   </div>
 </div>
 
 <script>
-  (function() {
-    var cats = document.querySelectorAll('.cat-avatar');
-    if (!cats.length) return;
+(function() {
+  var cats = document.querySelectorAll('.cat-avatar');
+  if (!cats.length) return;
 
-    var pupils = document.querySelectorAll('.cat-pupil');
+  var pupils = document.querySelectorAll('.cat-pupil');
+  var eyes = document.querySelectorAll('.cat-eye');
 
-    window.addEventListener('mousemove', function(e) {
-      var vw = window.innerWidth || 1;
-      var vh = window.innerHeight || 1;
-      var relX = (e.clientX / vw - 0.5) * 2; // -1 to 1
-      var relY = (e.clientY / vh - 0.5) * 2; // -1 to 1
+  // Eye tracking - follows mouse
+  window.addEventListener('mousemove', function(e) {
+    var vw = window.innerWidth || 1;
+    var vh = window.innerHeight || 1;
+    var relX = (e.clientX / vw - 0.5) * 2;
+    var relY = (e.clientY / vh - 0.5) * 2;
 
-      var maxOffset = 4; // px inside the eye
-      pupils.forEach(function(pupil, idx) {
-        // small variation per cat
-        var factor = idx % 2 === 0 ? 1 : 0.7;
-        var tx = relX * maxOffset * factor;
-        var ty = relY * maxOffset * factor * 0.8;
-        pupil.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px)';
-      });
+    var maxOffset = 3;
+    pupils.forEach(function(pupil, idx) {
+      var catIndex = Math.floor(idx / 2);
+      var cat = cats[catIndex];
+      if (!cat) return;
+      
+      // Check if cat is sleeping
+      if (cat.classList.contains('sleeping')) {
+        pupil.style.transform = 'translate(0px, 2px) scale(1, 0.1)';
+        return;
+      }
+
+      var factor = idx % 2 === 0 ? 1 : 0.85;
+      var tx = relX * maxOffset * factor;
+      var ty = relY * maxOffset * factor * 0.7;
+      pupil.style.transform = 'translate(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px) scale(1, 1)';
     });
+  });
 
-    cats.forEach(function(cat, index) {
-      cat.addEventListener('click', function() {
-        cat.style.transform = 'translateY(-10px) scale(1.06)';
+  // Random blink animation
+  function blinkEyes() {
+    eyes.forEach(function(eye, idx) {
+      var catIndex = Math.floor(idx / 2);
+      var cat = cats[catIndex];
+      if (cat && cat.classList.contains('sleeping')) return;
+
+      if (Math.random() < 0.3) {
+        eye.style.transform = 'scaleY(0.1)';
         setTimeout(function() {
-          cat.style.transform = '';
-        }, 260);
-      });
+          eye.style.transform = 'scaleY(1)';
+        }, 120);
+      }
     });
-  })();
+  }
+  setInterval(blinkEyes, 3000);
+
+  // Random animations for each cat
+  cats.forEach(function(cat, index) {
+    var animationTimer;
+
+    function triggerRandomAnimation() {
+      var animations = ['stretch', 'sleeping', 'walk', 'tail-wag'];
+      var randomAnim = animations[Math.floor(Math.random() * animations.length)];
+      
+      // Remove all animation classes first
+      animations.forEach(function(anim) {
+        cat.classList.remove(anim);
+      });
+
+      // Add new animation
+      cat.classList.add(randomAnim);
+
+      // Auto-remove after duration
+      var duration = randomAnim === 'sleeping' ? 8000 : randomAnim === 'walk' ? 6000 : 3000;
+      setTimeout(function() {
+        cat.classList.remove(randomAnim);
+      }, duration);
+
+      // Schedule next random animation
+      var nextDelay = 8000 + Math.random() * 12000; // 8-20 seconds
+      animationTimer = setTimeout(triggerRandomAnimation, nextDelay);
+    }
+
+    // Start random animations with staggered timing
+    setTimeout(function() {
+      triggerRandomAnimation();
+    }, index * 5000 + Math.random() * 3000);
+
+    // Click interaction - affection response
+    cat.addEventListener('click', function() {
+      cat.classList.add('petted');
+      setTimeout(function() {
+        cat.classList.remove('petted');
+      }, 800);
+    });
+  });
+
+  // Breathing animation (continuous subtle movement)
+  cats.forEach(function(cat) {
+    var body = cat.querySelector('.cat-body');
+    if (!body) return;
+
+    var breathePhase = Math.random() * Math.PI * 2;
+    setInterval(function() {
+      if (cat.classList.contains('sleeping') || cat.classList.contains('walk')) return;
+      breathePhase += 0.05;
+      var scale = 1 + Math.sin(breathePhase) * 0.01;
+      body.style.transform = 'translateX(-50%) scaleY(' + scale.toFixed(3) + ')';
+    }, 100);
+  });
+})();
 </script>
