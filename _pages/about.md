@@ -24,8 +24,7 @@ I am currently a third-year Master's student in Applied Mathematics at Fudan Uni
 # 🔥 News
 <div class="news-window" markdown="1">
 - *2026.02*: 🎉 [ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1) are accepted by **ICLR 2026**.
-- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. Got visa! See you in San Diego!
-- *2025.09*: 🎉 [OrderMind](https://arxiv.org/pdf/2510.25138) is accepted by **Neurips 2025**. Congrats to Yuxiang!
+- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) and [OrderMind](https://arxiv.org/pdf/2510.25138) are accepted by **Neurips 2025**. Got visa! See you in San Diego!
 - *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
 - *2025.06*: 🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
 - *2025.05*: Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
@@ -96,6 +95,22 @@ I am currently a third-year Master's student in Applied Mathematics at Fudan Uni
 </div>
 </div>
 
+
+
+<!-- ========================================================================================================================== -->
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Learning Spatial-Aware Manipulation Ordering](https://arxiv.org/pdf/2510.25138)
+
+Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
+
+- This paper introduces **OrderMind**, a spatial-aware manipulation ordering framework that learns object priorities from local geometry via a kNN spatial graph and a lightweight temporal module, supervised by VLM-distilled spatial priors. It also presents the **Manipulation Ordering Benchmark** (163k+ samples) for cluttered scenes.
+</div>
+</div>
+
 <!-- ========================================================================================================================== -->
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/2026_01_Artdeco/Artdeco.png' alt="sym" width="100%"></div></div>
@@ -133,34 +148,19 @@ Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe B
 
 <!-- ========================================================================================================================== -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Learning Spatial-Aware Manipulation Ordering](https://arxiv.org/pdf/2510.25138)
-
-Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
-
-- This paper introduces **OrderMind**, a spatial-aware manipulation ordering framework that learns object priorities from local geometry via a kNN spatial graph and a lightweight temporal module, supervised by VLM-distilled spatial priors. It also presents the **Manipulation Ordering Benchmark** (163k+ samples) for cluttered scenes.
-</div>
-</div>
 
 
-
-
-<!-- ========================================================================================================================== -->
-
-
-# Why PhD?
+<!-- # Why PhD?
 
 **And I've been thinking a lot recently - why PhD?**
 
-In fact, I was originally admitted to Fudan University as a direct PhD student after my undergraduate studies. However, at that time, the available research directions in my department were mostly focused on interdisciplinary areas between neuroscience and AI, which didn't fully align with my core interests - I've always been more fascinated by the algorithmic and mathematical foundations of intelligence.
+I was originally admitted to Fudan University as a direct PhD student after my undergraduate studies. At the time, most of the available research directions in my department focused on interdisciplinary topics between neuroscience and AI. They were interesting, but they did not fully match my core interests. I have always been more fascinated by the algorithmic and mathematical foundations of intelligence.
 
-Coming from a pure mathematics background, I realized that I hadn't yet received systematic training in scientific research, especially in fields related to AI and machine learning. I felt that before committing to a long and challenging PhD journey, I needed to go through a complete and rigorous master's program - to learn how to ask meaningful questions, design experiments, and build research intuition.
+Coming from a pure mathematics background, I also realized that I had not yet received systematic training in scientific research, especially in AI and machine learning. Before committing to a long and challenging PhD journey, I wanted to go through a complete and rigorous master’s program. I needed to learn how to ask meaningful questions, design experiments, and build research intuition.
 
-Fortunately, during this process, I discovered the genuine joy of research. I found excitement in turning abstract ideas into working systems, in bridging theoretical insights with practical models, and in those quiet moments of struggling with an equation until it suddenly made sense. Research became more than a requirement - it became a way of thinking.
+Fortunately, during this process, I discovered the genuine joy of research. I found excitement in turning abstract ideas into working systems, bridging theoretical insights with practical models, and spending long hours on an equation until it finally made sense. Research became more than a requirement. It became a way of thinking.
 
-That's why I now seek a PhD not as an academic credential, but as a natural continuation of this intellectual curiosity. I want to push the boundary between representation structure and generative intelligence, to explore how reasoning and understanding can emerge from learning systems, and to work with mentors and peers who share this deep fascination. To me, a PhD represents the freedom and responsibility to create something that didn't exist before - and I'm ready for that challenge.
+That is why I now seek a PhD, not as an academic credential, but as a natural continuation of my intellectual curiosity. I want to push the boundary between representation structure and generative intelligence. I want to explore how reasoning and understanding can emerge from learning systems. I also want to work with mentors and peers who share this fascination. To me, a PhD represents the freedom and responsibility to create something that did not exist before. I am ready for that challenge. -->
 
 
 # 🎖 Honors and Awards
