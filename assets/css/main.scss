@@ -342,7 +342,7 @@ $scroll_offset : 2em;
 }
 
 // =========================
-// REALISTIC SILVER CHINCHILLA CATS
+// CUTE ILLUSTRATED FLUFFY CATS
 // =========================
 .cat-park {
     position: fixed;
@@ -353,554 +353,704 @@ $scroll_offset : 2em;
     z-index: 40;
     display: flex;
     justify-content: flex-start;
-    gap: 1.2rem;
+    gap: 1.5rem;
     max-width: none;
     margin: 0;
     padding: 0;
 }
 
-.cat-avatar {
+.cat-avatar.fluffy-cat {
     pointer-events: auto;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.12));
 
     &:hover {
-        transform: translateY(-6px) scale(1.05);
+        transform: translateY(-8px) scale(1.06);
     }
 }
 
-// Realistic silver-gray gradient for British Shorthair look
-$cat-silver-light: #e8ebf0;
-$cat-silver-mid: #c8cdd8;
-$cat-silver-dark: #9ca3b0;
-$cat-white: #fafbfc;
-$cat-pink: #ffc0cb;
+// Color palette - soft illustration style
+$fur-white: #fcfcfc;
+$fur-silver-light: #e5e8ed;
+$fur-silver: #cbd1da;
+$fur-silver-dark: #b0b7c2;
+$fur-gray-stripe: rgba(160, 170, 185, 0.4);
+$pink-inner: #ffd4e5;
+$pink-nose: #ffb3c6;
+$eye-green: #8bc4a8;
+$eye-gold: #dab76f;
 
-// Body - realistic fur texture
+// Fluffy round body
 .cat-body {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 85px;
-    height: 55px;
-    border-radius: 45px 45px 30px 30px;
-    background: linear-gradient(160deg, 
-        $cat-silver-light 0%, 
-        $cat-silver-mid 40%, 
-        $cat-silver-dark 100%);
+    width: 95px;
+    height: 68px;
+    background: $fur-white;
+    border-radius: 50% 50% 45% 45%;
+    border: 2.5px solid rgba(100, 100, 100, 0.3);
     box-shadow: 
-        inset 0 -8px 12px rgba(0, 0, 0, 0.08),
-        inset 0 3px 8px rgba(255, 255, 255, 0.5),
-        0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.1s ease-out;
+        inset 0 -8px 15px rgba(200, 206, 215, 0.35),
+        inset 0 5px 12px rgba(255, 255, 255, 0.8),
+        0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
 
-// Fur detail overlay for texture
-.cat-fur-detail {
+// Fur texture layers (hand-drawn feel)
+.fur-texture {
     position: absolute;
     inset: 0;
     border-radius: inherit;
     background: 
-        radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 40%, rgba(255, 255, 255, 0.15) 0%, transparent 45%);
+        radial-gradient(ellipse at 20% 30%, rgba(255, 255, 255, 0.95) 0%, transparent 40%),
+        radial-gradient(ellipse at 75% 35%, rgba(229, 232, 237, 0.6) 0%, transparent 50%);
+}
+
+.fur-layer-1 {
+    position: absolute;
+    top: -8px;
+    left: 10%;
+    width: 25px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 70% 30% 60% 40% / 50% 60% 40% 50%;
+    filter: blur(3px);
     opacity: 0.8;
 }
 
-// White chest marking
-.cat-chest {
+.fur-layer-2 {
+    position: absolute;
+    top: -6px;
+    right: 12%;
+    width: 30px;
+    height: 22px;
+    background: rgba(229, 232, 237, 0.6);
+    border-radius: 50% 70% 40% 60% / 60% 40% 60% 40%;
+    filter: blur(2.5px);
+}
+
+// Gray stripes (tabby marking)
+.body-stripe {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 8px,
+        $fur-gray-stripe 8px,
+        $fur-gray-stripe 12px
+    );
+    border-radius: 50%;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+// Fluffy white chest
+.chest-fluff {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 42px;
-    height: 35px;
-    background: linear-gradient(180deg, $cat-white 0%, rgba(255, 255, 255, 0.4) 100%);
-    border-radius: 50% 50% 30px 30px;
-    box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.6);
+    width: 55px;
+    height: 45px;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(252, 252, 252, 0.8) 60%, 
+        transparent 100%);
+    border-radius: 50% 50% 40% 40%;
+    filter: blur(1px);
 }
 
-// Head - round and fluffy
+// Cute belly marking
+.belly-spot {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 20px;
+    background: rgba(229, 232, 237, 0.5);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+// Round fluffy head
 .cat-head {
     position: absolute;
-    bottom: 40px;
+    bottom: 52px;
     left: 50%;
     transform: translateX(-50%);
-    width: 62px;
-    height: 50px;
-    background: linear-gradient(145deg, $cat-silver-light, $cat-silver-mid);
-    border-radius: 50% 50% 45% 45%;
+    width: 72px;
+    height: 62px;
+    background: $fur-white;
+    border-radius: 50%;
+    border: 2.5px solid rgba(100, 100, 100, 0.3);
     box-shadow: 
-        inset 0 3px 8px rgba(255, 255, 255, 0.6),
-        inset 0 -5px 10px rgba(0, 0, 0, 0.08),
-        0 6px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-out;
+        inset 0 6px 12px rgba(255, 255, 255, 0.9),
+        inset 0 -8px 15px rgba(203, 209, 218, 0.4),
+        0 8px 20px rgba(0, 0, 0, 0.12);
+    overflow: visible;
 }
 
-// Muzzle (white area around mouth)
-.cat-muzzle {
+// Head fur details
+.head-fur-1 {
     position: absolute;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 38px;
-    height: 28px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 250, 250, 0.6) 100%);
-    border-radius: 50% 50% 60% 60%;
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    top: -5px;
+    left: 15%;
+    width: 28px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 60% 40% 50% 50% / 60% 60% 40% 40%;
+    filter: blur(2px);
 }
 
-// Ears with inner pink and fur tufts
+.head-fur-2 {
+    position: absolute;
+    top: -4px;
+    right: 18%;
+    width: 24px;
+    height: 16px;
+    background: rgba(229, 232, 237, 0.7);
+    border-radius: 40% 60% 50% 50% / 60% 60% 40% 40%;
+    filter: blur(2.5px);
+}
+
+// Pointy ears with pink inside
 .cat-ear {
     position: absolute;
-    top: -8px;
-    width: 22px;
-    height: 24px;
-    background: linear-gradient(135deg, $cat-silver-light, $cat-silver-mid);
-    border-radius: 50% 50% 20% 20%;
-    box-shadow: 
-        inset 0 2px 4px rgba(255, 255, 255, 0.5),
-        0 2px 6px rgba(0, 0, 0, 0.15);
+    top: -18px;
+    width: 26px;
+    height: 28px;
+    background: $fur-silver-light;
+    border-radius: 50% 50% 15% 15%;
+    border: 2.5px solid rgba(100, 100, 100, 0.3);
+    box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.6);
     
     &.left {
-        left: 4px;
-        transform: rotate(-12deg);
+        left: 8px;
+        transform: rotate(-18deg);
     }
     
     &.right {
-        right: 4px;
-        transform: rotate(12deg);
+        right: 8px;
+        transform: rotate(18deg);
     }
 }
 
 .ear-inner {
     position: absolute;
-    inset: 4px;
-    background: linear-gradient(135deg, rgba(255, 192, 203, 0.7), rgba(255, 192, 203, 0.4));
+    inset: 6px 5px 8px;
+    background: linear-gradient(135deg, $pink-inner, rgba(255, 212, 229, 0.6));
     border-radius: 50% 50% 20% 20%;
 }
 
-// Fluffy ear tufts
-.ear-tuft {
+.ear-fur {
     position: absolute;
-    top: -2px;
+    top: -3px;
     left: 50%;
     transform: translateX(-50%);
-    width: 8px;
-    height: 6px;
-    background: linear-gradient(180deg, rgba(232, 235, 240, 0.9), transparent);
+    width: 14px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    filter: blur(0.5px);
+    filter: blur(2px);
 }
 
-// Face features
+// Face container
 .cat-face {
     position: absolute;
-    inset: 12px 8px 10px;
+    inset: 0;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-// Realistic eyes with depth
-.cat-eye {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: 50% 50% 48% 48%;
-    background: radial-gradient(circle at 40% 35%, 
-        #b8d4f1 0%, 
-        #8ab4d9 45%, 
-        #6a9cc9 100%);
-    box-shadow: 
-        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 2px 3px rgba(255, 255, 255, 0.5),
-        0 1px 3px rgba(0, 0, 0, 0.3);
-    overflow: visible;
-    transition: transform 0.15s ease-out;
-}
-
-// Eye highlight (reflection)
-.eye-highlight {
+// Gray face markings (M shape on forehead)
+.face-marking {
     position: absolute;
-    top: 2px;
-    left: 4px;
-    width: 8px;
-    height: 8px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    top: 12px;
+    width: 15px;
+    height: 20px;
+    background: $fur-gray-stripe;
+    border-radius: 50% 50% 60% 40%;
+    filter: blur(1.5px);
+    opacity: 0.6;
+    
+    &.left {
+        left: 12px;
+        transform: rotate(-15deg);
+    }
+    
+    &.right {
+        right: 12px;
+        transform: rotate(15deg);
+    }
 }
 
-// Pupil - vertical slit
+// Big sparkly eyes
+.cat-eye {
+    position: absolute;
+    top: 22px;
+    width: 20px;
+    height: 22px;
+    border-radius: 48% 48% 50% 50%;
+    border: 2px solid rgba(80, 80, 80, 0.5);
+    overflow: hidden;
+    transition: transform 0.12s ease-out;
+    
+    &.left {
+        left: 16px;
+    }
+    
+    &.right {
+        right: 16px;
+    }
+    
+    &.blinking {
+        transform: scaleY(0.1);
+    }
+}
+
+.eye-white {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 35% 40%, #ffffff 0%, #f5f8fa 100%);
+}
+
+// Round pupil
 .cat-pupil {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 3px;
-    height: 11px;
+    width: 10px;
+    height: 13px;
+    background: radial-gradient(circle at 40% 35%, #2a2a2a 0%, #0f0f0f 100%);
     border-radius: 50%;
-    background: #1a1a1a;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-    transition: transform 0.08s linear, height 0.15s ease-out;
+    transition: transform 0.08s linear;
 }
 
-// Additional eye shine
+// Big sparkle in eyes
 .eye-shine {
     position: absolute;
-    bottom: 3px;
-    right: 3px;
-    width: 3px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.6);
+    top: 5px;
+    left: 5px;
+    width: 7px;
+    height: 7px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 70%, transparent 100%);
     border-radius: 50%;
     pointer-events: none;
 }
 
-// Pink nose
+// Small pink nose
 .cat-nose {
     position: absolute;
+    top: 42px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 7px;
-    height: 6px;
-    background: linear-gradient(135deg, #ffb3c1, #ff91a8);
-    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
-    box-shadow: 
-        inset 0 1px 2px rgba(255, 255, 255, 0.4),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+    width: 9px;
+    height: 7px;
+    background: $pink-nose;
+    border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%;
+    border: 1.5px solid rgba(255, 100, 140, 0.4);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5);
 }
 
-// Subtle mouth
+// Cute smile
 .cat-mouth {
     position: absolute;
+    top: 46px;
     left: 50%;
-    bottom: 2px;
-    width: 18px;
-    height: 8px;
     transform: translateX(-50%);
-    border-bottom: 2px solid rgba(150, 150, 150, 0.4);
-    border-radius: 0 0 50% 50%;
+    width: 24px;
+    height: 12px;
 }
 
-// Whiskers
-.cat-whiskers {
+.mouth-line {
     position: absolute;
-    top: 50%;
-    width: 28px;
-    height: 1px;
-    transform: translateY(-50%);
-    
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(to right, 
-            rgba(255, 255, 255, 0.8), 
-            rgba(200, 200, 200, 0.6), 
-            transparent);
-    }
-    
-    &::before {
-        top: -4px;
-        transform: rotate(-8deg);
-    }
-    
-    &::after {
-        top: 4px;
-        transform: rotate(8deg);
-    }
+    top: 0;
+    width: 10px;
+    height: 8px;
+    border: 2px solid rgba(100, 100, 100, 0.5);
+    border-top: none;
     
     &.left {
-        left: -26px;
+        left: 0;
+        border-radius: 0 0 0 8px;
+        border-right: none;
     }
     
     &.right {
-        right: -26px;
-        transform: translateY(-50%) scaleX(-1);
+        right: 0;
+        border-radius: 0 0 8px 0;
+        border-left: none;
     }
 }
 
-// Front paws
-.cat-front-paws {
+// Whiskers (hand-drawn style)
+.whisker-group {
     position: absolute;
-    bottom: 2px;
+    top: 40px;
+    
+    &.left {
+        left: -32px;
+    }
+    
+    &.right {
+        right: -32px;
+    }
+}
+
+.whisker {
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 1.5px;
+    background: linear-gradient(to right, 
+        rgba(140, 140, 140, 0.7) 0%, 
+        rgba(160, 160, 160, 0.5) 50%, 
+        transparent 100%);
+    border-radius: 2px;
+    
+    &.w1 {
+        top: -6px;
+        transform: rotate(-10deg);
+    }
+    
+    &.w2 {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    
+    &.w3 {
+        top: 6px;
+        transform: rotate(10deg);
+    }
+}
+
+.whisker-group.right .whisker {
+    transform-origin: right center;
+    
+    &.w1 {
+        transform: rotate(10deg);
+    }
+    
+    &.w3 {
+        transform: rotate(-10deg);
+    }
+}
+
+// Chubby cheek fluff
+.cheek-fluff {
+    position: absolute;
+    bottom: 12px;
+    width: 32px;
+    height: 28px;
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.9) 0%, rgba(245, 248, 250, 0.5) 70%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(2px);
+    
+    &.left {
+        left: -8px;
+    }
+    
+    &.right {
+        right: -8px;
+    }
+}
+
+// Cute little paws
+.cat-paws {
+    position: absolute;
+    bottom: 4px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 18px;
+    gap: 24px;
 }
 
 .paw {
-    width: 18px;
-    height: 14px;
-    background: linear-gradient(160deg, $cat-silver-mid, $cat-silver-dark);
-    border-radius: 40% 40% 50% 50%;
+    width: 22px;
+    height: 16px;
+    background: $fur-silver-light;
+    border-radius: 45% 45% 50% 50%;
+    border: 2px solid rgba(100, 100, 100, 0.25);
     box-shadow: 
-        inset 0 1px 3px rgba(255, 255, 255, 0.4),
-        0 2px 4px rgba(0, 0, 0, 0.2);
+        inset 0 2px 4px rgba(255, 255, 255, 0.7),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
-// Fluffy tail with segments for movement
+.paw-pad {
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 6px;
+    background: rgba(255, 179, 198, 0.6);
+    border-radius: 50% 50% 60% 60%;
+}
+
+// Fluffy tail
 .cat-tail {
     position: absolute;
-    right: -8px;
-    bottom: 18px;
-    width: 50px;
-    height: 18px;
-    transform-origin: left center;
-    display: flex;
-    gap: 2px;
-}
-
-.tail-segment {
-    flex: 1;
-    height: 100%;
-    background: linear-gradient(120deg, $cat-silver-light, $cat-silver-mid, $cat-silver-dark);
-    border-radius: 50%;
+    right: -5px;
+    bottom: 24px;
+    width: 52px;
+    height: 22px;
+    background: linear-gradient(120deg, 
+        $fur-white 0%, 
+        $fur-silver-light 35%, 
+        $fur-silver 100%);
+    border-radius: 60% 50% 50% 60%;
+    border: 2.5px solid rgba(100, 100, 100, 0.25);
     box-shadow: 
-        inset 0 2px 4px rgba(255, 255, 255, 0.3),
-        0 2px 6px rgba(0, 0, 0, 0.15);
-    
-    &:nth-child(1) {
-        animation: tail-segment-1 2.8s ease-in-out infinite;
-    }
-    &:nth-child(2) {
-        animation: tail-segment-2 2.8s ease-in-out infinite;
-    }
-    &:nth-child(3) {
-        animation: tail-segment-3 2.8s ease-in-out infinite;
-    }
+        inset 0 3px 8px rgba(255, 255, 255, 0.7),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+    transform-origin: left center;
+    animation: tail-gentle-sway 3.2s ease-in-out infinite;
 }
 
-@keyframes tail-segment-1 {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-2px) rotate(-5deg); }
-}
-
-@keyframes tail-segment-2 {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-4px) rotate(-8deg); }
-}
-
-@keyframes tail-segment-3 {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-6px) rotate(-12deg); }
-}
-
-// Soft shadow
-.cat-shadow {
+.tail-fur {
     position: absolute;
-    left: 50%;
-    bottom: -6px;
-    width: 65px;
-    height: 12px;
-    transform: translateX(-50%);
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.25), transparent 70%);
-    opacity: 0.7;
-    transition: opacity 0.3s ease-out;
+    top: -5px;
+    right: 10%;
+    width: 35px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50% 70% 40% 60%;
+    filter: blur(3px);
+}
+
+@keyframes tail-gentle-sway {
+    0%, 100% { transform: rotate(8deg); }
+    50% { transform: rotate(-12deg); }
 }
 
 // =========================
 // POSE VARIATIONS
 // =========================
 
-// Cat 1: Sitting upright
+// Cat 1: Sitting elegant
 .cat-avatar[data-cat="1"] {
     .cat-body {
         bottom: 0;
+        width: 95px;
+        height: 68px;
     }
     
     .cat-head {
-        bottom: 40px;
+        bottom: 52px;
+    }
+    
+    .cat-paws {
+        bottom: 4px;
+        gap: 20px;
     }
     
     .cat-tail {
-        bottom: 18px;
-        animation: tail-sway-sitting 3.5s ease-in-out infinite;
+        bottom: 24px;
+        right: -5px;
+        animation: tail-sitting-sway 3.5s ease-in-out infinite;
     }
 }
 
-@keyframes tail-sway-sitting {
-    0%, 100% { transform: rotate(10deg); }
-    50% { transform: rotate(-15deg); }
+@keyframes tail-sitting-sway {
+    0%, 100% { transform: rotate(12deg); }
+    50% { transform: rotate(-18deg); }
 }
 
-// Cat 2: Lying down (sphinx pose)
+// Cat 2: Lying down chubby
 .cat-avatar[data-cat="2"] {
     .cat-body {
-        bottom: 8px;
-        width: 95px;
-        height: 42px;
-        transform: translateX(-50%) rotate(-5deg);
-        border-radius: 60px 60px 25px 25px;
+        bottom: 12px;
+        width: 105px;
+        height: 58px;
+        transform: translateX(-50%) rotate(-8deg);
+        border-radius: 55% 55% 40% 40%;
     }
     
     .cat-head {
-        bottom: 38px;
-        transform: translateX(-50%) rotate(-3deg);
+        bottom: 48px;
+        transform: translateX(-50%) rotate(-5deg);
     }
     
-    .cat-front-paws {
-        bottom: 6px;
-        gap: 28px;
+    .cat-paws {
+        bottom: 10px;
+        gap: 32px;
         
         .paw {
-            width: 22px;
-            height: 12px;
-            border-radius: 50% 50% 30% 30%;
+            width: 24px;
+            height: 14px;
         }
     }
     
     .cat-tail {
-        bottom: 20px;
-        right: -5px;
-        width: 55px;
-        animation: tail-sway-lying 4s ease-in-out infinite;
+        bottom: 28px;
+        right: -3px;
+        width: 58px;
+        animation: tail-lazy-sway 4.2s ease-in-out infinite;
     }
 }
 
-@keyframes tail-sway-lying {
+@keyframes tail-lazy-sway {
     0%, 100% { transform: rotate(5deg); }
-    50% { transform: rotate(-20deg); }
+    50% { transform: rotate(-25deg); }
 }
 
 // =========================
 // ANIMATION STATES
 // =========================
 
-// Stretching animation
+// Stretch
 .cat-avatar.stretch {
     .cat-body {
-        animation: stretch-body 2s ease-in-out;
+        animation: body-stretch 2.2s ease-in-out;
     }
     
     .cat-head {
-        animation: stretch-head 2s ease-in-out;
+        animation: head-stretch-up 2.2s ease-in-out;
     }
     
-    .cat-front-paws {
-        animation: stretch-paws 2s ease-in-out;
+    .cat-tail {
+        animation: tail-stretch 2.2s ease-in-out;
     }
 }
 
-@keyframes stretch-body {
+@keyframes body-stretch {
     0%, 100% { transform: translateX(-50%) scaleX(1); }
-    30%, 70% { transform: translateX(-50%) scaleX(1.15) scaleY(0.95); }
+    35%, 65% { transform: translateX(-50%) scaleX(1.18) scaleY(0.92); }
 }
 
-@keyframes stretch-head {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    30%, 70% { transform: translateX(-50%) translateY(-8px) rotate(-5deg); }
-}
-
-@keyframes stretch-paws {
+@keyframes head-stretch-up {
     0%, 100% { transform: translateX(-50%); }
-    30%, 70% { transform: translateX(-50%) translateX(10px); }
+    35%, 65% { transform: translateX(-50%) translateY(-10px) rotate(-8deg); }
 }
 
-// Sleeping animation
+@keyframes tail-stretch {
+    0%, 100% { transform: rotate(8deg); }
+    35%, 65% { transform: rotate(-35deg); }
+}
+
+// Sleeping
 .cat-avatar.sleeping {
-    .cat-eye {
-        transform: scaleY(0.1) !important;
+    .cat-pupil {
+        transform: translate(-50%, -50%) scale(1, 0.15) !important;
     }
     
     .cat-body {
-        animation: breathing-sleep 2.5s ease-in-out infinite;
+        animation: sleep-breathe 2.8s ease-in-out infinite;
     }
     
     .cat-head {
-        animation: head-rest 2.5s ease-in-out infinite;
+        animation: sleep-head 2.8s ease-in-out infinite;
     }
 }
 
-@keyframes breathing-sleep {
+@keyframes sleep-breathe {
     0%, 100% { transform: translateX(-50%) scaleY(1); }
-    50% { transform: translateX(-50%) scaleY(1.03); }
+    50% { transform: translateX(-50%) scaleY(1.04); }
 }
 
-@keyframes head-rest {
+@keyframes sleep-head {
     0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(2px); }
+    50% { transform: translateX(-50%) translateY(3px) rotate(-2deg); }
 }
 
-// Walking animation
-.cat-avatar.walk {
-    animation: walk-bounce 1.5s ease-in-out;
-    
-    .cat-front-paws {
-        animation: paws-walk 0.6s ease-in-out infinite;
-    }
+// Happy/excited
+.cat-avatar.happy {
+    animation: happy-wiggle 0.5s ease-in-out 3;
     
     .cat-tail {
-        animation: tail-walk 0.4s ease-in-out infinite;
+        animation: tail-excited 0.3s ease-in-out 6;
     }
 }
 
-@keyframes walk-bounce {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(15px) translateY(-3px); }
-}
-
-@keyframes paws-walk {
-    0%, 100% { transform: translateX(-50%); }
-    50% { transform: translateX(-50%) translateX(-3px); }
-}
-
-@keyframes tail-walk {
-    0%, 100% { transform: rotate(15deg); }
-    50% { transform: rotate(-10deg); }
-}
-
-// Petted/clicked animation
-.cat-avatar.petted {
-    animation: petted-bounce 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-    
-    .cat-tail {
-        animation: tail-happy 0.5s ease-in-out 3;
-    }
-}
-
-@keyframes petted-bounce {
-    0%, 100% { transform: translateY(0) scale(1); }
-    30% { transform: translateY(-12px) scale(1.08); }
-    60% { transform: translateY(-6px) scale(1.04); }
-}
-
-@keyframes tail-happy {
+@keyframes happy-wiggle {
     0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(25deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
 }
 
-// Responsive adjustments
+@keyframes tail-excited {
+    0%, 100% { transform: rotate(5deg); }
+    50% { transform: rotate(35deg); }
+}
+
+// Tail shake
+.cat-avatar.shake-tail {
+    .cat-tail {
+        animation: tail-shake-vigorous 0.4s ease-in-out 5;
+    }
+}
+
+@keyframes tail-shake-vigorous {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(25deg); }
+    75% { transform: rotate(-25deg); }
+}
+
+// Petted (clicked)
+.cat-avatar.petted {
+    animation: petted-joy 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    .cat-tail {
+        animation: tail-happy-wag 0.4s ease-in-out 4;
+    }
+    
+    .cheek-fluff {
+        animation: cheeks-blush 0.9s ease-in-out;
+    }
+}
+
+@keyframes petted-joy {
+    0%, 100% { transform: translateY(0) scale(1); }
+    35% { transform: translateY(-14px) scale(1.1); }
+    65% { transform: translateY(-8px) scale(1.05); }
+}
+
+@keyframes tail-happy-wag {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(30deg); }
+}
+
+@keyframes cheeks-blush {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; filter: blur(2px) brightness(1.2); }
+}
+
+// Responsive
 @media (max-width: 768px) {
     .cat-park {
         bottom: 1rem;
         padding: 0 0.6rem;
-        gap: 0.8rem;
+        gap: 1rem;
     }
 
-    .cat-avatar {
-        width: 85px;
-        height: 85px;
+    .cat-avatar.fluffy-cat {
+        width: 100px;
+        height: 100px;
     }
     
     .cat-body {
-        width: 68px;
-        height: 44px;
+        width: 75px;
+        height: 52px;
     }
     
     .cat-head {
-        width: 50px;
-        height: 40px;
+        width: 58px;
+        height: 50px;
+        bottom: 40px;
     }
 }
