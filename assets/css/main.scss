@@ -342,7 +342,8 @@ $scroll_offset : 2em;
 }
 
 /* ==========================================================================
-   REALISTIC SILVER SHADED CATS - FIXED WHISKERS & TAILS
+   REALISTIC SILVER SHADED CATS - FINAL V2
+   (Right-facing lying cat & Solid tapered tails)
    Replace the bottom section of main.scss with this
    ========================================================================== */
 
@@ -353,7 +354,8 @@ $scroll_offset : 2em;
     z-index: 999;
     display: flex;
     align-items: flex-end;
-    gap: 10px; /* 增加一点点间距，避免身体重叠太多 */
+    /* 调整间距，因为右边的猫转向了，需要挨得更近一点才自然 */
+    gap: -30px; 
     pointer-events: none;
     
     @media (max-width: 768px) {
@@ -366,7 +368,7 @@ $scroll_offset : 2em;
 /* --- 基础变量 --- */
 $fur-base: #ffffff;
 $fur-silver: #e8ecf2;
-$fur-shadow: #c0c8d5;
+$fur-shadow: #b0b8c5; /* 稍微加深一点阴影，让毛发更实 */
 $eye-green: #90d4ac;
 $eye-liner: #4a4a4a;
 $nose-pink: #ffaebc;
@@ -376,7 +378,6 @@ $nose-pink: #ffaebc;
     pointer-events: auto;
     cursor: grab;
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
     &:hover { transform: translateY(-5px); }
     &:active { cursor: grabbing; transform: scale(0.95); }
 }
@@ -384,269 +385,196 @@ $nose-pink: #ffaebc;
 /* ========================
    通用解剖结构 (Anatomy)
    ======================== */
-
+/* 身体基础 */
 .cat-body {
     position: absolute; bottom: 0; left: 50%;
     transform: translateX(-50%);
     background: radial-gradient(circle at 30% 20%, $fur-base, $fur-silver);
-    box-shadow: inset -10px -5px 20px rgba(0,0,0,0.08);
+    box-shadow: inset -10px -5px 20px rgba(0,0,0,0.1); // 增加实体感
 }
 
+/* 头部基础 */
 .cat-head {
-    position: absolute; left: 50%;
-    transform: translateX(-50%);
+    position: absolute; left: 50%; transform: translateX(-50%);
     background: radial-gradient(circle at 40% 40%, #fff, $fur-silver);
-    border-radius: 46%; 
-    z-index: 20;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 46%; z-index: 20;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 /* 耳朵 */
 .ear-container { position: absolute; top: -10px; width: 100%; height: 40px; }
 .cat-ear {
-    position: absolute; top: 0;
-    width: 30px; height: 36px;
+    position: absolute; top: 0; width: 30px; height: 36px;
     background: $fur-silver;
-    border-radius: 20% 80% 0 0;
-    overflow: hidden;
+    border-radius: 20% 80% 0 0; overflow: hidden;
     &.left { left: 5px; transform: rotate(-30deg); }
     &.right { right: 5px; transform: scaleX(-1) rotate(-30deg); }
     .ear-inner {
-        position: absolute; bottom: 0; left: 20%;
-        width: 60%; height: 80%;
-        background: #ffe0e9;
-        border-radius: 50% 50% 0 0;
-        opacity: 0.8;
+        position: absolute; bottom: 0; left: 20%; width: 60%; height: 80%;
+        background: #ffe0e9; border-radius: 50% 50% 0 0; opacity: 0.9;
     }
 }
 
 /* 脸颊毛 */
 .cheek-fluff {
-    position: absolute; bottom: 5px;
-    width: 25px; height: 25px;
-    background: #fff;
-    border-radius: 50%;
-    filter: blur(4px);
-    z-index: 22;
-    &.left { left: -8px; }
-    &.right { right: -8px; }
+    position: absolute; bottom: 5px; width: 25px; height: 25px;
+    background: #fff; border-radius: 50%; filter: blur(4px); z-index: 22;
+    &.left { left: -8px; } &.right { right: -8px; }
 }
 
 /* 眼睛 */
 .cat-face { position: absolute; inset: 0; }
 .cat-eye {
-    position: absolute; top: 32px;
-    width: 24px; height: 24px;
+    position: absolute; top: 32px; width: 24px; height: 24px;
     background: linear-gradient(135deg, lighten($eye-green, 10%), darken($eye-green, 10%));
-    border-radius: 50%;
-    border: 1.5px solid $eye-liner;
-    overflow: hidden;
-    z-index: 25;
-    &.left { left: 16px; }
-    &.right { right: 16px; }
+    border-radius: 50%; border: 1.5px solid $eye-liner; overflow: hidden; z-index: 25;
+    &.left { left: 16px; } &.right { right: 16px; }
     .pupil {
-        position: absolute; top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        width: 7px; height: 16px;
-        background: #111;
-        border-radius: 50%;
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 7px; height: 16px; background: #111; border-radius: 50%;
     }
     .shine {
-        position: absolute; top: 5px; right: 5px;
-        width: 6px; height: 6px;
-        background: #fff;
-        border-radius: 50%;
+        position: absolute; top: 5px; right: 5px; width: 6px; height: 6px;
+        background: #fff; border-radius: 50%;
     }
 }
 
-/* 口鼻与胡须 (修复核心) */
+/* 口鼻与胡须 (保持之前的修复) */
 .cat-muzzle {
-    position: absolute; top: 48px; left: 50%;
-    transform: translateX(-50%);
-    width: 40px; height: 30px;
-    z-index: 26;
+    position: absolute; top: 48px; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 30px; z-index: 26;
 }
 .nose {
-    position: absolute; top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: 10px; height: 7px;
-    background: $nose-pink;
-    border-radius: 4px 4px 6px 6px;
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 10px; height: 7px; background: $nose-pink; border-radius: 4px 4px 6px 6px;
 }
 .mouth {
-    position: absolute; top: 7px; left: 50%;
-    transform: translateX(-50%);
-    width: 20px; height: 10px;
+    position: absolute; top: 7px; left: 50%; transform: translateX(-50%); width: 20px; height: 10px;
     .lip {
-        position: absolute; top: 0;
-        width: 10px; height: 8px;
-        border: 1.5px solid #888;
-        border-top: none;
+        position: absolute; top: 0; width: 10px; height: 8px;
+        border: 1.5px solid #888; border-top: none;
         &.left { right: 50%; border-right: none; border-radius: 0 0 0 8px; }
         &.right { left: 50%; border-left: none; border-radius: 0 0 8px 0; }
     }
     .tongue {
-        position: absolute; top: 2px; left: 50%;
-        transform: translateX(-50%) scale(0);
-        width: 12px; height: 14px;
-        background: #ff8fa3;
-        border-radius: 0 0 10px 10px;
-        transition: transform 0.2s;
+        position: absolute; top: 2px; left: 50%; transform: translateX(-50%) scale(0);
+        width: 12px; height: 14px; background: #ff8fa3; border-radius: 0 0 10px 10px; transition: transform 0.2s;
     }
 }
-
-/* 胡须肉垫 & 胡须修正 */
 .whisker-pad {
-    position: absolute; top: 5px;
-    width: 16px; height: 14px;
-    background: rgba(255,255,255,0.5);
-    border-radius: 50%;
-    &.left { left: -2px; }
-    &.right { right: -2px; }
-
+    position: absolute; top: 5px; width: 16px; height: 14px;
+    background: rgba(255,255,255,0.5); border-radius: 50%;
+    &.left { left: -2px; } &.right { right: -2px; }
     .whisker {
-        position: absolute; top: 50%;
-        height: 1px; width: 45px;
-        background: #bbb;
-        /* 关键修复：让胡须向外生长 */
-        &.w1 { top: -3px; }
-        &.w2 { top: 0; }
-        &.w3 { top: 3px; }
+        position: absolute; top: 50%; height: 1px; width: 45px; background: #bbb;
+        &.w1 { top: -3px; } &.w2 { top: 0; } &.w3 { top: 3px; }
     }
 }
+.whisker-pad.left .whisker { right: 0; transform-origin: 100% 50%; 
+    &.w1 { transform: rotate(15deg); } &.w2 { transform: rotate(0deg); } &.w3 { transform: rotate(-15deg); } }
+.whisker-pad.right .whisker { left: 0; transform-origin: 0% 50%; 
+    &.w1 { transform: rotate(-15deg); } &.w2 { transform: rotate(0deg); } &.w3 { transform: rotate(15deg); } }
 
-/* 左边胡须：以右端为轴心，向左炸开 */
-.whisker-pad.left .whisker {
-    right: 0; /* 贴紧肉垫 */
-    transform-origin: 100% 50%; /* 轴心在右侧 */
-    &.w1 { transform: rotate(15deg); }
-    &.w2 { transform: rotate(0deg); }
-    &.w3 { transform: rotate(-15deg); }
-}
-
-/* 右边胡须：以左端为轴心，向右炸开 */
-.whisker-pad.right .whisker {
-    left: 0; /* 贴紧肉垫 */
-    transform-origin: 0% 50%; /* 轴心在左侧 */
-    &.w1 { transform: rotate(-15deg); }
-    &.w2 { transform: rotate(0deg); }
-    &.w3 { transform: rotate(15deg); }
-}
 
 /* ========================
-   猫咪 1：坐姿 (Sitting)
+   猫咪 1：坐姿 (Sitting - Left Cat)
    ======================== */
 .cat-avatar[data-pose="sitting"] {
-    width: 140px; height: 170px;
-    z-index: 10;
-
+    width: 140px; height: 170px; z-index: 10;
     .cat-body {
         width: 95px; height: 110px;
         border-radius: 48% 48% 50% 50% / 60% 60% 40% 40%;
-        
         .chest-ruff {
-            position: absolute; top: 25px; left: 50%;
-            transform: translateX(-50%);
-            width: 70px; height: 50px;
-            background: #fff;
-            border-radius: 50%;
-            filter: blur(5px);
-            box-shadow: 0 5px 15px rgba(255,255,255,0.8);
-            z-index: 5;
+            position: absolute; top: 25px; left: 50%; transform: translateX(-50%);
+            width: 70px; height: 50px; background: #fff; border-radius: 50%;
+            filter: blur(5px); box-shadow: 0 5px 15px rgba(255,255,255,0.8); z-index: 5;
         }
     }
-
-    .cat-head {
-        top: 0; width: 100px; height: 90px;
-    }
-
+    .cat-head { top: 0; width: 100px; height: 90px; }
     .cat-paws {
-        position: absolute; bottom: 0; left: 50%;
-        transform: translateX(-50%);
-        width: 100px; z-index: 15;
+        position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; z-index: 15;
         .paw {
-            position: absolute; bottom: 0;
-            width: 28px; height: 20px;
-            background: #fff;
-            border-radius: 15px 15px 8px 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            &.left { left: 20px; }
-            &.right { right: 20px; }
+            position: absolute; bottom: 0; width: 28px; height: 20px; background: #fff;
+            border-radius: 15px 15px 8px 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            &.left { left: 20px; } &.right { right: 20px; }
         }
     }
 
-    /* 修复：坐姿猫的尾巴放在左边，避免打到右边的猫 */
+    /* 尾巴重构：实心、根部细、末端大 */
     .cat-tail {
-        position: absolute; bottom: 10px; 
-        left: -15px; /* 改到左边 */
-        right: auto;
-        z-index: 1;
-        transform-origin: bottom right; /* 轴心改为右下 */
-        
+        position: absolute; bottom: 15px; left: 0px; z-index: 1;
+        transform-origin: bottom right;
         .tail-fluff {
-            width: 55px; height: 120px;
-            background: $fur-shadow;
-            border-radius: 50px;
-            filter: blur(8px);
-            opacity: 0.9;
-            box-shadow: inset 10px 10px 20px #fff;
+            width: 40px; /* 基础宽度 */
+            height: 120px;
+            /* 使用渐变模拟根部深色细，末端浅色粗 */
+            background: linear-gradient(to top, $fur-shadow 0%, $fur-silver 40%, $fur-base 100%);
+            /* 关键：上宽下窄的圆角 */
+            border-radius: 30% 30% 60% 60% / 10% 10% 90% 90%;
+            filter: blur(6px); // 保持蓬松感
+            opacity: 1; /* 实心 */
+            /* 用阴影增加末端的体积感 */
+            box-shadow: 0 -20px 30px -10px $fur-silver;
             animation: tail-sway-left 5s ease-in-out infinite;
         }
     }
 }
 
 /* ========================
-   猫咪 2：趴姿 (Lying)
+   猫咪 2：趴姿 (Lying - Right Cat Facing Right)
    ======================== */
 .cat-avatar[data-pose="lying"] {
-    width: 160px; height: 110px;
-    z-index: 5;
+    width: 160px; height: 110px; z-index: 5;
 
+    /* 身体翻转：头在右边，屁股在左边 */
     .cat-body {
-        left: 10px; width: 130px; height: 75px;
-        border-radius: 40% 50% 45% 45% / 50% 70% 40% 40%;
-        
-        /* 背部毛 */
+        left: 50%; transform: translateX(-50%);
+        width: 130px; height: 75px;
+        /* 豆子形状水平翻转 */
+        border-radius: 50% 40% 45% 45% / 70% 50% 40% 40%;
+        /* 背毛位置调整 */
         &::after {
-            content: ''; position: absolute; top: -5px; left: 20%;
-            width: 80%; height: 30px;
-            background: rgba(255,255,255,0.5);
-            border-radius: 50%;
-            filter: blur(5px);
+            content: ''; position: absolute; top: -5px; right: 20%; /* 改到右侧 */
+            width: 60%; height: 30px; background: rgba(255,255,255,0.6);
+            border-radius: 50%; filter: blur(5px);
         }
     }
 
+    /* 头部位置调整到右侧 */
     .cat-head {
-        bottom: 30px; left: -10px;
+        bottom: 30px; 
+        right: -10px; left: auto; /* 移到右边 */
         width: 95px; height: 85px;
-        transform: rotate(-5deg);
+        transform: rotate(5deg); /* 向右歪头 */
     }
 
     .cat-paws {
         .paw-tip {
-            position: absolute; bottom: 0;
-            width: 20px; height: 12px;
-            background: $fur-silver;
-            border-radius: 10px;
-            filter: blur(1px);
-            z-index: 6;
-            &.left { left: 45px; }
-            &.right { left: 75px; }
+            position: absolute; bottom: 0; width: 20px; height: 12px;
+            background: $fur-silver; border-radius: 10px; filter: blur(1px); z-index: 6;
+            /* 爪子位置调整 */
+            &.left { right: 75px; left: auto; }
+            &.right { right: 45px; left: auto;}
         }
     }
 
-    /* 趴姿猫的尾巴保持在右边，稍微收一点 */
+    /* 尾巴重构：移到左侧，实心，根细末粗 */
     .cat-tail {
         position: absolute; bottom: 0; 
-        right: -20px; /* 稍微收紧 */
-        transform-origin: left center;
+        left: -20px; right: auto; /* 移到左边 */
+        transform-origin: right center; /* 轴心在右侧 */
         
         .tail-fluff {
-            width: 100px; height: 45px;
-            background: $fur-shadow;
-            border-radius: 40px;
+            width: 110px; height: 40px; /* 基础尺寸 */
+            /* 渐变：左粗右细 */
+            background: linear-gradient(to left, $fur-shadow 0%, $fur-silver 30%, $fur-base 100%);
+            /* 圆角：左宽右窄 */
+            border-radius: 60% 30% 30% 60% / 90% 10% 10% 90%;
             filter: blur(7px);
-            animation: tail-wag-lazy 6s ease-in-out infinite;
+            opacity: 1; /* 实心 */
+            /* 阴影增加左侧体积 */
+            box-shadow: -20px 0 30px -10px $fur-silver;
+            animation: tail-wag-right 6s ease-in-out infinite;
         }
     }
 }
@@ -654,41 +582,32 @@ $nose-pink: #ffaebc;
 /* ========================
    动画状态 (Animations)
    ======================== */
+/* 坐姿尾巴摇摆 */
+@keyframes tail-sway-left { 0%,100%{transform:rotate(0deg);} 50%{transform:rotate(-8deg) scale(1.02);} }
 
-/* 左侧尾巴摇摆 (新) */
-@keyframes tail-sway-left { 
+/* 趴姿尾巴摇摆 (新：适应左侧位置) */
+@keyframes tail-wag-right { 
     0%,100%{transform:rotate(0deg);} 
-    50%{transform:rotate(-10deg);} 
+    50%{transform:rotate(5deg) translateY(-3px);} 
 }
 
-@keyframes tail-wag-lazy { 
-    0%,100%{transform:rotate(0deg);} 
-    50%{transform:rotate(5deg) translateY(-5px);} 
-}
-
-/* 舔毛 */
+/* 其他交互动画 (保持不变) */
 .cat-avatar.grooming {
     .cat-head { animation: head-groom 1s ease-in-out infinite; }
     .mouth .tongue { transform: translateX(-50%) scale(1); }
 }
 @keyframes head-groom { 0%,100%{transform:translateX(-50%);} 50%{transform:translateX(-50%) translateY(5px) rotate(-3deg);} }
 
-/* 伸懒腰 */
 .cat-avatar.stretching {
     animation: body-stretch 2.5s ease-in-out;
     .cat-eye { height: 2px; border-color: transparent; background:#ccc; }
 }
-@keyframes body-stretch { 
-    0%,100%{transform:scale(1);} 
-    50%{transform:scaleX(1.15) scaleY(0.9) skewX(-5deg);} 
-}
+@keyframes body-stretch { 0%,100%{transform:scale(1);} 50%{transform:scaleX(1.15) scaleY(0.9) skewX(-5deg);} }
 
-/* 睡觉 */
 .cat-avatar.sleeping {
     .cat-eye { height: 2px; top: 40px; background:#ccc; border-color:transparent; .pupil,.shine{display:none;} }
     .cat-body { animation: breathe 3s ease-in-out infinite; }
 }
 @keyframes breathe { 0%,100%{transform:translateX(-50%) scale(1);} 50%{transform:translateX(-50%) scale(1.03);} }
 
-/* 眨眼 */
 .cat-avatar.blinking .cat-eye { transform: scaleY(0.1); }
