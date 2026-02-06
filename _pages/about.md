@@ -18,10 +18,12 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
-I am currently a third-year Master's student in Applied Mathematics at Fudan University. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. **I plan to apply for PhD programs in Fall 2026 and am seeking potential advisors and collaborators with shared research interests.** Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am currently a third-year Master's student in Applied Mathematics at Fudan University and an **incoming PhD student in Computer Science at a US top-10 university**. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models, and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
 
 # 🔥 News
+<div class="news-window" markdown="1">
+- *2026.02*: 🎉 [ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1) are accepted by **ICLR 2026**.
 - *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) is accepted by **Neurips 2025**. Got visa! See you in San Diego!
 - *2025.09*: 🎉 [OrderMind](https://arxiv.org/pdf/2510.25138) is accepted by **Neurips 2025**. Congrats to Yuxiang!
 - *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
@@ -30,6 +32,7 @@ I am currently a third-year Master's student in Applied Mathematics at Fudan Uni
 - *2025.04*: Welcomed two adorable cats into my life: Fellow and Putao 🐱🍇 
 - *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
 - *2024.12*: Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
+</div>
 <!-- Honored to collaborate with them on these promising projects. -->
 
 # 📝 Selected Publications 
@@ -94,6 +97,23 @@ I am currently a third-year Master's student in Applied Mathematics at Fudan Uni
 </div>
 
 <!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/2026_01_Artdeco/Artdeco.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[ARTDECO: Toward High-Fidelity On-the-Fly Reconstruction with Hierarchical Gaussian Structure and Feed-Forward Guidance](https://arxiv.org/pdf/2510.08551)
+
+ **Guanghao Li**, Kerui Ren, Linning Xu, Zhewen Zheng, Changjian Jiang, **Xin Gao**, Bo Dai, Jian Pu, Mulin Yu, Jiangmiao Pang
+
+[![GitHub Stars](https://img.shields.io/github/stars/InternRobotics/ARTDECO?style=social)](https://github.com/InternRobotics/ARTDECO)
+[![GitHub Forks](https://img.shields.io/github/forks/InternRobotics/ARTDECO?style=social)](https://github.com/InternRobotics/ARTDECO)
+[[Project page]](https://city-super.github.io/artdeco/)
+
+- **ARTDECO** unifies feed-forward 3D foundation priors with SLAM-style global optimization, and introduces a hierarchical 3D Gaussian scene representation with LoD-aware rendering to achieve efficient, robust, and high-fidelity on-the-fly monocular 3D reconstruction.
+
+</div>
+</div>
+========================================================================================================================== -->
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025 workshop</div><img src='images/2025_09_Loong/Loong.png' alt="sym" width="100%"></div></div>

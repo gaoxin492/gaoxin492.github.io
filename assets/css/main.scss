@@ -107,3 +107,27 @@ h1:before, .anchor:before {
     background-color: #00369f;
     font-size: .8em;
 }
+
+// Scrollable "slide window" for long News lists
+.news-window {
+    max-height: 14rem;
+    overflow-y: auto;
+    padding: 0.75rem 0.75rem 0.75rem 1rem;
+    margin: 0.75rem 0 1.25rem 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 0.6rem;
+    background: rgba(0, 0, 0, 0.015);
+
+    // keep layout stable when scrollbars appear (supported in modern browsers)
+    scrollbar-gutter: stable;
+}
+
+.news-window ul,
+.news-window ol {
+    margin-bottom: 0;
+}
+
+.news-window > :last-child {
+    margin-bottom: 0;
+}
