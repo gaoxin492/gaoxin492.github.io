@@ -241,187 +241,125 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 
 
 <div class="cat-park">
-  
-  <div class="cat-avatar silver-cat" data-pose="sitting" onclick="interactCat(this)">
-    <div class="cat-tail">
-      <div class="tail-fluff"></div>
-    </div>
-    <div class="cat-body">
-      <div class="chest-fur"></div>
-    </div>
+  <div class="cat-avatar" data-pose="sitting" onclick="interact(this)">
+    <div class="cat-tail"><div class="tail-fluff"></div></div>
+    <div class="cat-body"><div class="chest-ruff"></div></div>
     <div class="cat-head">
       <div class="ear-container">
-        <div class="cat-ear left"><div class="ear-inner"></div><div class="ear-tuft"></div></div>
-        <div class="cat-ear right"><div class="ear-inner"></div><div class="ear-tuft"></div></div>
+        <div class="cat-ear left"><div class="ear-inner"></div></div>
+        <div class="cat-ear right"><div class="ear-inner"></div></div>
       </div>
-      <div class="cheek-fluff left"></div>
-      <div class="cheek-fluff right"></div>
-      
+      <div class="cheek-fluff left"></div><div class="cheek-fluff right"></div>
       <div class="cat-face">
-        <div class="cat-eye left">
-          <div class="pupil"></div>
-          <div class="shine"></div>
-        </div>
-        <div class="cat-eye right">
-          <div class="pupil"></div>
-          <div class="shine"></div>
-        </div>
-        
-      <div class="cat-muzzle">
-        <div class="nose"></div>
-        <div class="mouth">
-          <div class="lip left"></div>
-          <div class="lip right"></div>
-          <div class="fangs"></div> <div class="tongue"></div>
-        </div>
-        <div class="whisker-pad left">
-          <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
-        </div>
-        <div class="whisker-pad right">
-          <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
-        </div>
-      </div>
-      </div>
-    </div>
-    <div class="cat-paws">
-      <div class="paw left"></div>
-      <div class="paw right"></div>
-    </div>
-  </div>
-
-  <div class="cat-avatar silver-cat" data-pose="lying" onclick="interactCat(this)">
-    <div class="cat-tail">
-      <div class="tail-fluff"></div>
-    </div>
-    <div class="cat-body">
-      <div class="back-fur"></div>
-    </div>
-    <div class="cat-head">
-      <div class="ear-container">
-        <div class="cat-ear left"><div class="ear-inner"></div><div class="ear-tuft"></div></div>
-        <div class="cat-ear right"><div class="ear-inner"></div><div class="ear-tuft"></div></div>
-      </div>
-      <div class="cheek-fluff left"></div>
-      <div class="cheek-fluff right"></div>
-      
-      <div class="cat-face">
-        <div class="cat-eye left">
-          <div class="pupil"></div>
-          <div class="shine"></div>
-        </div>
-        <div class="cat-eye right">
-          <div class="pupil"></div>
-          <div class="shine"></div>
-        </div>
-        
+        <div class="cat-eye left"><div class="pupil"></div><div class="shine"></div></div>
+        <div class="cat-eye right"><div class="pupil"></div><div class="shine"></div></div>
         <div class="cat-muzzle">
           <div class="nose"></div>
           <div class="mouth">
-             <div class="lip left"></div>
-             <div class="lip right"></div>
-             <div class="tongue"></div>
+             <div class="lip left"></div><div class="lip right"></div>
+             <div class="tongue"></div><div class="fangs"></div>
           </div>
           <div class="whisker-pad left">
-             <div class="whisker w1"></div>
-             <div class="whisker w2"></div>
-             <div class="whisker w3"></div>
+             <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
           </div>
           <div class="whisker-pad right">
-             <div class="whisker w1"></div>
-             <div class="whisker w2"></div>
-             <div class="whisker w3"></div>
+             <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="cat-paws">
-       <div class="paw-tip left"></div>
-       <div class="paw-tip right"></div>
-    </div>
+    <div class="cat-paws"><div class="paw left"></div><div class="paw right"></div></div>
   </div>
 
+  <div class="cat-avatar" data-pose="lying" onclick="interact(this)">
+    <div class="cat-tail"><div class="tail-fluff"></div></div>
+    <div class="cat-body"></div>
+    <div class="cat-head">
+      <div class="ear-container">
+        <div class="cat-ear left"><div class="ear-inner"></div></div>
+        <div class="cat-ear right"><div class="ear-inner"></div></div>
+      </div>
+      <div class="cheek-fluff left"></div><div class="cheek-fluff right"></div>
+      <div class="cat-face">
+        <div class="cat-eye left"><div class="pupil"></div><div class="shine"></div></div>
+        <div class="cat-eye right"><div class="pupil"></div><div class="shine"></div></div>
+        <div class="cat-muzzle">
+          <div class="nose"></div>
+          <div class="mouth">
+             <div class="lip left"></div><div class="lip right"></div>
+             <div class="tongue"></div><div class="fangs"></div>
+          </div>
+          <div class="whisker-pad left">
+             <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
+          </div>
+          <div class="whisker-pad right">
+             <div class="whisker w1"></div><div class="whisker w2"></div><div class="whisker w3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cat-paws lying-paws">
+        <div class="paw left"></div>
+        <div class="paw right"></div>
+    </div>
+  </div>
 </div>
 
 <script>
-// 交互：点击震动反馈
-function interactCat(el) {
-    if(el.classList.contains('purring')) return;
-    el.classList.add('purring');
-    setTimeout(() => el.classList.remove('purring'), 1500);
+function interact(el) {
+    if(el.classList.contains('grooming')) return;
+    el.classList.add('grooming');
+    setTimeout(() => el.classList.remove('grooming'), 2500);
 }
 
 (function() {
   const cats = document.querySelectorAll('.cat-avatar');
 
-  // 1. 眼睛跟随 (Eye Tracking)
+  // Eye Tracking
   document.addEventListener('mousemove', (e) => {
     cats.forEach(cat => {
-      // 睡觉或洗脸时不看鼠标
       if (cat.classList.contains('sleeping') || cat.classList.contains('grooming')) return;
-
+      
       const pupils = cat.querySelectorAll('.pupil');
       const rect = cat.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
+      const cx = rect.left + rect.width/2;
+      const cy = rect.top + rect.height/2;
+      const dx = (e.clientX - cx) / window.innerWidth;
+      const dy = (e.clientY - cy) / window.innerHeight;
       
-      // 计算相对位置
-      let dx = (e.clientX - cx) / window.innerWidth;
-      let dy = (e.clientY - cy) / window.innerHeight;
-
-      // 限制眼球转动幅度，防止“翻白眼”
-      const maxMove = 6; 
-      const x = Math.max(-maxMove, Math.min(maxMove, dx * 30));
-      const y = Math.max(-4, Math.min(maxMove, dy * 30));
-
-      pupils.forEach(p => {
-        p.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
-      });
+      const x = Math.max(-5, Math.min(5, dx * 25));
+      const y = Math.max(-3, Math.min(5, dy * 20));
+      
+      pupils.forEach(p => p.style.transform = `translate(-50%,-50%) translate(${x}px, ${y}px)`);
     });
   });
 
-  // 2. 眨眼循环 (Blinking)
-  const blinkCat = (cat) => {
+  // Blinking Loop
+  const blink = (cat) => {
       if(!cat.classList.contains('sleeping')) {
           cat.classList.add('blinking');
-          setTimeout(() => cat.classList.remove('blinking'), 250);
+          setTimeout(() => cat.classList.remove('blinking'), 200);
       }
-      setTimeout(() => blinkCat(cat), 3000 + Math.random() * 4000);
+      setTimeout(() => blink(cat), 3000 + Math.random() * 4000);
   };
-  cats.forEach(cat => blinkCat(cat));
+  cats.forEach(cat => blink(cat));
 
-  // 3. 随机行为AI (Behavior System)
-  cats.forEach((cat, index) => {
-      const behaviors = ['idle', 'sleeping', 'grooming', 'stretching'];
-      
-      const doRandomAction = () => {
-          // 移除所有旧状态
-          cat.classList.remove(...behaviors);
+  // Random Behavior AI
+  cats.forEach((cat, i) => {
+      const actions = ['sleeping', 'stretching', 'idle'];
+      const act = () => {
+          cat.classList.remove(...actions);
+          const r = Math.random();
+          let next = 'idle';
+          let time = 4000;
           
-          const roll = Math.random();
-          let action = 'idle';
-          let duration = 4000;
-
-          // 行为概率分布
-          if (roll < 0.15) { 
-              action = 'sleeping'; // 15% 睡觉
-              duration = 8000;
-          } else if (roll < 0.30) {
-              action = 'grooming'; // 15% 洗脸/舔毛
-              duration = 5000;
-          } else if (roll < 0.45) {
-              action = 'stretching'; // 15% 伸懒腰
-              duration = 3000;
-          } 
-          // 剩下的 55% 是 idle (发呆/呼吸)
-
-          if (action !== 'idle') cat.classList.add(action);
-
-          // 递归调用下一次动作，时间随机
-          setTimeout(doRandomAction, duration + 2000 + Math.random() * 5000);
+          if(r < 0.25) { next = 'sleeping'; time = 8000; }
+          else if(r < 0.4) { next = 'stretching'; time = 3000; }
+          
+          if(next !== 'idle') cat.classList.add(next);
+          setTimeout(act, time + Math.random() * 5000);
       };
-
-      // 两只猫错开启动时间
-      setTimeout(doRandomAction, 1000 + (index * 3000));
+      setTimeout(act, 1000 + i * 3000);
   });
 })();
 </script>
