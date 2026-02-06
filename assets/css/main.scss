@@ -237,7 +237,7 @@ $scroll_offset : 2em;
     margin-bottom: 0.8rem;
 }
 
-.page__content h1::before,
+// Left accent bar only for level-2 headings
 .page__content h2::before {
     content: '';
     position: absolute;
@@ -245,14 +245,9 @@ $scroll_offset : 2em;
     top: 50%;
     transform: translateY(-50%);
     width: 4px;
-    height: 0.95em; // base height, overridden per level if needed
+    height: 0.95em;
     border-radius: 999px;
     background: $accent-blue;
-}
-
-// Make the bar on level-1 headings a bit shorter so it doesn't look oversized
-.page__content h1::before {
-    height: 0.85em;
 }
 
 .page__content h1::after,
@@ -265,6 +260,25 @@ $scroll_offset : 2em;
     border-radius: 999px;
     background: linear-gradient(90deg, $pastel-blue, $pastel-pink);
     opacity: 0.9;
+}
+
+// Highlight style for level-1 headings instead of a left bar
+.page__content h1 {
+    display: inline-block;
+    padding: 0.35rem 0.9rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0.7rem;
+    background: linear-gradient(
+        135deg,
+        rgba(169, 200, 255, 0.18),
+        rgba(247, 182, 216, 0.18)
+    );
+}
+
+// Remove underline bar for level-1 headings (keep for h2 only)
+.page__content h1::after {
+    display: none;
 }
 
 // Publication card hover enhancement
