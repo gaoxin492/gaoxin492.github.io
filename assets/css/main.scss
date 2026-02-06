@@ -232,10 +232,22 @@ h1:before, .anchor:before {
 .page__content h1,
 .page__content h2 {
     position: relative;
-    padding-left: 0.85rem;
+    padding-left: 0.9rem;
     margin-top: 1.8rem;
     margin-bottom: 0.8rem;
-    border-left: 4px solid $accent-blue;
+}
+
+.page__content h1::before,
+.page__content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 1.1em; // slightly shorter than full line height
+    border-radius: 999px;
+    background: $accent-blue;
 }
 
 .page__content h1::after,
