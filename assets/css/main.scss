@@ -1,79 +1,89 @@
-// ===========================================
-// FLUFFY SILVER SHADED CATS - V2 (Organic)
-// ===========================================
+// ==========================================================================
+// REALISTIC SILVER SHADED CATS - SCSS PATCH
+// Append this to the end of your main.scss file
+// ==========================================================================
 
 .cat-park {
     position: fixed;
     left: 2rem;
-    bottom: 1rem;
+    bottom: 1.5rem;
     z-index: 50;
     display: flex;
-    align-items: flex-end;
-    gap: 0px; // Slightly overlap nicely
-    pointer-events: none;
+    align-items: flex-end; /* Align bottom */
+    gap: 1rem; /* Space between cats */
+    pointer-events: none; /* Let clicks pass through empty space */
+    font-size: 1px; /* Coordinate system scaling */
     
+    // Responsive scaling
     @media (max-width: 768px) {
         left: 50%;
-        transform: translateX(-50%) scale(0.7);
-        bottom: 0.5rem;
+        transform: translateX(-50%);
+        bottom: 1rem;
+        zoom: 0.8;
     }
 }
 
-// Variables
-$c-white: #fdfdfd;
-$c-silver: #dbe0e7;
-$c-shadow: #b8c1cf;
-$c-nose: #ffafbf;
-$c-eye-bg: #98c9a3;
-$c-pupil: #2a2a2a;
-
-.cat-avatar {
+// Global Cat Styles
+.cat-avatar.silver-cat {
     position: relative;
     pointer-events: auto;
-    transition: all 0.5s ease;
     cursor: grab;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+
+    // Hover effect
+    &:hover {
+        transform: translateY(-5px) scale(1.02);
+        .cat-tail {
+            animation-duration: 0.5s !important; // Wag faster
+        }
+    }
     
-    // Purring vibration effect
-    &.purring {
-        animation: purr-vibe 0.2s infinite;
+    &:active {
         cursor: grabbing;
+        transform: scale(0.95);
     }
 }
 
-// =======================
-// CAT 1: SITTING POSE
-// =======================
+// --- COLOR PALETTE (Soft Illustration Style) ---
+$fur-white: #fcfcfc;
+$fur-silver-light: #e6e9ee;
+$fur-silver: #cdd3de; // The "shaded" part
+$fur-dark: #aab2c0;
+$pink-inner: #ffcfdc;
+$pink-nose: #ffadbc;
+$eye-green: #8bc4a8; // Silver shadeds usually have green eyes
+$eye-liner: #4a4a4a; // The mascara look
+
+// --- CAT 1: SITTING POSE ---
 .cat-avatar[data-pose="sitting"] {
-    width: 140px;
-    height: 160px;
+    width: 120px;
+    height: 140px;
     z-index: 2;
 
     .cat-body {
         position: absolute;
         bottom: 0;
-        left: 15%;
-        width: 70%;
-        height: 65%;
-        background: radial-gradient(circle at 30% 20%, $c-white, $c-silver);
-        // Use irregular radius for organic "pear" shape
-        border-radius: 48% 52% 55% 45% / 60% 60% 40% 40%;
-        box-shadow: inset -10px -5px 20px rgba(0,0,0,0.05);
-        z-index: 5;
-        // Breathing animation
-        animation: body-breathe-sit 4s ease-in-out infinite;
-
-        .chest-fur {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 75px;
+        background: radial-gradient(circle at 40% 20%, $fur-white 20%, $fur-silver-light 80%);
+        border-radius: 50% 50% 45% 45%;
+        box-shadow: inset 0 -10px 20px $fur-silver;
+        
+        // Chest fluff
+        .chest-fluff {
             position: absolute;
-            top: -15px;
+            top: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80%;
-            height: 60px;
-            background: $c-white;
+            width: 60px;
+            height: 50px;
+            background: $fur-white;
             border-radius: 50%;
-            filter: blur(5px);
-            z-index: 6;
-            box-shadow: 0 5px 15px rgba(255,255,255,0.8);
+            filter: blur(4px);
+            z-index: 2;
         }
     }
 
@@ -82,18 +92,12 @@ $c-pupil: #2a2a2a;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 90px;
-        height: 80px;
+        width: 80px;
+        height: 72px;
+        background: #fff;
+        border-radius: 48%;
         z-index: 10;
-        background: radial-gradient(circle at 50% 40%, $c-white 50%, $c-silver 100%);
-        border-radius: 45% 45% 42% 42%; // Cheeks
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        
-        // Fluffy edges
-        &::after {
-            content:''; position:absolute; inset:-3px; 
-            background:inherit; border-radius:inherit; filter:blur(4px); z-index:-1;
-        }
+        box-shadow: inset 0 -6px 15px $fur-silver-light;
     }
 
     .cat-paws {
@@ -101,308 +105,371 @@ $c-pupil: #2a2a2a;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 80px;
-        z-index: 8;
-        
+        display: flex;
+        gap: 22px;
+        z-index: 5;
+
         .paw {
-            position: absolute;
-            bottom: 0;
-            width: 28px;
-            height: 24px;
-            background: $c-white;
-            border-radius: 15px 15px 10px 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 24px;
+            height: 20px;
+            background: $fur-white;
+            border-radius: 15px 15px 12px 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
             
-            &.left { left: 5px; }
-            &.right { right: 5px; }
+            &::after { // Paw details
+                content: '';
+                position: absolute;
+                top: 0; left: 8px;
+                width: 1px; height: 10px;
+                background: $fur-silver;
+                box-shadow: 7px 0 0 $fur-silver;
+                opacity: 0.5;
+            }
         }
     }
 
-    // THE FEATHER DUSTER TAIL
     .cat-tail {
         position: absolute;
-        bottom: 10px;
-        right: -20px;
-        width: 80px;
-        height: 120px;
+        bottom: 5px;
+        right: 0;
+        width: 60px;
+        height: 80px;
         z-index: 1;
         transform-origin: bottom left;
-        animation: tail-swish-sit 5s ease-in-out infinite;
-
-        .tail-core {
+        
+        .tail-fur {
             width: 100%;
             height: 100%;
             background: transparent;
-            // The "Duster" effect using multiple shadows
-            border-radius: 50%;
-            box-shadow: 15px 5px 0 15px $c-silver, 15px 5px 0 25px rgba(255,255,255,0.5);
-            filter: blur(8px); // High blur for fluff
-            opacity: 0.9;
+            border-radius: 0 0 50px 0;
+            box-shadow: 12px 5px 0 8px $fur-silver;
+            filter: blur(2px);
+            animation: tail-sway-sit 4s ease-in-out infinite;
         }
     }
 }
 
-// =======================
-// CAT 2: LYING POSE (The Loaf)
-// =======================
+// --- CAT 2: LYING POSE (Loaf/Prone) ---
 .cat-avatar[data-pose="lying"] {
-    width: 160px;
-    height: 100px;
-    margin-left: -30px; // Overlap slightly
-    z-index: 3;
+    width: 140px;
+    height: 90px;
+    margin-bottom: -5px; // Adjust alignment with sitting cat
+    z-index: 1;
 
     .cat-body {
         position: absolute;
         bottom: 0;
-        width: 100%;
-        height: 70px;
-        background: radial-gradient(ellipse at 50% 0%, $c-white, $c-silver);
-        // The "Bean" shape
-        border-radius: 40% 50% 40% 50% / 50% 60% 40% 40%;
-        box-shadow: inset 0 -10px 20px rgba(0,0,0,0.05);
-        animation: body-breathe-lie 5s ease-in-out infinite;
+        left: 20px;
+        width: 110px;
+        height: 55px;
+        background: radial-gradient(ellipse at center, $fur-white 0%, $fur-silver-light 100%);
+        border-radius: 40px 50px 30px 30px;
+        box-shadow: inset 0 -5px 15px $fur-silver;
+
+        // Stripe markings for realism
+        .body-stripe {
+            position: absolute;
+            top: 5px;
+            left: 40%;
+            width: 40px;
+            height: 30px;
+            background: repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(160,170,180,0.2) 10px, rgba(160,170,180,0.2) 15px);
+            border-radius: 50%;
+            filter: blur(1px);
+        }
     }
 
     .cat-head {
         position: absolute;
         bottom: 25px;
-        left: -10px;
-        width: 85px;
-        height: 75px;
-        background: radial-gradient(circle at 40% 40%, $c-white, $c-silver);
+        left: 0;
+        width: 76px;
+        height: 68px;
+        background: #fff;
         border-radius: 46%;
         z-index: 10;
-        transform: rotate(-10deg);
-        box-shadow: 2px 5px 10px rgba(0,0,0,0.1);
-
-        &::after {
-            content:''; position:absolute; inset:-2px; 
-            background:inherit; border-radius:inherit; filter:blur(3px); z-index:-1;
-        }
+        box-shadow: inset -5px -5px 15px $fur-silver-light;
+        transform: rotate(-5deg);
     }
-    
+
     .cat-paws {
-        // Tucked paws visible slightly
-        .paw-fold {
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        z-index: 5;
+        
+        .paw {
             position: absolute;
-            bottom: 0;
-            width: 30px; 
-            height: 15px;
-            background: darken($c-silver, 5%);
-            border-radius: 20px;
-            filter: blur(2px);
-            opacity: 0.5;
-            
-            &.left { left: 20px; z-index: 1; }
-            &.right { left: 50px; z-index: 1; }
+            background: $fur-white;
+            border-radius: 12px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+
+            &.left { width: 22px; height: 14px; left: 0; }
+            &.right { width: 24px; height: 16px; left: 26px; bottom: -2px;}
         }
     }
 
-    // TAIL: Long lying duster
     .cat-tail {
         position: absolute;
-        bottom: 0;
-        right: -30px;
-        width: 100px;
-        height: 50px;
+        bottom: 5px;
+        right: -10px;
+        width: 80px;
+        height: 30px;
         z-index: 0;
         transform-origin: left center;
-        animation: tail-lazy-wag 6s ease-in-out infinite;
-
-        .tail-core {
+        
+        .tail-fur {
             width: 100%;
             height: 100%;
+            background: $fur-silver;
             border-radius: 50px;
-            background: $c-silver;
-            box-shadow: 0 0 20px 5px $c-shadow; // Big soft glow
-            filter: blur(6px);
+            filter: blur(3px);
+            opacity: 0.8;
+            animation: tail-sway-lie 5s ease-in-out infinite;
         }
     }
 }
 
-// =======================
-// SHARED ANATOMY (The Fixes)
-// =======================
+// --- SHARED FACE FEATURES (The "Realistic" Details) ---
 
-// 1. EARS (Triangular & Separated)
-.ear-container {
-    position: absolute;
-    top: -15px;
-    width: 100%;
-    height: 40px;
+.cat-head {
+    // Fuzzy edges for head
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        background: inherit;
+        filter: blur(3px);
+        z-index: -1;
+    }
 }
+
 .cat-ear {
     position: absolute;
-    top: 5px;
-    width: 30px;
-    height: 35px;
-    background: $c-silver;
-    // Organic Triangle: Not sharp geometric, but cat-like
-    border-radius: 20% 80% 0% 100% / 20% 100% 0% 80%; 
-    border: 2px solid rgba(255,255,255,0.5);
-    border-bottom: none;
+    top: -12px;
+    width: 26px;
+    height: 30px;
+    background: $fur-silver-light;
+    border-radius: 50% 50% 0 0; // Pointed but soft
     overflow: hidden;
 
-    &.left { 
-        left: -5px; // Push out
-        transform: rotate(-35deg); 
-        .ear-fluff { transform: rotate(10deg); }
-    }
-    &.right { 
-        right: -5px; // Push out
-        transform: scaleX(-1) rotate(-35deg);
-        .ear-fluff { transform: rotate(10deg); }
-    }
+    &.left { left: 8px; transform: rotate(-25deg); }
+    &.right { right: 8px; transform: rotate(25deg); }
 
-    .ear-fluff {
+    .ear-inner {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 70%;
+        background: $pink-inner;
+        border-radius: 50% 50% 0 0;
+        opacity: 0.8;
+    }
+    
+    // Ear fluff
+    .ear-fur {
         position: absolute;
         bottom: 0;
-        left: -5px;
-        width: 20px;
-        height: 20px;
-        background: rgba(255,255,255,0.8);
-        filter: blur(3px);
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: #fff;
+        filter: blur(2px);
     }
 }
 
-// 2. FACE & EYES (Separated)
-.face-base {
+// The "M" mark on forehead (Silver tabby trait)
+.face-marking {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 8px;
+    width: 2px;
+    height: 12px;
+    background: $fur-dark;
+    opacity: 0.3;
+    filter: blur(0.5px);
+    
+    &.left { left: 38%; transform: rotate(-15deg); }
+    &.right { right: 38%; transform: rotate(15deg); }
 }
+
+.cheek-fluff {
+    position: absolute;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: 12;
+    
+    &.left { left: -5px; }
+    &.right { right: -5px; }
+}
+
+.cat-face {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .cat-eye {
     position: absolute;
-    top: 28px;
-    width: 24px;
-    height: 24px;
-    background: $c-eye-bg;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background: linear-gradient(135deg, lighten($eye-green, 10%), darken($eye-green, 5%));
     border-radius: 50%;
-    border: 1px solid #555; // Eyeliner
+    border: 1.5px solid $eye-liner; // Eyeliner
     overflow: hidden;
-    z-index: 20;
+    transition: transform 0.1s; // Blink speed
 
-    &.left { left: 10px; } // Moved closer to edge (further apart)
-    &.right { right: 10px; }
+    &.left { left: 12px; }
+    &.right { right: 12px; }
 
-    .pupil {
-        width: 6px; height: 18px;
-        background: $c-pupil;
+    .eye-white {
+        position: absolute;
+        top: -2px; left: -2px;
+        width: 10px; height: 10px;
+        background: rgba(255,255,255,0.2);
         border-radius: 50%;
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s;
+        filter: blur(2px);
     }
-    .shine {
-        position: absolute;
-        top: 5px; right: 5px;
-        width: 6px; height: 6px;
-        background: #fff; border-radius: 50%;
-    }
-}
 
-// 3. MUZZLE & WHISKERS (Correct Anatomy)
-.cat-muzzle {
-    position: absolute;
-    top: 42px; // Below eyes
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 20px;
-    z-index: 20;
+    .cat-pupil {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 14px;
+        background: #1a1a1a;
+        border-radius: 50%;
+        transition: transform 0.05s linear;
+    }
+
+    .eye-shine {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 2px #fff;
+    }
 }
 
 .cat-nose {
     position: absolute;
-    top: 0; left: 50%;
+    top: 24px;
+    left: 50%;
     transform: translateX(-50%);
-    width: 10px; height: 7px;
-    background: $c-nose;
-    border-radius: 4px 4px 6px 6px;
+    width: 8px;
+    height: 6px;
+    background: $pink-nose;
+    border-radius: 40% 40% 50% 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 .cat-mouth {
     position: absolute;
-    top: 7px; left: 50%;
+    top: 30px;
+    left: 50%;
     transform: translateX(-50%);
-    width: 20px; height: 10px;
+    width: 16px;
+    height: 8px;
     
-    .lip {
+    .mouth-line {
         position: absolute;
         top: 0;
-        width: 10px; height: 8px;
-        border: 1.5px solid #999;
+        width: 8px;
+        height: 6px;
+        border: 1.5px solid #888;
         border-top: none;
         border-radius: 0 0 5px 5px;
+        opacity: 0.6;
         
-        &.left { right: 50%; border-right: none; border-radius: 0 0 0 8px; transform:rotate(-5deg);}
-        &.right { left: 50%; border-left: none; border-radius: 0 0 8px 0; transform:rotate(5deg);}
+        &.left { left: 0; border-right: none; border-radius: 0 0 0 5px; transform: rotate(-5deg); }
+        &.right { right: 0; border-left: none; border-radius: 0 0 5px 0; transform: rotate(5deg); }
     }
 }
 
-.whiskers-hub {
+.whisker-group {
     position: absolute;
-    top: 6px; // Growing from the muzzle pads
-    width: 0; height: 0;
-
-    &.left { left: 0; }
-    &.right { right: 0; }
+    top: 26px;
+    
+    &.left { left: -15px; }
+    &.right { right: -15px; }
 
     .whisker {
-        position: absolute;
+        width: 40px;
         height: 1px;
         background: #bbb;
-        transform-origin: center left;
+        margin-bottom: 3px;
+        border-radius: 2px;
         
-        &.w1 { width: 45px; transform: rotate(-15deg); top: -2px; }
-        &.w2 { width: 50px; transform: rotate(0deg); top: 2px; }
-        &.w3 { width: 48px; transform: rotate(15deg); top: 6px; }
-        &.w4 { width: 40px; transform: rotate(25deg); top: 9px; }
+        &.left .w1 { transform: rotate(-10deg); }
+        &.right .w1 { transform: rotate(10deg); transform-origin: left; }
+    }
+}
+
+// --- ANIMATIONS ---
+
+@keyframes tail-sway-sit {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+@keyframes tail-sway-lie {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(5deg) translateY(-2px); }
+}
+
+// --- STATES (Added by JS) ---
+
+// Sleeping
+.cat-avatar.sleeping {
+    .cat-eye {
+        transform: scaleY(0.1);
+        border-color: transparent;
+        background: #ddd; // Eyelid color
     }
     
-    &.left .whisker { right: 0; transform-origin: right center; }
-    &.left .w1 { transform: rotate(15deg); }
-    &.left .w2 { transform: rotate(0deg); }
-    &.left .w3 { transform: rotate(-15deg); }
-    &.left .w4 { transform: rotate(-25deg); }
+    .cat-body {
+        animation: breathe 3s ease-in-out infinite;
+    }
+}
+@keyframes breathe {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.02); }
 }
 
-// =======================
-// ANIMATIONS
-// =======================
-
-@keyframes body-breathe-sit {
-    0%, 100% { border-radius: 48% 52% 55% 45% / 60% 60% 40% 40%; transform: scale(1); }
-    50% { border-radius: 50% 50% 53% 47% / 62% 58% 42% 38%; transform: scale(1.02); }
+// Blinking (Instant)
+.cat-eye.blinking {
+    transform: scaleY(0.1);
 }
 
-@keyframes body-breathe-lie {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(1.03); }
-}
-
-@keyframes tail-swish-sit {
-    0%, 100% { transform: rotate(0deg); filter: blur(8px); }
-    50% { transform: rotate(8deg); filter: blur(7px); } // Fluff pulses too
-}
-
-@keyframes tail-lazy-wag {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(10deg) translateY(-5px); }
-}
-
-@keyframes purr-vibe {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(1px, 1px); }
-    50% { transform: translate(-1px, 0); }
-    75% { transform: translate(0, -1px); }
-    100% { transform: translate(0, 0); }
-}
-
-// Interactive states
-.cat-avatar.wiggle {
-    animation: purr-vibe 0.3s infinite;
-}
+// Stretch (Animation)
 .cat-avatar.stretch {
-    transform: scaleX(1.1) skewX(-5deg);
+    animation: stretch-anim 2s ease-in-out;
+}
+@keyframes stretch-anim {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05) translateY(-5px); }
+}
+
+// Happy (Wiggle)
+.cat-avatar.happy {
+    animation: happy-wiggle 0.5s ease-in-out 2;
+}
+@keyframes happy-wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
 }
