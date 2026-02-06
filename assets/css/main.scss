@@ -245,9 +245,14 @@ h1:before, .anchor:before {
     top: 50%;
     transform: translateY(-50%);
     width: 4px;
-    height: 1.1em; // slightly shorter than full line height
+    height: 1em; // base height, overridden per level if needed
     border-radius: 999px;
     background: $accent-blue;
+}
+
+// Make the bar on level-1 headings a bit shorter so it doesn't look oversized
+.page__content h1::before {
+    height: 0.75em;
 }
 
 .page__content h1::after,
