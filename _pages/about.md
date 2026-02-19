@@ -18,11 +18,12 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 
-I am currently a third-year Master's student in Applied Mathematics at Fudan University and an **incoming PhD student in Computer Science at a US top-10 university**. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models, and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am currently a third-year Master's student in Applied Mathematics at Fudan University and will begin a PhD in Computer Science in North America. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models, and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
 
 # 🔥 News
 <div class="news-window" markdown="1">
+- *2026.02*: 🎉 Start my internship at Microsoft Research Asia (MSRA), based in Beijing~
 - *2026.02*: 🎉 [ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1) are accepted by **ICLR 2026**.
 - *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) and [OrderMind](https://arxiv.org/pdf/2510.25138) are accepted by **Neurips 2025**. Got visa! See you in San Diego!
 - *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
@@ -179,7 +180,8 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 - *2019.09 - 2023.06*, Bachelor of Mathematics, Donghua Univeristy, Shanghai, China.
 
 # 💻 Internships
-- *2025.05 - Now*, [Shanghai AIlab](https://www.shlab.org.cn/), Shanghai, China.
+- *2026.02 - present*, [Microsoft Research Asia](https://www.microsoft.com/en-us/research/), Beijing, China.
+- *2025.05 - 2025.12*, [Shanghai AIlab](https://www.shlab.org.cn/), Shanghai, China.
 - *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
 
 
