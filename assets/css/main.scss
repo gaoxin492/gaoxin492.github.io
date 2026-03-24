@@ -348,7 +348,7 @@ $scroll_offset : 2em;
    ========================================================================== */
 
    .cat-park {
-    position: fixed; left: 2rem; bottom: 1rem; z-index: 999;
+    position: fixed; left: 3rem; bottom: 1rem; z-index: 999;
     display: flex; align-items: flex-end; gap: -40px; pointer-events: none;
     @media (max-width: 768px) { left: 50%; transform: translateX(-50%) scale(0.75); bottom: 0.5rem; }
 }
