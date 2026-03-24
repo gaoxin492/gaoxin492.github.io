@@ -17,8 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-
-I am currently a third-year Master's student in Applied Mathematics at Fudan University and will begin a PhD in Computer Science at Yale University. My research focuses on generative machine learning, with particular emphasis on probabilistic distribution modeling, generative models, and multimodal representation learning. At present, I am exploring recursive and looped architectures, such as diffusion language models, tiny recursive models, and looped transformers, for complex reasoning tasks. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). My research envisions a future where complex AI systems are fundamentally trustworthy. I focus on the reliability and verification of multimodal AI, aiming to build systems that integrate rigorous structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
 
 # 🔥 News
