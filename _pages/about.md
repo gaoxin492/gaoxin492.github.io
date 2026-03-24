@@ -39,6 +39,8 @@ I am a Master's student in Applied Math at Fudan University and an incoming CS P
 
 # 📝 Selected Publications
 
+My publications primarily focus on two synergetic directions: **Robust Representation in Complex Environments** and **Safety and Verification in AI Systems**.
+
 ## Robust Representation in Complex Environments
 
 <!-- ========================================================================================================================== -->
