@@ -17,40 +17,29 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). My research focuses on the reliability and verification of multimodal AI, aiming to build systems that integrate explicit structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Currently, I am exploring verifiable multimodal code generation and principled human-in-the-loop (HITL) mechanisms for error-aware autonomous agents. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). **My research focuses on the reliability and verification of multimodal AI**, aiming to build systems that integrate explicit structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Currently, I am exploring verifiable multimodal code generation and principled human-in-the-loop (HITL) mechanisms for error-aware autonomous agents. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+
+<p style="font-size: 0.85em; font-style: italic; color: #888;">(Note: You might notice some early Medical AI publications on my Google Scholar. These stem from my lab rotations in an excellent group, where we explored trustworthiness and interpretability in medical settings. I still maintain great relationships with my brilliant former colleagues there, though my own research is now entirely focused on domain-agnostic multimodal systems.)</p>
 
 
 # 🔥 News
 <div class="news-window" markdown="1">
-- *2026.03*: 🎉 MacTok and GIFT are accepted by **CVPR 2026**.
-- *2026.02*: Start my internship at Microsoft Research Asia (MSRA), based in Beijing~
-- *2026.02*: 🎉 [ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1) are accepted by **ICLR 2026**.
-- *2025.09*: 🎉 [GOOD](https://arxiv.org/pdf/2510.17131) and [OrderMind](https://arxiv.org/pdf/2510.25138) are accepted by **Neurips 2025**. Got visa! See you in San Diego!
-- *2025.09*: 🎉 [Loong](https://arxiv.org/abs/2509.03059) is accepted by **Neurips 2025 workshop**. Great work from the Camel-AI team!!
-- *2025.06*: 🎉 [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) is accepted by **ICCV 2025**. Congrats to Jiasheng! Hope to see you in Hawaii!
-- *2025.05*: Start my internship in shanghai AIlab with [Jie Fu](https://bigaidream.github.io/)! Do you have Big AI Dream~
-- *2025.04*: Welcomed two adorable cats into my life: Fellow and Putao 🐱🍇 
-- *2025.01*: 🎉 [MVP](https://openreview.net/forum?id=s4MwstmB8o) is accepted by **ICLR 2025**. See you in Singapore!
-- *2024.12*: Start my internship with prof [Chenyang Si](https://chenyangsi.top/) and [Ziwei Liu](https://liuziwei7.github.io/)~
+- *2026.03*: Two papers (MacTok and GIFT) accepted to **CVPR 2026**.
+- *2026.02*: Joined Microsoft Research Asia (MSRA) as a Research Intern.
+- *2026.02*: Two papers ([ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1)) accepted to **ICLR 2026**.
+- *2025.09*: Two papers ([GOOD](https://arxiv.org/pdf/2510.17131) and [OrderMind](https://arxiv.org/pdf/2510.25138)) accepted to **NeurIPS 2025**.
+- *2025.09*: [Loong](https://arxiv.org/abs/2509.03059) accepted to **NeurIPS 2025 Workshop**.
+- *2025.06*: [Dark-ISP](https://openreview.net/forum?id=7Z3G2ScIwN) accepted to **ICCV 2025**.
+- *2025.05*: Joined Shanghai AILab as a Research Intern, working with [Jie Fu](https://bigaidream.github.io/).
+- *2025.04*: Welcomed two cats into my life: Fellow and Putao 🐱🍇
+- *2025.01*: [MVP](https://openreview.net/forum?id=s4MwstmB8o) accepted to **ICLR 2025**.
+- *2024.12*: Joined as a Research Intern, working with Prof. [Chenyang Si](https://chenyangsi.top/) and Prof. [Ziwei Liu](https://liuziwei7.github.io/).
 </div>
 <!-- Honored to collaborate with them on these promising projects. -->
 
-# 📝 Selected Publications 
+# 📝 Selected Publications
 
-
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv preprint</div><img src='images/2024_09_PAPL_SLAM/PAPL_SLAM.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[PAPL-SLAM: Principal Axis-Anchored Monocular Point-Line SLAM](https://arxiv.org/pdf/2410.12324)
-
- **Guanghao Li**, Yu Cao, Qi Chen, Yifan Yang, Jian Pu
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=6nkKQDIAAAAJ&citation_for_view=6nkKQDIAAAAJ:9yKSN-GCB0IC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-
-- PAPL-SLAM is a point-line SLAM system that efficiently integrates line structural information and optimization by anchoring lines to a principal axis, reducing the number of parameters, and utilizing probabilistic data association, enabling robust, rapid, and accurate mapping and tracking in both indoor and outdoor environments.
-</div>
-</div> -->
-
+## Robust Representation in Complex Environments
 
 <!-- ========================================================================================================================== -->
 
@@ -71,42 +60,25 @@ I am a Master's student in Applied Math at Fudan University and an incoming CS P
 
 <!-- ========================================================================================================================== -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/2026_02_MacTok/mactok.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://arxiv.org/pdf/2510.17131)
+[MacTok: Robust Continuous Tokenization for Image Generation](https://arxiv.org/abs/TBD)
 
-**Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
+Hengyu Zeng#, **Xin Gao#**, Guanghao Li, Yuxiang Yan, Jiaoyang Ruan, Junpeng Ma, Haoyu Albert Wang, Jian Pu
 
-- **GOOD** is a training-free diffusion guidance framework that shapes a robust OOD/ID decision boundary. It steers sampling with two gradients—image-level toward low-density regions and feature-level toward sparse zones—to generate diverse, controllable OOD examples.
+- **MacTok** identifies and mitigates the severe "posterior collapse" failure in continuous image tokenizers. We formulate tokenization as a rigorous information preservation task by introducing DINO-guided semantic masking and multi-level representation alignment, forcing the model to infer robust semantics from incomplete visual evidence. This prevents structural degradation and yields state-of-the-art generation fidelity (gFID 1.52 at 512x512) with up to 64x fewer tokens.
 </div>
 </div>
 
 <!-- ========================================================================================================================== -->
 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
-
-**Jiasheng Guo#**, **Xin Gao#**, Yuxiang Yan, Guanghao Li, Jian Pu
-
-- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion. 
-</div>
-</div>
-
-
-
-<!-- ========================================================================================================================== -->
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/2025_09_order/order.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Learning Spatial-Aware Manipulation Ordering](https://arxiv.org/pdf/2510.25138)
 
-Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu 
+Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu
 
 - This paper introduces **OrderMind**, a spatial-aware manipulation ordering framework that learns object priorities from local geometry via a kNN spatial graph and a lightweight temporal module, supervised by VLM-distilled spatial priors. It also presents the **Manipulation Ordering Benchmark** (163k+ samples) for cluttered scenes.
 </div>
@@ -129,10 +101,39 @@ Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qu
 
 </div>
 </div>
-<!-- ========================================================================================================================== --> 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurips 2025 workshop</div><img src='images/2025_09_Loong/Loong.png' alt="sym" width="100%"></div></div>
+## Safety and Verification in AI Systems
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://arxiv.org/pdf/2510.17131)
+
+**Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
+
+- **GOOD** is a training-free diffusion guidance framework that shapes a robust OOD/ID decision boundary. It steers sampling with two gradients—image-level toward low-density regions and feature-level toward sparse zones—to generate diverse, controllable OOD examples.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
+
+**Jiasheng Guo#**, **Xin Gao#**, Yuxiang Yan, Guanghao Li, Jian Pu
+
+- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025 Workshop</div><img src='images/2025_09_Loong/Loong.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Loong: Synthesize Long Chain-of-Thoughts at Scale through Verifiers](https://arxiv.org/abs/2509.03059)
@@ -182,7 +183,6 @@ That is why I now seek a PhD, not as an academic credential, but as a natural co
 # 💻 Internships
 - *2026.02 - present*, [Microsoft Research Asia](https://www.microsoft.com/en-us/research/), Beijing, China.
 - *2025.05 - 2025.12*, [Shanghai AIlab](https://www.shlab.org.cn/), Shanghai, China.
-- *2023.03 - 2023.07*, [Winning AI Lab](https://www.winning.com.cn/solution-detail.html?id=40), Shanghai, China.
 
 
 # 📚 Learning Materials

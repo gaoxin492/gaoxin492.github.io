@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Xin Gao (高鑫)"
-description              : "Master of Fudan University"
+description              : "Incoming CS Ph.D. @ Yale | M.S. in Applied Math @ Fudan"
 repository               : "gaoxin492/gaoxin492.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Xin Gao"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : # "Fudan University"
+  bio              : "Incoming CS Ph.D. @ Yale | M.S. in Applied Math @ Fudan"
   location         : "Shanghai, China"
   employer         :
   pubmed           : 
