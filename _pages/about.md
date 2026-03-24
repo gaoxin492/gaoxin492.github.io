@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). My research envisions a future where complex AI systems are fundamentally trustworthy. I focus on the reliability and verification of multimodal AI, aiming to build systems that integrate rigorous structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. This is my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). My research focuses on the reliability and verification of multimodal AI, aiming to build systems that integrate explicit structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Currently, I am exploring verifiable multimodal code generation and principled human-in-the-loop (HITL) mechanisms for error-aware autonomous agents. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
 
 # 🔥 News
