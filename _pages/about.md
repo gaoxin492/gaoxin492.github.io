@@ -78,13 +78,9 @@ I am a Master's student in Applied Math at Fudan University and an incoming CS P
 
 [Escaping Low-Rank Traps: Interpretable Visual Concept Learning via Implicit Vector Quantization](https://openreview.net/pdf?id=9M2VrpAtR1)
 
-Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Cheng Tang et al.
+Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Cheng Tang, Changkai Ji, Huihui Xu, Wei Li, Ziyan Huang et al.
 
-[![GitHub Stars](https://img.shields.io/github/stars/Daryl-GSJ/IVQ-CBM?style=social)](https://github.com/Daryl-GSJ/IVQ-CBM)
-[![GitHub Forks](https://img.shields.io/github/forks/Daryl-GSJ/IVQ-CBM?style=social)](https://github.com/Daryl-GSJ/IVQ-CBM)
-[[Project page]](https://github.com/Daryl-GSJ/IVQ-CBM)
-
-- **IVQ** addresses representational collapse in Concept Bottleneck Models (CBMs), where vision-concept alignment degrades under low-rank feature traps. Rather than imposing a hard, lossy bottleneck, IVQ acts as a structural regularizer that anchors patch features to learned semantic prototypes without quantizing the forward pass, preserving high-rank and explicitly structured representations for robust, interpretable concept learning.
+- **IVQ** addresses representational collapse in Concept Bottleneck Models (CBMs), where vision-concept alignment degrades under low-rank feature traps. Rather than imposing a hard, lossy bottleneck, IVQ acts as a structural regularizer that anchors patch features to learned semantic prototypes without quantizing the forward pass, preserving high-rank and structured representations for robust, interpretable concept learning.
 </div>
 </div>
 
