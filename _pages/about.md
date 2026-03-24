@@ -19,12 +19,12 @@ redirect_from:
 
 I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). **My research focuses on the reliability and verification of multimodal AI**, aiming to build systems that integrate explicit structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Currently, I am exploring verifiable multimodal code generation and principled human-in-the-loop (HITL) mechanisms for error-aware autonomous agents. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 
-<p style="font-size: 0.85em; font-style: italic; color: #888;">(Note: You might notice some early Medical AI publications on my Google Scholar. These stem from my lab rotations in an excellent group, where we explored trustworthiness and interpretability in medical settings. I still maintain great relationships with my brilliant former colleagues there, though my own research is now entirely focused on domain-agnostic multimodal systems.)</p>
+<p style="font-size: 0.85em; font-style: italic; color: #888;">(Note: You might notice some early Medical AI publications on my Google Scholar. These stem from my first-year rotations in an excellent group, where we explored trustworthiness and interpretability. I learned a lot about probabilistic modeling and uncertainty estimation. I remain closely connected with my brilliant former colleagues there, though my own research is now entirely focused on domain-agnostic multimodal systems.)</p>
 
 
 # 🔥 News
 <div class="news-window" markdown="1">
-- *2026.03*: Two papers (MacTok and GIFT) accepted to **CVPR 2026**.
+- *2026.03*: Two papers ([MacTok](https://arxiv.org/abs/TBD) and [GIFT](https://arxiv.org/abs/TBD)) accepted to **CVPR 2026**.
 - *2026.02*: Joined Microsoft Research Asia (MSRA) as a Research Intern.
 - *2026.02*: Two papers ([ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1)) accepted to **ICLR 2026**.
 - *2025.09*: Two papers ([GOOD](https://arxiv.org/pdf/2510.17131) and [OrderMind](https://arxiv.org/pdf/2510.25138)) accepted to **NeurIPS 2025**.
@@ -65,9 +65,26 @@ I am a Master's student in Applied Math at Fudan University and an incoming CS P
 
 [MacTok: Robust Continuous Tokenization for Image Generation](https://arxiv.org/abs/TBD)
 
-Hengyu Zeng#, **Xin Gao#**, Guanghao Li, Yuxiang Yan, Jiaoyang Ruan, Junpeng Ma, Haoyu Albert Wang, Jian Pu
+**Hengyu Zeng#**, **Xin Gao#**, Guanghao Li, Yuxiang Yan, Jiaoyang Ruan, Junpeng Ma, Haoyu Albert Wang, Jian Pu
 
 - **MacTok** identifies and mitigates the severe "posterior collapse" failure in continuous image tokenizers. We formulate tokenization as a rigorous information preservation task by introducing DINO-guided semantic masking and multi-level representation alignment, forcing the model to infer robust semantics from incomplete visual evidence. This prevents structural degradation and yields state-of-the-art generation fidelity (gFID 1.52 at 512x512) with up to 64x fewer tokens.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/2026_01_IVQ/IVQ.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Escaping Low-Rank Traps: Interpretable Visual Concept Learning via Implicit Vector Quantization](https://openreview.net/pdf?id=9M2VrpAtR1)
+
+Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Cheng Tang et al.
+
+[![GitHub Stars](https://img.shields.io/github/stars/Daryl-GSJ/IVQ-CBM?style=social)](https://github.com/Daryl-GSJ/IVQ-CBM)
+[![GitHub Forks](https://img.shields.io/github/forks/Daryl-GSJ/IVQ-CBM?style=social)](https://github.com/Daryl-GSJ/IVQ-CBM)
+[[Project page]](https://github.com/Daryl-GSJ/IVQ-CBM)
+
+- **IVQ** addresses representational collapse in Concept Bottleneck Models (CBMs), where vision-concept alignment degrades under low-rank feature traps. Rather than imposing a hard, lossy bottleneck, IVQ acts as a structural regularizer that anchors patch features to learned semantic prototypes without quantizing the forward pass, preserving high-rank and explicitly structured representations for robust, interpretable concept learning.
 </div>
 </div>
 
