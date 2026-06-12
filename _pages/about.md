@@ -18,14 +18,15 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 <div style="font-size: 1.1em;" markdown="1">
-I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). **My research focuses on the reliability and verification of multimodal AI**, aiming to build systems that integrate explicit structures with dynamic reasoning capabilities to ensure safe, verifiable, and logically sound outputs. Currently, I am exploring verifiable multimodal code generation and principled human-in-the-loop (HITL) mechanisms for error-aware autonomous agents. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
+I am a Master's student in Applied Math at Fudan University and an incoming CS Ph.D. student at Yale University, advised by Prof. [Rex Ying](https://scholar.google.cat/citations?user=6fqNXooAAAAJ&hl=ca). **My research focuses on Multimodal Structured Reasoning**, aiming to build systems that integrate explicit structural priors with dynamic reasoning capabilities. Currently, I am exploring multimodal code generation, post-training strategies for Vision-Language Models (VLMs), and modeling structured reasoning processes. Feel free to reach out if you'd like to learn more about my work, chat, or explore potential collaborations. You can find my publications on my [google scholar](https://scholar.google.com/citations?user=1UKUQUEAAAAJ&hl=zh-CN).
 </div>
 
-<p style="font-size: 0.85em; font-style: italic; color: #888;">(Note: You might notice some early Medical AI publications on my Google Scholar. These stem from my first-year lab rotation exploring probabilistic modeling and uncertainty estimation. While I maintain close ties with my brilliant former colleagues, my research is now entirely focused on domain-agnostic multimodal systems.)</p>
+<!-- <p style="font-size: 0.85em; font-style: italic; color: #888;">(Note: You might notice some early Medical AI publications on my Google Scholar. These stem from my first-year lab rotation exploring probabilistic modeling and uncertainty estimation. While I maintain close ties with my brilliant former colleagues, my research is now entirely focused on domain-agnostic multimodal systems.)</p> -->
 
 
 # 🔥 News
 <div class="news-window" markdown="1">
+- *2026.05*: [BMC](https://arxiv.org/abs/TBD) accepted to **ICML 2026**.
 - *2026.03*: Two papers ([MacTok](https://arxiv.org/abs/TBD) and [GIFT](https://arxiv.org/abs/TBD)) accepted to **CVPR 2026**.
 - *2026.02*: Joined Microsoft Research Asia (MSRA) as a Research Intern.
 - *2026.02*: Two papers ([ARTDECO](https://arxiv.org/pdf/2510.08551) and [IVQ](https://openreview.net/pdf?id=9M2VrpAtR1)) accepted to **ICLR 2026**.
@@ -41,9 +42,7 @@ I am a Master's student in Applied Math at Fudan University and an incoming CS P
 
 # 📝 Selected Publications
 
-My research primarily focus on two directions: **Robust Representation in Complex Environments** and **Safety and Verification in AI Systems**.
-
-## Robust Representation in Complex Environments
+All of my works are driven by a singular goal: **Multimodal Structured Reasoning**. Whether it is through representing continuous visual semantics, verifying reasoning trajectories, or parsing complex 3D environments, my research seeks to endow AI systems with the ability to reason structurally.
 
 <!-- ========================================================================================================================== -->
 
@@ -54,11 +53,13 @@ My research primarily focus on two directions: **Robust Representation in Comple
 
  **Xin Gao**, Jian Pu
 
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Multimodal Representation</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Structural Consistency</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Cross-modal Reasoning</span></div>
+
 [![GitHub Stars](https://img.shields.io/github/stars/gaoxin492/MVP?style=social)](https://github.com/gaoxin492/MVP)
 [![GitHub Forks](https://img.shields.io/github/forks/gaoxin492/MVP?style=social)](https://github.com/gaoxin492/MVP)
 [[Project page]](https://github.com/gaoxin/MVP)
 
-- **MVP** introduces a novel approach to incomplete multi-view representation learning by leveraging latent space correspondences in Variational Auto-Encoders, enabling the inference of missing views and enhancing the consistency of multi-view data even with irregularly missing information.
+- **MVP** introduces a structured framework for multimodal representation learning by leveraging latent space correspondences. By modeling the structural consistency across incomplete views, the system can dynamically infer missing modalities, providing a robust representational foundation for cross-modal reasoning.
 </div>
 </div>
 
@@ -69,22 +70,41 @@ My research primarily focus on two directions: **Robust Representation in Comple
 
 [MacTok: Robust Continuous Tokenization for Image Generation](https://arxiv.org/abs/TBD)
 
-**Hengyu Zeng#**, **Xin Gao#**, Guanghao Li, Yuxiang Yan, Jiaoyang Ruan, Junpeng Ma, Haoyu Albert Wang, Jian Pu
+Hengyu Zeng#, **Xin Gao#**, Guanghao Li, Yuxiang Yan, Jiaoyang Ruan, Junpeng Ma, Haoyu Albert Wang, Jian Pu
 
-- **MacTok** identifies and mitigates the severe "posterior collapse" failure in continuous image tokenizers. We formulate tokenization as a rigorous information preservation task by introducing DINO-guided semantic masking and multi-level representation alignment, forcing the model to infer robust semantics from incomplete visual evidence. This prevents structural degradation and yields state-of-the-art generation fidelity (gFID 1.52 at 512x512) with up to 64x fewer tokens.
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Continuous Representation</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Semantic Masking</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Visual Reasoning</span></div>
+
+- **MacTok** formulates visual tokenization as a continuous and structured information preservation task. By introducing semantic masking and multi-level structural alignment, it forces the model to perform inferential reasoning over incomplete visual evidence. This establishes a highly compressed yet structurally intact representation essential for generative reasoning.
 </div>
 </div>
 
 <!-- ========================================================================================================================== -->
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/2026_01_IVQ/IVQ.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML 2026</div><img src='images/2026_05_BMC/BMC.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Escaping Low-Rank Traps: Interpretable Visual Concept Learning via Implicit Vector Quantization](https://openreview.net/pdf?id=9M2VrpAtR1)
+[Reasoning on the Manifold: Bidirectional Consistency for Self-Verification in Diffusion Language Models](https://arxiv.org/abs/TBD)
 
-Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Cheng Tang, Changkai Ji, Huihui Xu, Wei Li, Ziyan Huang et al.
+Jiaoyang Ruan#, **Xin Gao#**, Yinda Chen, Hengyu Zeng, Liang Du, Guanghao Li, Jie Fu, Jian Pu
 
-- **IVQ** addresses representational collapse in Concept Bottleneck Models (CBMs), where vision-concept alignment degrades under low-rank feature traps. Rather than imposing a hard, lossy bottleneck, IVQ acts as a structural regularizer that anchors patch features to learned semantic prototypes without quantizing the forward pass, preserving high-rank and structured representations for robust, interpretable concept learning.
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Diffusion Language Models</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Geometric Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Self-Verification</span></div>
+
+- **BMC** introduces a geometric perspective to structured reasoning in Diffusion Language Models. By framing reasoning trajectories as stable paths on a high-density manifold, it provides an unsupervised mechanism for logical self-verification. BMC serves as a dense structural reward, empowering models to dynamically verify their reasoning steps and self-evolve efficiently.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://arxiv.org/pdf/2510.17131)
+
+**Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
+
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Reliable Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Diffusion Models</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Decision Boundary</span></div>
+
+- **GOOD** is a framework designed to enhance the reliability of generative reasoning boundaries. By dynamically guiding the diffusion sampling process, it systematically probes the structured boundaries of the learned distribution, providing crucial mechanisms for reliable decision-making and handling out-of-distribution environments safely.
 </div>
 </div>
 
@@ -97,7 +117,39 @@ Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Ch
 
 Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qunyan Pu, Jian Pu
 
-- This paper introduces **OrderMind**, a spatial-aware manipulation ordering framework that learns object priorities from local geometry via a kNN spatial graph and a lightweight temporal module, supervised by VLM-distilled spatial priors. It also presents the **Manipulation Ordering Benchmark** (163k+ samples) for cluttered scenes.
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Spatial Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Vision-Language Models</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Embodied Planning</span></div>
+
+- **OrderMind** is a structured spatial reasoning framework that integrates explicit geometric priors with Vision-Language Models (VLMs) for embodied decision-making. By extracting structured relational logic via spatial graphs and VLM-distilled knowledge, it endows agents with dynamic, long-horizon reasoning capabilities in complex physical environments.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/2026_01_IVQ/IVQ.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Escaping Low-Rank Traps: Interpretable Visual Concept Learning via Implicit Vector Quantization](https://openreview.net/pdf?id=9M2VrpAtR1)
+
+Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Cheng Tang, Changkai Ji, Huihui Xu, Wei Li, Ziyan Huang et al.
+
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Interpretable Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Concept Representation</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Structured Regularization</span></div>
+
+- **IVQ** bridges the gap between low-level dense features and high-level logical reasoning by establishing structured concept representations. Serving as an implicit structural regularizer, it anchors visual features to explicit semantic prototypes continuously, preserving a high-dimensional, explainable reasoning space critical for verifiable multimodal systems.
+</div>
+</div>
+
+<!-- ========================================================================================================================== -->
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
+
+Jiasheng Guo#, **Xin Gao#**, Yuxiang Yan, Guanghao Li, Jian Pu
+
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Physical Priors</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Perceptual Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Robust Perception</span></div>
+
+- **Dark-ISP** integrates explicit physical and structural priors into the early stages of visual perception to ensure robust multimodal reasoning under fundamentally degraded conditions. By reformulating sensory pipelines with physics-informed constraints, it guarantees reliable feature extraction, forming a resilient foundation for downstream semantic reasoning.
 </div>
 </div>
 
@@ -110,41 +162,13 @@ Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qu
 
  Guanghao Li, Kerui Ren, Linning Xu, Zhewen Zheng, Changjian Jiang, **Xin Gao**, Bo Dai, Jian Pu, Mulin Yu, Jiangmiao Pang
 
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">3D Structured Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Spatial Representation</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Scene Understanding</span></div>
+
 [![GitHub Stars](https://img.shields.io/github/stars/InternRobotics/ARTDECO?style=social)](https://github.com/InternRobotics/ARTDECO)
 [![GitHub Forks](https://img.shields.io/github/forks/InternRobotics/ARTDECO?style=social)](https://github.com/InternRobotics/ARTDECO)
 [[Project page]](https://city-super.github.io/artdeco/)
 
-- **ARTDECO** unifies feed-forward 3D foundation priors with SLAM-style global optimization, and introduces a hierarchical 3D Gaussian scene representation with LoD-aware rendering to achieve efficient, robust, and high-fidelity on-the-fly monocular 3D reconstruction.
-
-</div>
-</div>
-
-
-## Safety and Verification in AI Systems
-
-<!-- ========================================================================================================================== -->
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/2025_09_GOOD/GOOD.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[GOOD: Training-Free Guided Diffusion Sampling for Out-of-Distribution Detection](https://arxiv.org/pdf/2510.17131)
-
-**Xin Gao**, Jiyao Liu, Guanghao Li, Yueming Lyu, Jianxiong Gao, Weichen Yu, Ningsheng Xu, Liang Wang, Caifeng Shan, Ziwei Liu, Chenyang Si
-
-- **GOOD** is a training-free diffusion guidance framework that shapes a robust OOD/ID decision boundary. It steers sampling with two gradients—image-level toward low-density regions and feature-level toward sparse zones—to generate diverse, controllable OOD examples.
-</div>
-</div>
-
-<!-- ========================================================================================================================== -->
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/2025_06_DarkISP/DarkISP.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Dark-ISP: Enhancing RAW Image Processing for Low-Light Object Detection](https://openreview.net/forum?id=7Z3G2ScIwN)
-
-**Jiasheng Guo#**, **Xin Gao#**, Yuxiang Yan, Guanghao Li, Jian Pu
-
-- **Dark-ISP** is a lightweight, self-adaptive ISP plugin that enhances low-light object detection by processing Bayer RAW images. It breaks down traditional ISP pipelines into optimized linear and nonlinear sub-modules, using physics-informed priors for automatic RAW-to-RGB conversion.
+- **ARTDECO** formulates dynamic scene understanding as a continuous structured reasoning problem. By integrating feed-forward foundational priors with hierarchical spatial optimizations, it builds highly structured, globally consistent 3D representations on the fly. This equips multimodal agents with the exact geometrical and spatial context needed for complex physical reasoning.
 </div>
 </div>
 
@@ -157,29 +181,15 @@ Yuxiang Yan, Zhiyuan Zhou, **Xin Gao**, Guanghao Li, Shenglin Li, Jiaqi Chen, Qu
 
 Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe Bi, Zifeng Ding, Yiqun Duan, Chengyu Fan, Wendong Fan, **Xin Gao** et al.
 
+<div style="margin-top: 8px;"><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Chain-of-Thought</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Structured Reasoning</span><span style="background-color: #f1f8ff; color: #0366d6; padding: 2px 6px; border-radius: 4px; font-size: 0.85em; border: 1px solid #c8e1ff; margin-right: 6px; display: inline-block;">Large Language Models</span></div>
+
 [![GitHub Stars](https://img.shields.io/github/stars/camel-ai/loong?style=social)](https://github.com/camel-ai/loong)
 [![GitHub Forks](https://img.shields.io/github/forks/camel-ai/loong?style=social)](https://github.com/camel-ai/loong)
 [[Project page]](https://github.com/camel-ai/loong)
 
-- **Loong** is an open-source framework for scalable, verifiable reasoning data. It pairs **LoongBench** (8,729 human-vetted, code-checkable examples across 12 domains) with **LoongEnv**, a modular generator forming an agent–environment loop for RL with verifiable rewards and broad-domain CoT training.
+- **Loong** is a comprehensive framework for scalable, verifiable Chain-of-Thought reasoning. By structuring the reasoning process into an interactive agent-environment loop with verifiable rewards, it scales structured reasoning data generation. This provides a crucial automated mechanism for training models in rigorous, logically sound deduction.
 </div>
 </div>
-
-<!-- ========================================================================================================================== -->
-
-
-
-<!-- # Why PhD?
-
-**And I've been thinking a lot recently - why PhD?**
-
-I was originally admitted to Fudan University as a direct PhD student after my undergraduate studies. At the time, most of the available research directions in my department focused on interdisciplinary topics between neuroscience and AI. They were interesting, but they did not fully match my core interests. I have always been more fascinated by the algorithmic and mathematical foundations of intelligence.
-
-Coming from a pure mathematics background, I also realized that I had not yet received systematic training in scientific research, especially in AI and machine learning. Before committing to a long and challenging PhD journey, I wanted to go through a complete and rigorous master’s program. I needed to learn how to ask meaningful questions, design experiments, and build research intuition.
-
-Fortunately, during this process, I discovered the genuine joy of research. I found excitement in turning abstract ideas into working systems, bridging theoretical insights with practical models, and spending long hours on an equation until it finally made sense. Research became more than a requirement. It became a way of thinking.
-
-That is why I now seek a PhD, not as an academic credential, but as a natural continuation of my intellectual curiosity. I want to push the boundary between representation structure and generative intelligence. I want to explore how reasoning and understanding can emerge from learning systems. I also want to work with mentors and peers who share this fascination. To me, a PhD represents the freedom and responsibility to create something that did not exist before. I am ready for that challenge. -->
 
 
 # 🎖 Honors and Awards
