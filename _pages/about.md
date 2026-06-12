@@ -192,7 +192,7 @@ Xingyue Huang, Rishabh, Gregor Franke, Ziyi Yang, Jiamu Bai, Weijie Bai, Jinhe B
 - 2020.12 Shanghai Scholarship
 
 # 👨‍💼 Academic Service
-- Conference Reviewer: Neurips 2025, ICCV 2025, ICLR 2026, ICML 2026
+- Conference Reviewer: NeurIPS 2025, ICCV 2025, ICLR 2026, ICML 2026 (Silver Reviewer),  NeurIPS 2026
 
 # 📖 Educations
 - *2023.09 - 2026.06 (now)*, Master of Applied Mathematics, Fudan University, Shanghai, China.
