@@ -1,0 +1,50 @@
+<div class="pixel-cat-park" role="group" aria-label="Fellow and Putao, pixel cats">
+  <div class="pixel-cat-platforms" aria-hidden="true"></div>
+  {% assign cats = "Fellow,Putao" | split: "," %}
+  {% for cat in cats %}
+  <button class="pixel-cat" type="button" data-cat="{{ cat | downcase }}" data-state="idle" aria-label="Play with {{ cat }}">
+    <span class="pixel-cat__name" aria-hidden="true">{{ cat }}</span>
+    <span class="pixel-cat__reaction" aria-hidden="true">
+      <svg viewBox="0 0 9 8"><path d="M1 0h2v1h1v1h1V1h1V0h2v1h1v3H8v1H7v1H6v1H5v1H4V7H3V6H2V5H1V4H0V1h1Z"/></svg>
+    </span>
+    <span class="pixel-cat__direction">
+      <svg class="pixel-cat__sprite" viewBox="0 0 32 32" aria-hidden="true" focusable="false" shape-rendering="crispEdges">
+        <g class="pixel-cat__tail">
+          <path fill="#778397" d="M3 7h3v1h2v3h1v3h1v5h2v5H7v-2H5v-2H3v-3H2v-3H1v-4h1V8h1Z"/>
+          <path fill="#fff" d="M3 9h1V8h1v1h2v3h1v3h1v5h2v3H8v-2H6v-2H4v-3H3v-3H2v-2h1Z"/>
+          <path fill="#e6ebf2" d="M2 12h1v3h1v3h2v2h2v2h3v1H8v-2H6v-2H4v-3H3v-3H2Z"/>
+        </g>
+        <path fill="#778397" d="M10 15h13v2h3v10H8v-9h2Z"/>
+        <path fill="#fff" d="M11 16h11v2h3v8H9v-7h2Z"/>
+        <path fill="#e6ebf2" d="M9 23h3v2h11v-6h2v7H9Z"/>
+        <path fill="#fff" d="M12 20h8v3h-2v2h-2v-1h-2v-1h-2Z"/>
+        <g class="pixel-cat__leg pixel-cat__leg--back">
+          <path fill="#778397" d="M9 24h6v5H8v-3h1Z"/>
+          <path fill="#fff" d="M10 24h4v4H9v-1h1Z"/>
+        </g>
+        <g class="pixel-cat__leg pixel-cat__leg--front">
+          <path fill="#778397" d="M20 24h5v2h1v3h-7v-3h1Z"/>
+          <path fill="#fff" d="M21 24h3v3h1v1h-5v-1h1Z"/>
+        </g>
+        <g class="pixel-cat__head">
+          <path fill="#778397" d="M12 4h2v1h1v2h2v2h6V7h2V5h2V4h1v10h1v2h1v1h-1v2h-3v2H14v-2h-3v-2h-1v-1h1v-2h1Z"/>
+          <path fill="#fff" d="M13 6h1v2h2v2h8V8h2V6h1v9h1v2h-1v1h-2v2H15v-2h-2v-1h-1v-2h1Z"/>
+          <path fill="#efc6d0" d="M14 9h1v2h-1Zm11 0h1v2h-1Z"/>
+          <path fill="#e6ebf2" d="M13 16h2v2h10v-2h2v2h-2v2H15v-2h-2Z"/>
+          <g class="pixel-cat__eyes">
+            <path fill="#364152" d="M16 13h2v3h-2Zm7 0h2v3h-2Z"/>
+            <path fill="#fff" d="M16 13h1v1h-1Zm7 0h1v1h-1Z"/>
+          </g>
+          <path class="pixel-cat__closed-eyes" fill="#364152" d="M16 15h2v1h-2Zm7 0h2v1h-2Z"/>
+          <path fill="#d99aaf" d="M20 16h2v1h-2Z"/>
+          <path fill="#778397" d="M20 17h1v1h-1Z"/>
+          <path class="pixel-cat__whiskers" fill="#9aa5b5" d="M8 15h5v1H8Zm1 3h4v1H9Zm18-3h4v1h-4Zm0 3h3v1h-3Z"/>
+          <path class="pixel-cat__collar" d="M15 20h10v2H15Z"/>
+          <path fill="#d5b66c" d="M20 22h2v2h-2Z"/>
+        </g>
+      </svg>
+    </span>
+  </button>
+  {% endfor %}
+</div>
+<script src="{{ '/assets/js/pixel-cats.js' | relative_url }}" defer></script>
