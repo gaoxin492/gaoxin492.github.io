@@ -1,0 +1,182 @@
+.pixel-cat-park {
+    position: fixed;
+    right: 12px;
+    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    left: 12px;
+    height: 72px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.pixel-cat-platforms { display: none; }
+
+.pixel-cat-park--sidebar .pixel-cat-platforms { display: block; }
+
+.pixel-cat-tree__post {
+    position: absolute;
+    width: 8px;
+    border-right: 2px solid #e0e7ee;
+    border-left: 2px solid #e0e7ee;
+    background: repeating-linear-gradient(to top, #f8fafc 0, #f8fafc 5px, #e8edf3 5px, #e8edf3 7px);
+}
+
+.pixel-cat-tree__base {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    background: #dce5ee;
+    border-bottom: 2px solid #cbd7e3;
+}
+
+.pixel-cat-tree__house {
+    position: absolute;
+    width: 64px;
+    border: 2px solid #dce5ee;
+    border-top: 4px solid #dce5ee;
+    background: #fbfcfe;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 17px;
+        width: 26px;
+        height: 32px;
+        background: #e8eef5;
+        clip-path: polygon(4px 0, 22px 0, 22px 4px, 26px 4px, 26px 32px, 0 32px, 0 4px, 4px 4px);
+    }
+}
+
+.pixel-cat-platform {
+    position: absolute;
+    height: 4px;
+    background: #dce5ee;
+    box-shadow: 0 2px 0 #f1f4f8;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 3px;
+        height: 3px;
+        background: #e8edf3;
+    }
+
+    &::before { left: 3px; }
+    &::after { right: 3px; }
+}
+
+.pixel-cat {
+    --collar: #8dbbd0;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #64748b;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+
+    &[data-cat="putao"] {
+        --collar: #baabd5;
+        left: 96px;
+    }
+
+    &:focus-visible {
+        outline: 2px dashed #8dbbd0;
+        outline-offset: 3px;
+    }
+
+    &__direction {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__sprite {
+        display: block;
+        width: 100%;
+        height: 100%;
+        image-rendering: pixelated;
+    }
+
+    &__collar { fill: var(--collar); }
+    &__closed-eyes { display: none; }
+
+    &__name {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px 6px;
+        background: #fff;
+        border: 1px solid #e1e6ed;
+        font: 10px/1.2 monospace;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover &__name,
+    &:focus-visible &__name { opacity: 1; }
+
+    &__reaction {
+        display: none;
+        position: absolute;
+        top: -10px;
+        left: 24px;
+        width: 18px;
+        height: 16px;
+        pointer-events: none;
+
+        svg { display: block; fill: var(--collar); shape-rendering: crispEdges; }
+    }
+
+    &[data-state="walking"] &__leg--front { animation: pixel-step 0.4s steps(2, end) infinite; }
+    &[data-state="walking"] &__leg--back { animation: pixel-step 0.4s steps(2, end) -0.2s infinite; }
+    &[data-state="walking"] &__tail { animation: pixel-tail 0.8s steps(2, end) infinite; }
+    &[data-state="jumping"] &__leg { transform: translateY(-2px); }
+    &[data-state="playing"] &__sprite { animation: pixel-hop 0.6s steps(3, end) 3; }
+    &[data-state="playing"] &__reaction { display: block; }
+    &[data-state="playing"] &__name { opacity: 0; }
+    &[data-state="sleeping"] &__eyes,
+    &.is-blinking &__eyes { display: none; }
+    &[data-state="sleeping"] &__closed-eyes,
+    &.is-blinking &__closed-eyes { display: block; }
+
+    @media (max-width: 600px) {
+        width: 48px;
+        height: 48px;
+
+        &__reaction { left: 18px; }
+    }
+}
+
+@keyframes pixel-step {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+@keyframes pixel-tail {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-1px); }
+}
+
+@keyframes pixel-hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pixel-cat * { animation: none !important; }
+}
