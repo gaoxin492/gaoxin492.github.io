@@ -216,7 +216,7 @@ Shujian Gao, Yuan Wang, Chenglong Ma, **Xin Gao**, Jiangtao Yan, Junzhi Ning, Ch
 </div>
 
 # 👨‍💼 Academic Service
-- Conference Reviewer: NeurIPS 2025, ICCV 2025, ICLR 2026, ICML 2026 (Silver Reviewer),  NeurIPS 2026
+- Conference Reviewer: NeurIPS 2025, 2026; ICLR 2026, 2027; ICML 2026 (Silver Reviewer); ICCV 2025; AAAI 2027; WACV 2027
 
 # 💻 Internships
 - *2026.02 - 2026.09*, [Microsoft Research Asia](https://www.microsoft.com/en-us/research/), Beijing, China.
